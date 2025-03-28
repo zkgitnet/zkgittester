@@ -1,45 +1,50 @@
 import config
+import logger
 
 import os
 import json
 import subprocess
 import psutil
 import time
+import logging
 import statistics
 
 from functools import wraps
 from datetime import datetime
 
 performanceData = {}
+LOGGER = logger.configure_logger()
 
-def find_processes_by_names(term1, term2):
-    """Finds all process PIDs where the command contains either of the given search strings."""
-    matching_pids = []
-    for process in psutil.process_iter(attrs=['pid', 'cmdline']):
+def findProcesses(terms):
+    """Finds all process PIDs where the command contains any of the given search strings from the list of terms."""
+    matchingPids = []
+    for process in psutil.process_iter(attrs=[config.PID, config.CMDLINE]):
         try:
-            cmdline = process.info['cmdline']
-            if cmdline and any(term in cmd for term in (term1, term2) for cmd in cmdline):
-                matching_pids.append(process.info['pid'])
+            cmdline = process.info[config.CMDLINE]
+            if cmdline and any(term in cmd for term in terms for cmd in cmdline):
+                matchingPids.append(process.info[config.PID])
         except (psutil.NoSuchProcess, psutil.AccessDenied):
-            continue 
+            LOGGER.warning(config.ERROR_NO_PID)
+            continue
 
-    return matching_pids
+    return matchingPids
 
-def get_memory_usage_for_pids(pid_list):
+
+def getMemoryUsage(pidList):
     """Returns the total memory usage (in MB) for all given PIDs, including their child processes."""
-    total_memory = 0.0
-
-    for pid in pid_list:
+    
+    totalMemory = 0.0
+    for pid in pidList:
         try:
             parent = psutil.Process(pid)
             children = parent.children(recursive=True)
-            all_processes = [parent] + children 
+            allProcesses = [parent] + children 
             
-            total_memory += sum(p.memory_info().rss for p in all_processes if p.is_running()) / (1024 * 1024)
+            totalMemory += sum(p.memory_info().rss for p in allProcesses if p.is_running()) / config.STATS_MB
         except psutil.NoSuchProcess:
             continue 
 
-    return total_memory
+    return totalMemory
 
 def measurePerformance(func):
     """Decorator to measure execution time, memory usage, and I/O stats of a function."""
@@ -47,44 +52,41 @@ def measurePerformance(func):
     def wrapper(*args, **kwargs):
         process = psutil.Process()
 
-        start_time = time.time()
-        net_before = psutil.net_io_counters() 
-        disk_before = psutil.disk_io_counters() 
+        startTime = time.time()
+        netBefore = psutil.net_io_counters() 
+        diskBefore = psutil.disk_io_counters() 
 
         result = func(*args, **kwargs)
 
-        execution_time = time.time() - start_time
-        net_after = psutil.net_io_counters()  
-        disk_after = psutil.disk_io_counters() 
+        executionTime = time.time() - startTime
+        netAfter = psutil.net_io_counters()  
+        diskAfter = psutil.disk_io_counters() 
 
-        net_sent = (net_after.bytes_sent - net_before.bytes_sent) / (1024 * 1024)  # Sent MB
-        net_recv = (net_after.bytes_recv - net_before.bytes_recv) / (1024 * 1024)  # Received MB
-        disk_read = (disk_after.read_bytes - disk_before.read_bytes) / (1024 * 1024)  # Read MB
-        disk_write = (disk_after.write_bytes - disk_before.write_bytes) / (1024 * 1024)  # Written MB
+        netSent = (netAfter.bytes_sent - netBefore.bytes_sent) / config.STATS_MB
+        netRecv = (netAfter.bytes_recv - netBefore.bytes_recv) / config.STATS_MB
+        diskRead = (diskAfter.read_bytes - diskBefore.read_bytes) / config.STATS_MB
+        diskWrite = (diskAfter.write_bytes - diskBefore.write_bytes) / config.STATS_MB
 
-        repo_dir = args[0] 
+        repoDir = args[0] 
         remote = args[1]  
-        round_num = args[3] 
+        roundNum = args[3]
 
-        if repo_dir not in performanceData:
-            performanceData[repo_dir] = {}
+        existingRoundEntry = next((entry for entry in performanceData[repoDir][remote] if entry.get(config.STATS_ROUND) == roundNum), None)
 
-        if remote not in performanceData[repo_dir]:
-            performanceData[repo_dir][remote] = []
+        if existingRoundEntry is not None:
+            existingRoundEntry.update({
+                config.STATS_EXECUTION_TIME: executionTime,
+                config.STATS_NET_SENT: netSent,
+                config.STATS_NET_RECEIVED: netRecv,
+                config.STATS_DISK_READ: diskRead,
+                config.STATS_DISK_WRITE: diskWrite
+            })
 
-        performanceData[repo_dir][remote].append({
-            "round": round_num,
-            "execution_time": execution_time,
-            "net_sent": net_sent,
-            "net_recv": net_recv,
-            "disk_read": disk_read,
-            "disk_write": disk_write
-        })
-
-        print(f"[{repo_dir} | {remote} | Round {round_num}]")
-        print(f"  Execution time: {execution_time:.2f} seconds")
-        print(f"  Network sent: {net_sent:.2f} MB, received: {net_recv:.2f} MB")
-        print(f"  Disk read: {disk_read:.2f} MB, written: {disk_write:.2f} MB")
+        LOGGER.debug(f"[{os.path.basename(repoDir)} | {remote} | Round {roundNum}]")
+        LOGGER.debug(f"  Execution time: {executionTime:.2f} seconds")
+        LOGGER.debug(f"  Network sent: {netSent:.2f} MB, received: {netRecv:.2f} MB")
+        LOGGER.debug(f"  Disk read: {diskRead:.2f} MB, written: {diskWrite:.2f} MB")
+        LOGGER.debug(f"  Memory usage: {existingRoundEntry.get('peak_memory'):.2f} MB")
 
         return result
 
@@ -93,129 +95,125 @@ def measurePerformance(func):
 def readRepositoryInformation(jsonFile):
     with open(jsonFile, "r") as inputFile:
         data = json.load(inputFile)
-    return data["repositories"]
+    return data[config.JSON_REPOS]
 
 
 def deleteRemoteRepo(directory, remote, branch):
     """Deletes all the remote content from the specified directory."""
     if not os.path.isdir(directory):
-        print(f"Error: Directory '{directory}' does not exist.")
+        LOGGER.error(f"Error: Directory '{directory}' does not exist.")
         return
     
     try:
         os.chdir(directory)
-        subprocess.run(["git", "push", "--delete", remote, branch], capture_output=True, text=True, check=True)
+        process = subprocess.Popen(
+            [config.GIT_GIT, config.GIT_PUSH, config.GIT_DELETE, remote, branch],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True
+        )
+        LOGGER.debug(f"Resetting remote repo. PID: {process.pid}")
+        process.wait()
     except subprocess.CalledProcessError as e:
-        print(f"Delete failed: {e.stderr}")
+        LOGGER.warning(f"Delete failed: {e.stderr}")
     except Exception as e:
-        print(f"Unexpected error: {e}")    
+        LOGGER.critical(f"Unexpected error: {e}")    
 
         
 @measurePerformance
 def gitPush(directory, remote, branch, i):
     """Performs a git push in the specified directory."""
     if not os.path.isdir(directory):
-        print(f"Error: Directory '{directory}' does not exist.")
+        LOGGER.error(f"Error: Directory '{directory}' does not exist.")
         return
     
     try:
         os.chdir(directory)
         process = subprocess.Popen(
-            ["git", "push", remote, branch],
+            [config.GIT_GIT, config.GIT_PUSH, remote, branch, config.GIT_FORCE],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             text=True
         )
 
-        print(f"Git push started with PID: {process.pid}")
+        LOGGER.info(f"Git push for {os.path.basename(directory)} started with PID: {process.pid}")
 
-        memory_usages = []
+        maxMemoryUsage = 0.0
+        output = True
         while process.poll() is None: 
-            search_term1 = "git"
-            search_term2 = "gcrypt"
-            pids = find_processes_by_names(search_term1, search_term2)
+            pids = findProcesses(config.PID_TERMS)
+            if output:
+                LOGGER.debug(f"Relevant processes found {pids}")
+                output = False
 
-            print(f"Processes containing '{search_term1}' or '{search_term2}': {pids}")
-            memory_used = get_memory_usage_for_pids(pids)
-            memory_usages.append(memory_used)
-            print(f"Current Memory Usage: {memory_used:.2f} MB")
-            time.sleep(1)
+            maxMemoryUsage = max(maxMemoryUsage, getMemoryUsage(pids))
+            time.sleep(0.2)
 
-        # Get final memory usage after process exits
-        print(f"Final Memory Usage: {max(memory_usages):.2f} MB")
+        if directory not in performanceData:
+            performanceData[directory] = {}
 
+        if remote not in performanceData[directory]:
+            performanceData[directory][remote] = []
+            
         performanceData[directory][remote].append({
-            "peak_memory": max(memory_usages),
+            config.STATS_ROUND: i,
+            config.STATS_PEAK_MEMORY: maxMemoryUsage
         })
 
-        stdout, stderr = process.communicate() 
+        process.wait()
+        
     except subprocess.CalledProcessError as e:
-        print(f"Git push failed: {e.stderr}")
+        LOGGER.error(f"Git push failed: {e.stderr}")
     except Exception as e:
-        print(f"Unexpected error: {e}")
+        LOGGER.error(f"Unexpected error: {e}")
 
         
 def calculateStatistics(data):
     """Calculates statistics (average & standard deviation) from the collected performance data and writes to a file."""
     if not data:
-        print("No data to calculate statistics.")
+        LOGGER.warning("No data to calculate statistics.")
         return
 
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     filename = f"{timestamp}_stats.txt"
 
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
     with open(filename, "w") as file:
-        for repo_dir, remotes in data.items():
-            print(f"\nStatistics for Repository: {repo_dir}")
-            file.write(f"\nStatistics for Repository: {repo_dir}\n")
+        for repoDir, remotes in data.items():
+            LOGGER.info(f"\nStatistics for Repository: {os.path.basename(repoDir)}")
+            file.write(f"\nStatistics for Repository: {os.path.basename(repoDir)}\n")
 
             for remote, entries in remotes.items():
-                num_runs = len(entries)
+                numRuns = len(entries)
 
-                if num_runs < 2:
-                    print(f"\n  Remote: {remote} (Total Runs: {num_runs}) - Not enough data for standard deviation")
+                if numRuns < 2:
+                    LOGGER.warning(f"\n  Remote: {remote} (Total Runs: {num_runs}) - Not enough data for standard deviation")
                     file.write(f"\n  Remote: {remote} (Total Runs: {num_runs}) - Not enough data for standard deviation\n")
                     continue
+                
+                metricValues = {metric: [entry[metric] for entry in entries if metric in entry] for metric in config.STATS}
 
-                execution_times = [entry["execution_time"] for entry in entries]
-                peak_memories = [entry["peak_memory"] for entry in entries]
-                net_sent_values = [entry["net_sent"] for entry in entries]
-                net_recv_values = [entry["net_recv"] for entry in entries]
-                disk_read_values = [entry["disk_read"] for entry in entries]
-                disk_write_values = [entry["disk_write"] for entry in entries]
+                avgValues = {metric: sum(values) / numRuns for metric, values in metricValues.items()}
+                stdValues = {
+                    metric: statistics.stdev(values) if len(values) > 1 else 0
+                    for metric, values in metricValues.items()
+                }
 
-                avg_time = sum(execution_times) / num_runs
-                avg_memory = sum(peak_memories) / num_runs
-                avg_net_sent = sum(net_sent_values) / num_runs
-                avg_net_recv = sum(net_recv_values) / num_runs
-                avg_disk_read = sum(disk_read_values) / num_runs
-                avg_disk_write = sum(disk_write_values) / num_runs
+                output = f"\n  Remote: {remote} (Total Runs: {numRuns})\n"
+                for metric in config.STATS:
+                    unit = "sec" if metric == config.STATS_EXECUTION_TIME else "MB"
+                    output += (
+                        f"  Avg {metric.replace('_', ' ').title()}: {avgValues[metric]:.2f} "
+                        f"{unit}, Std Dev: {stdValues[metric]:.2f} {unit}\n"
+                    )
 
-                std_time = statistics.stdev(execution_times) if num_runs > 1 else 0
-                std_memory = statistics.stdev(peak_memories) if num_runs > 1 else 0
-                std_net_sent = statistics.stdev(net_sent_values) if num_runs > 1 else 0
-                std_net_recv = statistics.stdev(net_recv_values) if num_runs > 1 else 0
-                std_disk_read = statistics.stdev(disk_read_values) if num_runs > 1 else 0
-                std_disk_write = statistics.stdev(disk_write_values) if num_runs > 1 else 0
-
-                output = (
-                    f"\n  Remote: {remote} (Total Runs: {num_runs})\n"
-                    f"  Avg Execution Time: {avg_time:.2f} sec, Std Dev: {std_time:.2f} sec\n"
-                    f"  Avg Peak Memory Usage: {avg_memory:.2f} MB, Std Dev: {std_memory:.2f} MB\n"
-                    f"  Avg Network Sent: {avg_net_sent:.2f} MB, Std Dev: {std_net_sent:.2f} MB\n"
-                    f"  Avg Network Received: {avg_net_recv:.2f} MB, Std Dev: {std_net_recv:.2f} MB\n"
-                    f"  Avg Disk Read: {avg_disk_read:.2f} MB, Std Dev: {std_disk_read:.2f} MB\n"
-                    f"  Avg Disk Write: {avg_disk_write:.2f} MB, Std Dev: {std_disk_write:.2f} MB\n"
-                )
-
-                print(output)
+                LOGGER.info(output)
                 file.write(output)
 
-    print(f"\nStatistics written to: {filename}")
+    LOGGER.debug(f"\nStatistics written to: {filename}")
 
-    
-if __name__ == "__main__":
-    
+
+def main():
     repoData = readRepositoryInformation(config.JSON_REPOSITORIES);
     totalRounds = sum(len(repo[config.JSON_REMOTES]) for repo in repoData) * config.TEST_NUM_ROUNDS
 
@@ -225,9 +223,13 @@ if __name__ == "__main__":
         branch = repo[config.JSON_BRANCHES]
         for remote in repo[config.JSON_REMOTES]:
             for i in range(config.TEST_NUM_ROUNDS):
-                print(f"Round {currentRound} of {totalRounds}: {os.path.basename(repoDir)} at {remote}")
+                LOGGER.info(f"Round {currentRound} of {totalRounds}: {os.path.basename(repoDir)} at {remote}")
                 deleteRemoteRepo(repoDir, remote, branch)
                 gitPush(repoDir, remote, branch, i)
                 currentRound += 1
 
     calculateStatistics(performanceData)
+    
+if __name__ == "__main__":
+    main()
+
