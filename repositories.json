@@ -4,11 +4,6 @@
             "repoDir": "/home/leif/programming/test_zkgit/Web-Dev-For-Beginners",
             "branch": "main",
             "remotes": ["origin"]
-        },
-        {
-            "repoDir": "/home/leif/programming/test_zkgit/n8n",
-            "branch": "master",
-            "remotes": ["origin", "cryptremote"]
         }
     ]
 }
