@@ -1,9 +1,14 @@
 {
     "repositories": [
         {
-            "repoDir": "/home/leif/programming/test_zkgit/Web-Dev-For-Beginners",
-            "branch": "main",
-            "remotes": ["origin"]
+            "repo_dir": "/home/leif/programming/test_zkgit/boxmot",
+            "branch": "master",
+            "remotes": ["gitremote","gitcryptremote","gcryptremote"]
+        },
+        {
+            "repo_dir": "/home/leif/programming/test_zkgit/build-your-own-x",
+            "branch": "master",
+            "remotes": ["gitremote","gitcryptremote","gcryptremote"]            
         }
     ]
 }
