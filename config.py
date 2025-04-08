@@ -17,6 +17,9 @@ JSON_REPOS = "repositories"
 # Git Configuration
 GIT_GIT = "git"
 GIT_PUSH = "push"
+GIT_ADD = "add"
+GIT_COMMIT = "commit"
+GIT_MESSAGE = "-m"
 GIT_DELETE = "--delete"
 GIT_FORCE = "--force"
 GIT_CRYPT = "git-crypt"
@@ -24,7 +27,7 @@ GIT_LOCK = "lock"
 GIT_UNLOCK = "unlock"
 
 # Test Configuration
-TEST_NUM_ROUNDS = 2
+TEST_NUM_ROUNDS = 12
 PID_TERMS = ["git", "gcrypt"]
 PID = "pid"
 CMDLINE = "cmdline"
@@ -34,7 +37,10 @@ DATETIME_FORMAT = "%Y-%m-%d_%H-%M-%S"
 # File Configuration
 FILE_READ = "r"
 FILE_WRITE = "w"
+FILE_WRITE_BINARY = "wb"
 FILE_UTF8 = "utf-8"
+FILE_JSON = ".json"
+DIR_TMP = "tmp"
 
 # Logger Configuration
 LOGGING_LEVEL = logging.DEBUG
@@ -47,11 +53,20 @@ LOG_BOXPLOT = "Boxplot saved as %s"
 LOG_DIRECTORY = "Error: Directory '%s' does not exist"
 LOG_RESET_REPO = "Resetting remote repo. PID: %d"
 LOG_RUN_COMMAND = "Running command: %s (PID: %d)"
+LOG_FILE_NOT_FOUND = "Filename %s does not match expected pattern, skipping"
 LOG_PROCESS_FOUND = "[%s] Relevant processes found: %s"
 LOG_STATS_WRITE = "\nStatistics written to: %s"
 LOG_ROUND_INFO = "Round %d of %d: %s at %s"
+LOG_ROUND_SKIP = "Skipping existing round %d for %s/%s"
+LOG_FILE_DELETE_FAIL = "Error deleting file %s: %s"
 LOG_DELETE_FAIL = "Delete failed: %s"
+LOG_ANOVA = "ANOVA result for %s: F-statistic = %.2f, p-value = %.4f"
+LOG_TTEST = "T-test result for %s vs %s (%s): t-statistic = %.2f, p-value = %.4f"
+LOG_TTEST_FAIL = "T-test skipped for {%s} vs {%s} (%s) due to missing data"
+LOG_METRIC_MISSING = "Metric '%s' is missing for one or more remotes in repository %s"
 LOG_PUSH_FAIL = "Git push failed: %s"
+LOG_COMMIT = "Created and committed 1MB file: %s"
+LOG_COMMIT_FAIL = "Git commit failed: %s"
 LOG_STATS_REPO = "\nStatistics for Repository: %s"
 LOG_ERROR = "Unexpected error: %s"
 LOG_RAWDATA = "\nRaw Data:\n"

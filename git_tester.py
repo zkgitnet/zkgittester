@@ -33,12 +33,16 @@ performance statistics for each repository and remote.
 
 import time
 import os
+import re
 import json
+import shutil
 import subprocess
 import statistics
 import threading
+import itertools
 from datetime import datetime
 from functools import wraps
+from scipy import stats
 import seaborn as sns
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -48,6 +52,57 @@ import logger
 
 performance_data = {}
 LOGGER = logger.configure_logger()
+
+def load_existing_data():
+    """Loads performance data from JSON files in the ./tmp directory."""
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    tmp_dir = os.path.join(script_dir, config.DIR_TMP)
+
+    for filename in os.listdir(tmp_dir):
+        if not filename.endswith(config.FILE_JSON):
+            continue
+
+        path = os.path.join(tmp_dir, filename)
+
+        match = re.match(r"(.+)_(.+)_round_(\d+).json", filename)
+        if match:
+            repo = match.group(1)
+            remote = match.group(2)
+        else:
+            LOGGER.warning(config.LOG_FILE_NOT_FOUND, filename)
+            continue
+
+        with open(path, config.FILE_READ, encoding=config.FILE_UTF8) as f:
+            entry = json.load(f)
+
+        if repo not in performance_data:
+            performance_data[repo] = {}
+        if remote not in performance_data[repo]:
+            performance_data[repo][remote] = []
+
+        performance_data[repo][remote].append(entry)
+
+
+def get_round_data_path(repo_dir, remote, round_entry):
+    """Returns the path to save a round's data in ./tmp, relative to the script directory."""
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    tmp_dir = os.path.join(script_dir, config.DIR_TMP)
+    os.makedirs(tmp_dir, exist_ok=True)
+
+    round_number = round_entry[config.STATS_ROUND]
+
+    filename = f"{os.path.basename(repo_dir)}_{remote}_round_{round_number}.json"
+
+    return os.path.join(tmp_dir, filename)
+
+
+def save_round_data(repo_dir, remote, round_entry):
+    """Saves a single round's performance data to ./tmp directory."""
+    path = get_round_data_path(repo_dir, remote, round_entry)
+
+    with open(path, config.FILE_WRITE, encoding=config.FILE_UTF8) as f:
+        json.dump(round_entry, f, indent=4)
+
 
 def generate_box_plots(data):
     """Generates boxplots for each metric, grouped by repo_dir and remote."""
@@ -79,7 +134,7 @@ def generate_box_plots(data):
         if metric_df.empty:
             continue
 
-        plt.figure(figsize=(12, 6))
+        plt.figure(figsize=(6, 6))
         sns.boxplot(data=metric_df, x=config.STATS_REPODIR,
                     y=config.STATS_VALUE, hue=config.STATS_REMOTE)
 
@@ -87,6 +142,7 @@ def generate_box_plots(data):
         plt.ylabel(metric.replace('_', ' ').title())
         plt.ylim(bottom=0)
         plt.grid(True)
+        plt.xticks(rotation=90)
         plt.tight_layout()
 
         timestamp = datetime.now().strftime(config.DATETIME_FORMAT)
@@ -136,7 +192,7 @@ def measure_performance(func):
         round_num = args[3]
 
         existing_round_entry = next((entry for entry
-                                     in performance_data[repo_dir][remote]
+                                     in performance_data[os.path.basename(repo_dir)][remote]
                                      if entry.get(config.STATS_ROUND) == round_num), None)
 
         if existing_round_entry is not None:
@@ -147,6 +203,8 @@ def measure_performance(func):
                 config.STATS_DISK_READ: disk_read,
                 config.STATS_DISK_WRITE: disk_write
             })
+
+        save_round_data(repo_dir, remote, existing_round_entry)
 
         LOGGER.debug(config.LOG_ROUND_DATA, os.path.basename(repo_dir), remote, round_num + 1)
         LOGGER.debug(config.LOG_ROUND_TIME, execution_time)
@@ -167,7 +225,7 @@ def read_repository_information(json_file):
     return data[config.JSON_REPOS]
 
 
-def delete_remote_repo(directory, remote, branch):
+def delete_remote_branch(directory, remote, branch):
     """Deletes all the remote content from the specified directory."""
     if not os.path.isdir(directory):
         LOGGER.error(config.LOG_DIRECTORY, directory)
@@ -185,6 +243,35 @@ def delete_remote_repo(directory, remote, branch):
         process.wait()
     except subprocess.CalledProcessError as e:
         LOGGER.warning(config.LOG_DELETE_FAIL, e.stderr)
+    except Exception as e:
+        LOGGER.critical(config.LOG_ERROR, e)
+
+
+def create_and_commit_file(directory, filename="random_file.bin", commit_msg="Add 1MB random file"):
+    """Creates a 1MB random file, adds it to the Git repo, and commits it."""
+    filepath = os.path.join(directory, filename)
+
+    if not os.path.isdir(directory):
+        LOGGER.error(config.LOG_DIRECTORY, directory)
+        return
+
+    try:
+        os.chdir(directory)
+
+        with open(filepath, config.FILE_WRITE_BINARY) as f:
+            f.write(os.urandom(1024 * 1024))
+
+        subprocess.run([config.GIT_GIT, config.GIT_ADD, "*"], check=True)
+        time.sleep(1)
+
+        subprocess.run([config.GIT_GIT, config.GIT_COMMIT,
+                        config.GIT_MESSAGE, commit_msg], check=True)
+        time.sleep(1)
+
+        LOGGER.info(config.LOG_COMMIT, filename)
+
+    except subprocess.CalledProcessError as e:
+        LOGGER.warning(config.LOG_COMMIT_FAIL, e)
     except Exception as e:
         LOGGER.critical(config.LOG_ERROR, e)
 
@@ -292,14 +379,14 @@ def monitor_process(process, label=config.LABEL_PROCESS):
 
 
 @measure_performance
-def git_push(directory, remote, branch, i):
+def git_push(repo_dir, remote, branch, i):
     """Performs a git push in the specified directory."""
-    if not os.path.isdir(directory):
-        LOGGER.error(config.LOG_DIRECTORY, directory)
+    if not os.path.isdir(repo_dir):
+        LOGGER.error(config.LOG_DIRECTORY, repo_dir)
         return
 
     try:
-        os.chdir(directory)
+        os.chdir(repo_dir)
 
         max_memory_usage = 0.0
         avg_cpu_usage = 0.0
@@ -317,17 +404,19 @@ def git_push(directory, remote, branch, i):
         avg_cpu_usage = max(avg_cpu_usage, cpu)
         process.wait()
 
-        if directory not in performance_data:
-            performance_data[directory] = {}
+        if os.path.basename(repo_dir) not in performance_data:
+            performance_data[os.path.basename(repo_dir)] = {}
 
-        if remote not in performance_data[directory]:
-            performance_data[directory][remote] = []
+        if remote not in performance_data[os.path.basename(repo_dir)]:
+            performance_data[os.path.basename(repo_dir)][remote] = []
 
-        performance_data[directory][remote].append({
+        round_entry = {
             config.STATS_ROUND: i,
             config.STATS_PEAK_MEMORY: max_memory_usage,
             config.STATS_AVG_CPU: avg_cpu_usage
-        })
+        }
+
+        performance_data[os.path.basename(repo_dir)][remote].append(round_entry)
 
     except subprocess.CalledProcessError as e:
         LOGGER.error(config.LOG_PUSH_FAIL, e.stderr)
@@ -337,7 +426,8 @@ def git_push(directory, remote, branch, i):
 
 def calculate_statistics(data):
     """Calculates statistics (average & standard deviation) from
-    the collected performance data and writes to a file."""
+    the collected performance data and writes to a file. 
+    Performs ANOVA and T-tests to compare remotes."""
     if not data:
         LOGGER.warning(config.ERROR_NO_STATS)
         return
@@ -351,6 +441,7 @@ def calculate_statistics(data):
             LOGGER.info(config.LOG_STATS_REPO, os.path.basename(repo_dir))
             file.write(f"\nStatistics for Repository: {os.path.basename(repo_dir)}\n")
 
+            # Perform ANOVA and T-tests within each repository
             for remote, entries in remotes.items():
                 num_runs = len(entries)
 
@@ -380,6 +471,53 @@ def calculate_statistics(data):
                         f"{unit}, Std Dev: {std_values[metric]:.2f} {unit}\n"
                     )
 
+                # Perform ANOVA if multiple remotes exist in the repository
+                if len(remotes) > 1:
+                    remote_data = {metric: [] for metric in config.STATS}
+
+                    for remote_name, remote_entries in remotes.items():
+                        for metric in config.STATS:
+                            if metric in remote_entries[0]:
+                                values = [entry[metric] for entry
+                                          in remote_entries if metric in entry]
+                                remote_data[metric].append(values)
+
+                    for metric in config.STATS:
+                        if len(remote_data[metric]) < 2:
+                            LOGGER.warning(config.LOG_METRIC_MISSING, metric,
+                                           os.path.basename(repo_dir))
+                            continue
+
+                    # Perform ANOVA only on metrics with data for all remotes
+                    anova_result = {}
+                    for metric, values in remote_data.items():
+                        if values:
+                            anova_result[metric] = stats.f_oneway(*values)
+
+                    for metric, result in anova_result.items():
+                        file.write(f"\nANOVA Result for {metric}: F-statistic = "
+                                   f"{result.statistic:.2f}, p-value = {result.pvalue:.4f}\n")
+                        LOGGER.info(config.LOG_ANOVA, metric, result.statistic, result.pvalue)
+
+                # Perform pairwise T-tests for each possible pair of remotes
+                if len(remotes) > 1:
+                    for remote1, remote2 in itertools.combinations(remotes.keys(), 2):
+                        ttest_result = {}
+                        for metric in config.STATS:
+                            values1 = [entry[metric] for entry in remotes[remote1] if metric in entry]
+                            values2 = [entry[metric] for entry in remotes[remote2] if metric in entry]
+
+                            if values1 and values2:
+                                t_stat, p_val = stats.ttest_ind(values1, values2)
+                                ttest_result[metric] = {"t-statistic": t_stat, "p-value": p_val}
+                                file.write(f"\nT-test Result for {remote1} vs {remote2} ({metric}): "
+                                           f"t-statistic = {t_stat:.2f}, p-value = {p_val:.4f}\n")
+                                LOGGER.info(config.LOG_TTEST, remote1, remote2, metric, t_stat, p_val)
+                            else:
+                                file.write(f"\nT-test skipped for {remote1} vs "
+                                           f"{remote2} ({metric}) due to missing data.\n")
+                                LOGGER.warning(config.LOG_TTEST_FAIL, remote1, remote2, metric)
+
                 LOGGER.info(output)
                 file.write(output)
 
@@ -389,28 +527,62 @@ def calculate_statistics(data):
     LOGGER.debug(config.LOG_STATS_WRITE, filename)
 
 
+def delete_tmp_directory_contents():
+    """Deletes all files inside the ./tmp directory."""
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    tmp_dir = os.path.join(script_dir, config.DIR_TMP)
+
+    if os.path.exists(tmp_dir):
+        for filename in os.listdir(tmp_dir):
+            file_path = os.path.join(tmp_dir, filename)
+            try:
+                if os.path.isfile(file_path):
+                    os.remove(file_path)
+                elif os.path.isdir(file_path):
+                    shutil.rmtree(file_path)
+            except Exception as e:
+                print(config.LOG_FILE_DELETE_FAIL, file_path, e)
+
+
 def main():
     """Main method to conduct all measurements over all repos and remotes"""
     repo_data = read_repository_information(config.JSON_REPOSITORIES)
     total_rounds = sum(len(repo[config.JSON_REMOTES])
                        for repo in repo_data) * config.TEST_NUM_ROUNDS
+    load_existing_data()
 
     current_round = 1
     for repo in repo_data:
         repo_dir = repo[config.JSON_REPODIR]
         branch = repo[config.JSON_BRANCHES]
         for remote in repo[config.JSON_REMOTES]:
-            for i in range(config.TEST_NUM_ROUNDS):
+            for _ in range(config.TEST_NUM_ROUNDS):
                 LOGGER.info(config.LOG_ROUND_INFO, current_round,
                             total_rounds, os.path.basename(repo_dir), remote)
-                delete_remote_repo(repo_dir, remote, branch)
-                git_push(repo_dir, remote, branch, i)
+                #delete_remote_branch(repo_dir, remote, branch)
+
+                existing_rounds = [
+                    entry[config.STATS_ROUND]
+                    for entry in performance_data.get(os.path.basename(repo_dir),
+                                                      {}).get(remote, [])
+                ]
+                if _ in existing_rounds:
+                    LOGGER.info(config.LOG_ROUND_SKIP, _, os.path.basename(repo_dir), remote)
+                    current_round += 1
+                    continue
+
+                create_and_commit_file(repo_dir)
+                git_push(repo_dir, remote, branch, _)
+
                 if remote.lower() == config.GIT_CRYPT_REMOTE:
                     run_command([config.GIT_CRYPT, config.GIT_UNLOCK])
+
                 current_round += 1
+                time.sleep(2)
 
     calculate_statistics(performance_data)
     generate_box_plots(performance_data)
+    delete_tmp_directory_contents()
 
 if __name__ == "__main__":
     main()
