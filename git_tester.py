@@ -138,7 +138,19 @@ def generate_box_plots(data):
         sns.boxplot(data=metric_df, x=config.STATS_REPODIR,
                     y=config.STATS_VALUE, hue=config.STATS_REMOTE)
 
-        plt.title(f"{metric.replace('_', ' ').title()}")
+        handles, labels = plt.gca().get_legend_handles_labels()
+        
+        label_map = {
+            "gitremote": "git",
+            "gitcryptremote": "git-grypt",
+            "gcryptremote": "gcrypt",
+            "zkgitremote": "ZK Git"
+        }
+        new_labels = [label_map.get(label, label) for label in labels]
+
+        plt.legend(handles=handles, labels=new_labels, title=None)
+        plt.title("")
+        plt.xlabel("")
         plt.ylabel(metric.replace('_', ' ').title())
         plt.ylim(bottom=0)
         plt.grid(True)
@@ -261,11 +273,13 @@ def create_and_commit_file(directory, filename="random_file.bin", commit_msg="Ad
         with open(filepath, config.FILE_WRITE_BINARY) as f:
             f.write(os.urandom(1024 * 1024))
 
-        subprocess.run([config.GIT_GIT, config.GIT_ADD, "*"], check=True)
+>        subprocess.run([config.GIT_GIT, config.GIT_ADD, "*"], check=True,
+                        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         time.sleep(1)
 
         subprocess.run([config.GIT_GIT, config.GIT_COMMIT,
-                        config.GIT_MESSAGE, commit_msg], check=True)
+                        config.GIT_MESSAGE, commit_msg], check=True,
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         time.sleep(1)
 
         LOGGER.info(config.LOG_COMMIT, filename)

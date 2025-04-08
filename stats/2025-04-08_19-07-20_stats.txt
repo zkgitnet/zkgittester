@@ -1,0 +1,4386 @@
+
+Statistics for Repository: anime
+
+ANOVA Result for execution_time: F-statistic = 192.82, p-value = 0.0000
+
+ANOVA Result for peak_memory: F-statistic = 86.96, p-value = 0.0000
+
+ANOVA Result for net_sent: F-statistic = 192.95, p-value = 0.0000
+
+ANOVA Result for net_recv: F-statistic = 154.79, p-value = 0.0000
+
+ANOVA Result for disk_read: F-statistic = 1.56, p-value = 0.2131
+
+ANOVA Result for disk_write: F-statistic = 3.82, p-value = 0.0162
+
+ANOVA Result for avg_cpu: F-statistic = 4.24, p-value = 0.0102
+
+T-test Result for gitremote vs gitcryptremote (execution_time): t-statistic = -0.59, p-value = 0.5640
+
+T-test Result for gitremote vs gitcryptremote (peak_memory): t-statistic = -0.20, p-value = 0.8456
+
+T-test Result for gitremote vs gitcryptremote (net_sent): t-statistic = 0.01, p-value = 0.9950
+
+T-test Result for gitremote vs gitcryptremote (net_recv): t-statistic = -0.01, p-value = 0.9942
+
+T-test Result for gitremote vs gitcryptremote (disk_read): t-statistic = nan, p-value = nan
+
+T-test Result for gitremote vs gitcryptremote (disk_write): t-statistic = -2.72, p-value = 0.0126
+
+T-test Result for gitremote vs gitcryptremote (avg_cpu): t-statistic = 0.72, p-value = 0.4764
+
+T-test Result for gitremote vs gcryptremote (execution_time): t-statistic = -86.92, p-value = 0.0000
+
+T-test Result for gitremote vs gcryptremote (peak_memory): t-statistic = -14.65, p-value = 0.0000
+
+T-test Result for gitremote vs gcryptremote (net_sent): t-statistic = -155.69, p-value = 0.0000
+
+T-test Result for gitremote vs gcryptremote (net_recv): t-statistic = -73.36, p-value = 0.0000
+
+T-test Result for gitremote vs gcryptremote (disk_read): t-statistic = -1.27, p-value = 0.2184
+
+T-test Result for gitremote vs gcryptremote (disk_write): t-statistic = -6.73, p-value = 0.0000
+
+T-test Result for gitremote vs gcryptremote (avg_cpu): t-statistic = -2.13, p-value = 0.0446
+
+T-test Result for gitremote vs zkgitremote (execution_time): t-statistic = -11.58, p-value = 0.0000
+
+T-test Result for gitremote vs zkgitremote (peak_memory): t-statistic = -4.19, p-value = 0.0004
+
+T-test Result for gitremote vs zkgitremote (net_sent): t-statistic = -11.77, p-value = 0.0000
+
+T-test Result for gitremote vs zkgitremote (net_recv): t-statistic = -10.89, p-value = 0.0000
+
+T-test Result for gitremote vs zkgitremote (disk_read): t-statistic = -1.25, p-value = 0.2241
+
+T-test Result for gitremote vs zkgitremote (disk_write): t-statistic = -2.09, p-value = 0.0479
+
+T-test Result for gitremote vs zkgitremote (avg_cpu): t-statistic = -2.11, p-value = 0.0464
+
+T-test Result for gitcryptremote vs gcryptremote (execution_time): t-statistic = -87.05, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (peak_memory): t-statistic = -14.62, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (net_sent): t-statistic = -155.94, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (net_recv): t-statistic = -72.97, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (disk_read): t-statistic = -1.27, p-value = 0.2184
+
+T-test Result for gitcryptremote vs gcryptremote (disk_write): t-statistic = -6.43, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (avg_cpu): t-statistic = -3.22, p-value = 0.0040
+
+T-test Result for gitcryptremote vs zkgitremote (execution_time): t-statistic = -11.51, p-value = 0.0000
+
+T-test Result for gitcryptremote vs zkgitremote (peak_memory): t-statistic = -4.16, p-value = 0.0004
+
+T-test Result for gitcryptremote vs zkgitremote (net_sent): t-statistic = -11.77, p-value = 0.0000
+
+T-test Result for gitcryptremote vs zkgitremote (net_recv): t-statistic = -10.89, p-value = 0.0000
+
+T-test Result for gitcryptremote vs zkgitremote (disk_read): t-statistic = -1.25, p-value = 0.2241
+
+T-test Result for gitcryptremote vs zkgitremote (disk_write): t-statistic = -2.05, p-value = 0.0520
+
+T-test Result for gitcryptremote vs zkgitremote (avg_cpu): t-statistic = -2.46, p-value = 0.0224
+
+T-test Result for gcryptremote vs zkgitremote (execution_time): t-statistic = 1.16, p-value = 0.2599
+
+T-test Result for gcryptremote vs zkgitremote (peak_memory): t-statistic = 6.85, p-value = 0.0000
+
+T-test Result for gcryptremote vs zkgitremote (net_sent): t-statistic = 0.58, p-value = 0.5699
+
+T-test Result for gcryptremote vs zkgitremote (net_recv): t-statistic = 0.01, p-value = 0.9890
+
+T-test Result for gcryptremote vs zkgitremote (disk_read): t-statistic = -1.24, p-value = 0.2272
+
+T-test Result for gcryptremote vs zkgitremote (disk_write): t-statistic = -1.10, p-value = 0.2825
+
+T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = -1.45, p-value = 0.1616
+
+  Remote: gitremote (Total Runs: 12)
+  Avg Execution Time: 1.75 sec, Std Dev: 2.35 sec
+  Avg Peak Memory: 1192.11 MB, Std Dev: 36.17 MB
+  Avg Net Sent: 8.94 MB, Std Dev: 23.05 MB
+  Avg Net Recv: 0.32 MB, Std Dev: 0.76 MB
+  Avg Disk Read: 0.00 MB, Std Dev: 0.00 MB
+  Avg Disk Write: 0.71 MB, Std Dev: 0.99 MB
+  Avg Avg Cpu: 26.41 MB, Std Dev: 8.82 MB
+
+  Remote: gitcryptremote (Total Runs: 12)
+  Avg Execution Time: 2.30 sec, Std Dev: 2.30 sec
+  Avg Peak Memory: 1195.01 MB, Std Dev: 35.85 MB
+  Avg Net Sent: 8.88 MB, Std Dev: 23.00 MB
+  Avg Net Recv: 0.33 MB, Std Dev: 0.78 MB
+  Avg Disk Read: 0.00 MB, Std Dev: 0.00 MB
+  Avg Disk Write: 5.50 MB, Std Dev: 6.02 MB
+  Avg Avg Cpu: 23.85 MB, Std Dev: 8.47 MB
+
+  Remote: gcryptremote (Total Runs: 12)
+  Avg Execution Time: 107.34 sec, Std Dev: 3.49 sec
+  Avg Peak Memory: 2452.11 MB, Std Dev: 295.70 MB
+  Avg Net Sent: 1107.81 MB, Std Dev: 8.17 MB
+  Avg Net Recv: 38.80 MB, Std Dev: 1.65 MB
+  Avg Disk Read: 0.01 MB, Std Dev: 0.02 MB
+  Avg Disk Write: 118.42 MB, Std Dev: 60.58 MB
+  Avg Avg Cpu: 32.03 MB, Std Dev: 2.41 MB
+
+  Remote: zkgitremote (Total Runs: 12)
+  Avg Execution Time: 97.71 sec, Std Dev: 28.62 sec
+  Avg Peak Memory: 1585.77 MB, Std Dev: 323.07 MB
+  Avg Net Sent: 1056.61 MB, Std Dev: 307.42 MB
+  Avg Net Recv: 38.75 MB, Std Dev: 12.20 MB
+  Avg Disk Read: 1.30 MB, Std Dev: 3.59 MB
+  Avg Disk Write: 251.95 MB, Std Dev: 415.49 MB
+  Avg Avg Cpu: 42.47 MB, Std Dev: 24.85 MB
+
+Statistics for Repository: build-your-own-x
+
+ANOVA Result for execution_time: F-statistic = 1404.16, p-value = 0.0000
+
+ANOVA Result for peak_memory: F-statistic = 310.74, p-value = 0.0000
+
+ANOVA Result for net_sent: F-statistic = 2487.54, p-value = 0.0000
+
+ANOVA Result for net_recv: F-statistic = 1780.48, p-value = 0.0000
+
+ANOVA Result for disk_read: F-statistic = 1.00, p-value = 0.4018
+
+ANOVA Result for disk_write: F-statistic = 8.82, p-value = 0.0001
+
+ANOVA Result for avg_cpu: F-statistic = 25.69, p-value = 0.0000
+
+T-test Result for gitremote vs gitcryptremote (execution_time): t-statistic = -0.09, p-value = 0.9280
+
+T-test Result for gitremote vs gitcryptremote (peak_memory): t-statistic = 0.26, p-value = 0.7960
+
+T-test Result for gitremote vs gitcryptremote (net_sent): t-statistic = -0.00, p-value = 0.9984
+
+T-test Result for gitremote vs gitcryptremote (net_recv): t-statistic = -0.02, p-value = 0.9822
+
+T-test Result for gitremote vs gitcryptremote (disk_read): t-statistic = 1.00, p-value = 0.3282
+
+T-test Result for gitremote vs gitcryptremote (disk_write): t-statistic = 0.61, p-value = 0.5489
+
+T-test Result for gitremote vs gitcryptremote (avg_cpu): t-statistic = -0.61, p-value = 0.5457
+
+T-test Result for gitremote vs gcryptremote (execution_time): t-statistic = -47.99, p-value = 0.0000
+
+T-test Result for gitremote vs gcryptremote (peak_memory): t-statistic = -21.61, p-value = 0.0000
+
+T-test Result for gitremote vs gcryptremote (net_sent): t-statistic = -59.06, p-value = 0.0000
+
+T-test Result for gitremote vs gcryptremote (net_recv): t-statistic = -56.37, p-value = 0.0000
+
+T-test Result for gitremote vs gcryptremote (disk_read): t-statistic = 1.00, p-value = 0.3282
+
+T-test Result for gitremote vs gcryptremote (disk_write): t-statistic = -3.98, p-value = 0.0006
+
+T-test Result for gitremote vs gcryptremote (avg_cpu): t-statistic = -4.62, p-value = 0.0001
+
+T-test Result for gitremote vs zkgitremote (execution_time): t-statistic = -41.48, p-value = 0.0000
+
+T-test Result for gitremote vs zkgitremote (peak_memory): t-statistic = -12.98, p-value = 0.0000
+
+T-test Result for gitremote vs zkgitremote (net_sent): t-statistic = -62.98, p-value = 0.0000
+
+T-test Result for gitremote vs zkgitremote (net_recv): t-statistic = -48.79, p-value = 0.0000
+
+T-test Result for gitremote vs zkgitremote (disk_read): t-statistic = 1.00, p-value = 0.3282
+
+T-test Result for gitremote vs zkgitremote (disk_write): t-statistic = -3.38, p-value = 0.0027
+
+T-test Result for gitremote vs zkgitremote (avg_cpu): t-statistic = -6.57, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (execution_time): t-statistic = -52.44, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (peak_memory): t-statistic = -21.69, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (net_sent): t-statistic = -59.05, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (net_recv): t-statistic = -55.65, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (disk_read): t-statistic = nan, p-value = nan
+
+T-test Result for gitcryptremote vs gcryptremote (disk_write): t-statistic = -4.04, p-value = 0.0005
+
+T-test Result for gitcryptremote vs gcryptremote (avg_cpu): t-statistic = -5.32, p-value = 0.0000
+
+T-test Result for gitcryptremote vs zkgitremote (execution_time): t-statistic = -44.11, p-value = 0.0000
+
+T-test Result for gitcryptremote vs zkgitremote (peak_memory): t-statistic = -13.11, p-value = 0.0000
+
+T-test Result for gitcryptremote vs zkgitremote (net_sent): t-statistic = -62.98, p-value = 0.0000
+
+T-test Result for gitcryptremote vs zkgitremote (net_recv): t-statistic = -48.38, p-value = 0.0000
+
+T-test Result for gitcryptremote vs zkgitremote (disk_read): t-statistic = nan, p-value = nan
+
+T-test Result for gitcryptremote vs zkgitremote (disk_write): t-statistic = -3.42, p-value = 0.0024
+
+T-test Result for gitcryptremote vs zkgitremote (avg_cpu): t-statistic = -7.96, p-value = 0.0000
+
+T-test Result for gcryptremote vs zkgitremote (execution_time): t-statistic = -1.22, p-value = 0.2364
+
+T-test Result for gcryptremote vs zkgitremote (peak_memory): t-statistic = 13.55, p-value = 0.0000
+
+T-test Result for gcryptremote vs zkgitremote (net_sent): t-statistic = -8.35, p-value = 0.0000
+
+T-test Result for gcryptremote vs zkgitremote (net_recv): t-statistic = -4.12, p-value = 0.0004
+
+T-test Result for gcryptremote vs zkgitremote (disk_read): t-statistic = nan, p-value = nan
+
+T-test Result for gcryptremote vs zkgitremote (disk_write): t-statistic = -0.37, p-value = 0.7172
+
+T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = -5.28, p-value = 0.0000
+
+  Remote: gitremote (Total Runs: 12)
+  Avg Execution Time: 1.79 sec, Std Dev: 2.53 sec
+  Avg Peak Memory: 1264.77 MB, Std Dev: 35.67 MB
+  Avg Net Sent: 8.69 MB, Std Dev: 22.37 MB
+  Avg Net Recv: 0.31 MB, Std Dev: 0.75 MB
+  Avg Disk Read: 0.00 MB, Std Dev: 0.01 MB
+  Avg Disk Write: 1.26 MB, Std Dev: 2.37 MB
+  Avg Avg Cpu: 7.49 MB, Std Dev: 14.83 MB
+
+  Remote: gitcryptremote (Total Runs: 12)
+  Avg Execution Time: 1.88 sec, Std Dev: 2.28 sec
+  Avg Peak Memory: 1260.92 MB, Std Dev: 36.39 MB
+  Avg Net Sent: 8.71 MB, Std Dev: 22.37 MB
+  Avg Net Recv: 0.32 MB, Std Dev: 0.76 MB
+  Avg Disk Read: 0.00 MB, Std Dev: 0.00 MB
+  Avg Disk Write: 0.79 MB, Std Dev: 1.22 MB
+  Avg Avg Cpu: 10.72 MB, Std Dev: 10.52 MB
+
+  Remote: gcryptremote (Total Runs: 12)
+  Avg Execution Time: 39.38 sec, Std Dev: 0.98 sec
+  Avg Peak Memory: 1877.84 MB, Std Dev: 91.58 MB
+  Avg Net Sent: 413.57 MB, Std Dev: 7.97 MB
+  Avg Net Recv: 14.20 MB, Std Dev: 0.41 MB
+  Avg Disk Read: 0.00 MB, Std Dev: 0.00 MB
+  Avg Disk Write: 40.76 MB, Std Dev: 34.27 MB
+  Avg Avg Cpu: 27.98 MB, Std Dev: 3.95 MB
+
+  Remote: zkgitremote (Total Runs: 12)
+  Avg Execution Time: 40.15 sec, Std Dev: 1.96 sec
+  Avg Peak Memory: 1479.22 MB, Std Dev: 44.77 MB
+  Avg Net Sent: 440.82 MB, Std Dev: 8.02 MB
+  Avg Net Recv: 15.22 MB, Std Dev: 0.75 MB
+  Avg Disk Read: 0.00 MB, Std Dev: 0.00 MB
+  Avg Disk Write: 46.89 MB, Std Dev: 46.64 MB
+  Avg Avg Cpu: 36.72 MB, Std Dev: 4.16 MB
+
+Statistics for Repository: awesome-llm-apps
+
+ANOVA Result for execution_time: F-statistic = 295.32, p-value = 0.0000
+
+ANOVA Result for peak_memory: F-statistic = 874.92, p-value = 0.0000
+
+ANOVA Result for net_sent: F-statistic = 2868.05, p-value = 0.0000
+
+ANOVA Result for net_recv: F-statistic = 1549.77, p-value = 0.0000
+
+ANOVA Result for disk_read: F-statistic = nan, p-value = nan
+
+ANOVA Result for disk_write: F-statistic = 1.93, p-value = 0.1381
+
+ANOVA Result for avg_cpu: F-statistic = 34.08, p-value = 0.0000
+
+T-test Result for gitremote vs gitcryptremote (execution_time): t-statistic = -0.38, p-value = 0.7040
+
+T-test Result for gitremote vs gitcryptremote (peak_memory): t-statistic = -0.21, p-value = 0.8330
+
+T-test Result for gitremote vs gitcryptremote (net_sent): t-statistic = -0.00, p-value = 0.9980
+
+T-test Result for gitremote vs gitcryptremote (net_recv): t-statistic = -0.02, p-value = 0.9859
+
+T-test Result for gitremote vs gitcryptremote (disk_read): t-statistic = nan, p-value = nan
+
+T-test Result for gitremote vs gitcryptremote (disk_write): t-statistic = -0.86, p-value = 0.4011
+
+T-test Result for gitremote vs gitcryptremote (avg_cpu): t-statistic = 0.17, p-value = 0.8685
+
+T-test Result for gitremote vs gcryptremote (execution_time): t-statistic = -16.49, p-value = 0.0000
+
+T-test Result for gitremote vs gcryptremote (peak_memory): t-statistic = -49.94, p-value = 0.0000
+
+T-test Result for gitremote vs gcryptremote (net_sent): t-statistic = -64.84, p-value = 0.0000
+
+T-test Result for gitremote vs gcryptremote (net_recv): t-statistic = -65.10, p-value = 0.0000
+
+T-test Result for gitremote vs gcryptremote (disk_read): t-statistic = nan, p-value = nan
+
+T-test Result for gitremote vs gcryptremote (disk_write): t-statistic = -1.49, p-value = 0.1508
+
+T-test Result for gitremote vs gcryptremote (avg_cpu): t-statistic = -6.52, p-value = 0.0000
+
+T-test Result for gitremote vs zkgitremote (execution_time): t-statistic = -45.82, p-value = 0.0000
+
+T-test Result for gitremote vs zkgitremote (peak_memory): t-statistic = -11.37, p-value = 0.0000
+
+T-test Result for gitremote vs zkgitremote (net_sent): t-statistic = -66.30, p-value = 0.0000
+
+T-test Result for gitremote vs zkgitremote (net_recv): t-statistic = -40.50, p-value = 0.0000
+
+T-test Result for gitremote vs zkgitremote (disk_read): t-statistic = nan, p-value = nan
+
+T-test Result for gitremote vs zkgitremote (disk_write): t-statistic = -4.36, p-value = 0.0002
+
+T-test Result for gitremote vs zkgitremote (avg_cpu): t-statistic = -7.58, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (execution_time): t-statistic = -16.38, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (peak_memory): t-statistic = -50.19, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (net_sent): t-statistic = -64.86, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (net_recv): t-statistic = -64.70, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (disk_read): t-statistic = nan, p-value = nan
+
+T-test Result for gitcryptremote vs gcryptremote (disk_write): t-statistic = -1.47, p-value = 0.1570
+
+T-test Result for gitcryptremote vs gcryptremote (avg_cpu): t-statistic = -6.66, p-value = 0.0000
+
+T-test Result for gitcryptremote vs zkgitremote (execution_time): t-statistic = -46.30, p-value = 0.0000
+
+T-test Result for gitcryptremote vs zkgitremote (peak_memory): t-statistic = -11.28, p-value = 0.0000
+
+T-test Result for gitcryptremote vs zkgitremote (net_sent): t-statistic = -66.32, p-value = 0.0000
+
+T-test Result for gitcryptremote vs zkgitremote (net_recv): t-statistic = -40.40, p-value = 0.0000
+
+T-test Result for gitcryptremote vs zkgitremote (disk_read): t-statistic = nan, p-value = nan
+
+T-test Result for gitcryptremote vs zkgitremote (disk_write): t-statistic = -3.99, p-value = 0.0006
+
+T-test Result for gitcryptremote vs zkgitremote (avg_cpu): t-statistic = -7.71, p-value = 0.0000
+
+T-test Result for gcryptremote vs zkgitremote (execution_time): t-statistic = 1.73, p-value = 0.0972
+
+T-test Result for gcryptremote vs zkgitremote (peak_memory): t-statistic = 27.24, p-value = 0.0000
+
+T-test Result for gcryptremote vs zkgitremote (net_sent): t-statistic = -3.39, p-value = 0.0026
+
+T-test Result for gcryptremote vs zkgitremote (net_recv): t-statistic = -1.52, p-value = 0.1427
+
+T-test Result for gcryptremote vs zkgitremote (disk_read): t-statistic = nan, p-value = nan
+
+T-test Result for gcryptremote vs zkgitremote (disk_write): t-statistic = 1.08, p-value = 0.2899
+
+T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = -1.66, p-value = 0.1103
+
+  Remote: gitremote (Total Runs: 12)
+  Avg Execution Time: 1.78 sec, Std Dev: 2.46 sec
+  Avg Peak Memory: 1261.04 MB, Std Dev: 36.85 MB
+  Avg Net Sent: 8.89 MB, Std Dev: 23.02 MB
+  Avg Net Recv: 0.32 MB, Std Dev: 0.78 MB
+  Avg Disk Read: 0.00 MB, Std Dev: 0.00 MB
+  Avg Disk Write: 1.99 MB, Std Dev: 3.45 MB
+  Avg Avg Cpu: 12.89 MB, Std Dev: 9.57 MB
+
+  Remote: gitcryptremote (Total Runs: 12)
+  Avg Execution Time: 2.16 sec, Std Dev: 2.38 sec
+  Avg Peak Memory: 1264.22 MB, Std Dev: 36.07 MB
+  Avg Net Sent: 8.91 MB, Std Dev: 23.01 MB
+  Avg Net Recv: 0.33 MB, Std Dev: 0.78 MB
+  Avg Disk Read: 0.00 MB, Std Dev: 0.00 MB
+  Avg Disk Write: 4.40 MB, Std Dev: 9.10 MB
+  Avg Avg Cpu: 12.23 MB, Std Dev: 9.72 MB
+
+  Remote: gcryptremote (Total Runs: 12)
+  Avg Execution Time: 48.32 sec, Std Dev: 9.46 sec
+  Avg Peak Memory: 2089.04 MB, Std Dev: 44.05 MB
+  Avg Net Sent: 464.94 MB, Std Dev: 7.99 MB
+  Avg Net Recv: 15.70 MB, Std Dev: 0.25 MB
+  Avg Disk Read: 0.00 MB, Std Dev: 0.00 MB
+  Avg Disk Write: 159.05 MB, Std Dev: 365.52 MB
+  Avg Avg Cpu: 32.81 MB, Std Dev: 4.51 MB
+
+  Remote: zkgitremote (Total Runs: 12)
+  Avg Execution Time: 43.48 sec, Std Dev: 1.97 sec
+  Avg Peak Memory: 1495.71 MB, Std Dev: 61.25 MB
+  Avg Net Sent: 476.11 MB, Std Dev: 8.13 MB
+  Avg Net Recv: 16.20 MB, Std Dev: 1.11 MB
+  Avg Disk Read: 0.00 MB, Std Dev: 0.00 MB
+  Avg Disk Write: 44.14 MB, Std Dev: 33.30 MB
+  Avg Avg Cpu: 35.77 MB, Std Dev: 4.19 MB
+
+Statistics for Repository: gitdiagram
+
+ANOVA Result for execution_time: F-statistic = 165.61, p-value = 0.0000
+
+ANOVA Result for peak_memory: F-statistic = 133.32, p-value = 0.0000
+
+ANOVA Result for net_sent: F-statistic = 994.84, p-value = 0.0000
+
+ANOVA Result for net_recv: F-statistic = 672.08, p-value = 0.0000
+
+ANOVA Result for disk_read: F-statistic = 0.71, p-value = 0.5520
+
+ANOVA Result for disk_write: F-statistic = 2.22, p-value = 0.0988
+
+ANOVA Result for avg_cpu: F-statistic = 26.72, p-value = 0.0000
+
+T-test Result for gitremote vs gitcryptremote (execution_time): t-statistic = -0.57, p-value = 0.5713
+
+T-test Result for gitremote vs gitcryptremote (peak_memory): t-statistic = 0.05, p-value = 0.9581
+
+T-test Result for gitremote vs gitcryptremote (net_sent): t-statistic = 0.00, p-value = 0.9981
+
+T-test Result for gitremote vs gitcryptremote (net_recv): t-statistic = -0.01, p-value = 0.9912
+
+T-test Result for gitremote vs gitcryptremote (disk_read): t-statistic = nan, p-value = nan
+
+T-test Result for gitremote vs gitcryptremote (disk_write): t-statistic = -1.62, p-value = 0.1194
+
+T-test Result for gitremote vs gitcryptremote (avg_cpu): t-statistic = -0.51, p-value = 0.6149
+
+T-test Result for gitremote vs gcryptremote (execution_time): t-statistic = -12.57, p-value = 0.0000
+
+T-test Result for gitremote vs gcryptremote (peak_memory): t-statistic = -14.19, p-value = 0.0000
+
+T-test Result for gitremote vs gcryptremote (net_sent): t-statistic = -36.64, p-value = 0.0000
+
+T-test Result for gitremote vs gcryptremote (net_recv): t-statistic = -29.00, p-value = 0.0000
+
+T-test Result for gitremote vs gcryptremote (disk_read): t-statistic = -1.00, p-value = 0.3282
+
+T-test Result for gitremote vs gcryptremote (disk_write): t-statistic = -1.64, p-value = 0.1162
+
+T-test Result for gitremote vs gcryptremote (avg_cpu): t-statistic = -5.72, p-value = 0.0000
+
+T-test Result for gitremote vs zkgitremote (execution_time): t-statistic = -26.16, p-value = 0.0000
+
+T-test Result for gitremote vs zkgitremote (peak_memory): t-statistic = -11.21, p-value = 0.0000
+
+T-test Result for gitremote vs zkgitremote (net_sent): t-statistic = -40.41, p-value = 0.0000
+
+T-test Result for gitremote vs zkgitremote (net_recv): t-statistic = -34.79, p-value = 0.0000
+
+T-test Result for gitremote vs zkgitremote (disk_read): t-statistic = -1.00, p-value = 0.3282
+
+T-test Result for gitremote vs zkgitremote (disk_write): t-statistic = -3.55, p-value = 0.0018
+
+T-test Result for gitremote vs zkgitremote (avg_cpu): t-statistic = -6.93, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (execution_time): t-statistic = -12.52, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (peak_memory): t-statistic = -14.20, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (net_sent): t-statistic = -36.65, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (net_recv): t-statistic = -29.29, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (disk_read): t-statistic = -1.00, p-value = 0.3282
+
+T-test Result for gitcryptremote vs gcryptremote (disk_write): t-statistic = -1.57, p-value = 0.1310
+
+T-test Result for gitcryptremote vs gcryptremote (avg_cpu): t-statistic = -5.47, p-value = 0.0000
+
+T-test Result for gitcryptremote vs zkgitremote (execution_time): t-statistic = -27.82, p-value = 0.0000
+
+T-test Result for gitcryptremote vs zkgitremote (peak_memory): t-statistic = -11.22, p-value = 0.0000
+
+T-test Result for gitcryptremote vs zkgitremote (net_sent): t-statistic = -40.42, p-value = 0.0000
+
+T-test Result for gitcryptremote vs zkgitremote (net_recv): t-statistic = -35.29, p-value = 0.0000
+
+T-test Result for gitcryptremote vs zkgitremote (disk_read): t-statistic = -1.00, p-value = 0.3282
+
+T-test Result for gitcryptremote vs zkgitremote (disk_write): t-statistic = -3.08, p-value = 0.0055
+
+T-test Result for gitcryptremote vs zkgitremote (avg_cpu): t-statistic = -6.76, p-value = 0.0000
+
+T-test Result for gcryptremote vs zkgitremote (execution_time): t-statistic = 0.80, p-value = 0.4330
+
+T-test Result for gcryptremote vs zkgitremote (peak_memory): t-statistic = 6.71, p-value = 0.0000
+
+T-test Result for gcryptremote vs zkgitremote (net_sent): t-statistic = -8.33, p-value = 0.0000
+
+T-test Result for gcryptremote vs zkgitremote (net_recv): t-statistic = -0.85, p-value = 0.4062
+
+T-test Result for gcryptremote vs zkgitremote (disk_read): t-statistic = -0.35, p-value = 0.7260
+
+T-test Result for gcryptremote vs zkgitremote (disk_write): t-statistic = 1.04, p-value = 0.3104
+
+T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = -2.41, p-value = 0.0246
+
+  Remote: gitremote (Total Runs: 12)
+  Avg Execution Time: 1.77 sec, Std Dev: 2.52 sec
+  Avg Peak Memory: 1265.48 MB, Std Dev: 35.60 MB
+  Avg Net Sent: 8.91 MB, Std Dev: 23.01 MB
+  Avg Net Recv: 0.33 MB, Std Dev: 0.79 MB
+  Avg Disk Read: 0.00 MB, Std Dev: 0.00 MB
+  Avg Disk Write: 1.09 MB, Std Dev: 2.34 MB
+  Avg Avg Cpu: 11.32 MB, Std Dev: 11.07 MB
+
+  Remote: gitcryptremote (Total Runs: 12)
+  Avg Execution Time: 2.32 sec, Std Dev: 2.14 sec
+  Avg Peak Memory: 1264.70 MB, Std Dev: 35.99 MB
+  Avg Net Sent: 8.89 MB, Std Dev: 23.00 MB
+  Avg Net Recv: 0.33 MB, Std Dev: 0.77 MB
+  Avg Disk Read: 0.00 MB, Std Dev: 0.00 MB
+  Avg Disk Write: 5.09 MB, Std Dev: 8.22 MB
+  Avg Avg Cpu: 13.53 MB, Std Dev: 10.12 MB
+
+  Remote: gcryptremote (Total Runs: 12)
+  Avg Execution Time: 29.28 sec, Std Dev: 7.15 sec
+  Avg Peak Memory: 1732.84 MB, Std Dev: 108.40 MB
+  Avg Net Sent: 266.07 MB, Std Dev: 7.86 MB
+  Avg Net Recv: 9.07 MB, Std Dev: 0.68 MB
+  Avg Disk Read: 0.02 MB, Std Dev: 0.07 MB
+  Avg Disk Write: 100.99 MB, Std Dev: 211.62 MB
+  Avg Avg Cpu: 31.05 MB, Std Dev: 4.52 MB
+
+  Remote: zkgitremote (Total Runs: 12)
+  Avg Execution Time: 27.55 sec, Std Dev: 2.30 sec
+  Avg Peak Memory: 1492.39 MB, Std Dev: 60.42 MB
+  Avg Net Sent: 293.02 MB, Std Dev: 7.98 MB
+  Avg Net Recv: 9.26 MB, Std Dev: 0.41 MB
+  Avg Disk Read: 0.03 MB, Std Dev: 0.12 MB
+  Avg Disk Write: 36.72 MB, Std Dev: 34.66 MB
+  Avg Avg Cpu: 35.99 MB, Std Dev: 5.46 MB
+
+Statistics for Repository: glance
+
+ANOVA Result for execution_time: F-statistic = 155.83, p-value = 0.0000
+
+ANOVA Result for peak_memory: F-statistic = 79.10, p-value = 0.0000
+
+ANOVA Result for net_sent: F-statistic = 1220.21, p-value = 0.0000
+
+ANOVA Result for net_recv: F-statistic = 931.59, p-value = 0.0000
+
+ANOVA Result for disk_read: F-statistic = nan, p-value = nan
+
+ANOVA Result for disk_write: F-statistic = 1.59, p-value = 0.2054
+
+ANOVA Result for avg_cpu: F-statistic = 18.28, p-value = 0.0000
+
+T-test Result for gitremote vs gitcryptremote (execution_time): t-statistic = -0.68, p-value = 0.5006
+
+T-test Result for gitremote vs gitcryptremote (peak_memory): t-statistic = 0.09, p-value = 0.9311
+
+T-test Result for gitremote vs gitcryptremote (net_sent): t-statistic = 0.00, p-value = 0.9996
+
+T-test Result for gitremote vs gitcryptremote (net_recv): t-statistic = 0.02, p-value = 0.9852
+
+T-test Result for gitremote vs gitcryptremote (disk_read): t-statistic = nan, p-value = nan
+
+T-test Result for gitremote vs gitcryptremote (disk_write): t-statistic = -2.92, p-value = 0.0079
+
+T-test Result for gitremote vs gitcryptremote (avg_cpu): t-statistic = -0.51, p-value = 0.6163
+
+T-test Result for gitremote vs gcryptremote (execution_time): t-statistic = -12.11, p-value = 0.0000
+
+T-test Result for gitremote vs gcryptremote (peak_memory): t-statistic = -10.06, p-value = 0.0000
+
+T-test Result for gitremote vs gcryptremote (net_sent): t-statistic = -40.79, p-value = 0.0000
+
+T-test Result for gitremote vs gcryptremote (net_recv): t-statistic = -36.66, p-value = 0.0000
+
+T-test Result for gitremote vs gcryptremote (disk_read): t-statistic = nan, p-value = nan
+
+T-test Result for gitremote vs gcryptremote (disk_write): t-statistic = -1.38, p-value = 0.1816
+
+T-test Result for gitremote vs gcryptremote (avg_cpu): t-statistic = -4.48, p-value = 0.0002
+
+T-test Result for gitremote vs zkgitremote (execution_time): t-statistic = -28.25, p-value = 0.0000
+
+T-test Result for gitremote vs zkgitremote (peak_memory): t-statistic = -11.00, p-value = 0.0000
+
+T-test Result for gitremote vs zkgitremote (net_sent): t-statistic = -44.59, p-value = 0.0000
+
+T-test Result for gitremote vs zkgitremote (net_recv): t-statistic = -35.95, p-value = 0.0000
+
+T-test Result for gitremote vs zkgitremote (disk_read): t-statistic = nan, p-value = nan
+
+T-test Result for gitremote vs zkgitremote (disk_write): t-statistic = -2.77, p-value = 0.0112
+
+T-test Result for gitremote vs zkgitremote (avg_cpu): t-statistic = -5.57, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (execution_time): t-statistic = -11.79, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (peak_memory): t-statistic = -10.08, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (net_sent): t-statistic = -40.80, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (net_recv): t-statistic = -39.14, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (disk_read): t-statistic = nan, p-value = nan
+
+T-test Result for gitcryptremote vs gcryptremote (disk_write): t-statistic = -1.34, p-value = 0.1932
+
+T-test Result for gitcryptremote vs gcryptremote (avg_cpu): t-statistic = -4.71, p-value = 0.0001
+
+T-test Result for gitcryptremote vs zkgitremote (execution_time): t-statistic = -27.15, p-value = 0.0000
+
+T-test Result for gitcryptremote vs zkgitremote (peak_memory): t-statistic = -11.02, p-value = 0.0000
+
+T-test Result for gitcryptremote vs zkgitremote (net_sent): t-statistic = -44.60, p-value = 0.0000
+
+T-test Result for gitcryptremote vs zkgitremote (net_recv): t-statistic = -38.05, p-value = 0.0000
+
+T-test Result for gitcryptremote vs zkgitremote (disk_read): t-statistic = nan, p-value = nan
+
+T-test Result for gitcryptremote vs zkgitremote (disk_write): t-statistic = -2.60, p-value = 0.0162
+
+T-test Result for gitcryptremote vs zkgitremote (avg_cpu): t-statistic = -6.04, p-value = 0.0000
+
+T-test Result for gcryptremote vs zkgitremote (execution_time): t-statistic = 0.54, p-value = 0.5971
+
+T-test Result for gcryptremote vs zkgitremote (peak_memory): t-statistic = 5.61, p-value = 0.0000
+
+T-test Result for gcryptremote vs zkgitremote (net_sent): t-statistic = -8.29, p-value = 0.0000
+
+T-test Result for gcryptremote vs zkgitremote (net_recv): t-statistic = -2.45, p-value = 0.0229
+
+T-test Result for gcryptremote vs zkgitremote (disk_read): t-statistic = nan, p-value = nan
+
+T-test Result for gcryptremote vs zkgitremote (disk_write): t-statistic = 0.73, p-value = 0.4726
+
+T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = -1.66, p-value = 0.1112
+
+  Remote: gitremote (Total Runs: 12)
+  Avg Execution Time: 1.79 sec, Std Dev: 2.56 sec
+  Avg Peak Memory: 1266.46 MB, Std Dev: 35.71 MB
+  Avg Net Sent: 8.89 MB, Std Dev: 23.01 MB
+  Avg Net Recv: 0.33 MB, Std Dev: 0.80 MB
+  Avg Disk Read: 0.00 MB, Std Dev: 0.00 MB
+  Avg Disk Write: 0.84 MB, Std Dev: 1.38 MB
+  Avg Avg Cpu: 16.88 MB, Std Dev: 10.52 MB
+
+  Remote: gitcryptremote (Total Runs: 12)
+  Avg Execution Time: 2.52 sec, Std Dev: 2.63 sec
+  Avg Peak Memory: 1265.18 MB, Std Dev: 36.27 MB
+  Avg Net Sent: 8.88 MB, Std Dev: 23.01 MB
+  Avg Net Recv: 0.32 MB, Std Dev: 0.74 MB
+  Avg Disk Read: 0.00 MB, Std Dev: 0.00 MB
+  Avg Disk Write: 3.46 MB, Std Dev: 2.79 MB
+  Avg Avg Cpu: 18.84 MB, Std Dev: 8.21 MB
+
+  Remote: gcryptremote (Total Runs: 12)
+  Avg Execution Time: 31.30 sec, Std Dev: 8.04 sec
+  Avg Peak Memory: 1785.77 MB, Std Dev: 175.15 MB
+  Avg Net Sent: 295.51 MB, Std Dev: 7.94 MB
+  Avg Net Recv: 9.88 MB, Std Dev: 0.41 MB
+  Avg Disk Read: 0.00 MB, Std Dev: 0.00 MB
+  Avg Disk Write: 98.39 MB, Std Dev: 244.95 MB
+  Avg Avg Cpu: 32.09 MB, Std Dev: 5.24 MB
+
+  Remote: zkgitremote (Total Runs: 12)
+  Avg Execution Time: 30.00 sec, Std Dev: 2.33 sec
+  Avg Peak Memory: 1486.51 MB, Std Dev: 59.40 MB
+  Avg Net Sent: 322.54 MB, Std Dev: 8.02 MB
+  Avg Net Recv: 10.36 MB, Std Dev: 0.54 MB
+  Avg Disk Read: 0.00 MB, Std Dev: 0.00 MB
+  Avg Disk Write: 45.40 MB, Std Dev: 55.74 MB
+  Avg Avg Cpu: 35.53 MB, Std Dev: 4.91 MB
+
+Statistics for Repository: llama-models
+
+ANOVA Result for execution_time: F-statistic = 2665.36, p-value = 0.0000
+
+ANOVA Result for peak_memory: F-statistic = 661.15, p-value = 0.0000
+
+ANOVA Result for net_sent: F-statistic = 8746.73, p-value = 0.0000
+
+ANOVA Result for net_recv: F-statistic = 983.82, p-value = 0.0000
+
+ANOVA Result for disk_read: F-statistic = 1.00, p-value = 0.4018
+
+ANOVA Result for disk_write: F-statistic = 9.83, p-value = 0.0000
+
+ANOVA Result for avg_cpu: F-statistic = 28.70, p-value = 0.0000
+
+T-test Result for gitremote vs gitcryptremote (execution_time): t-statistic = -2.34, p-value = 0.0287
+
+T-test Result for gitremote vs gitcryptremote (peak_memory): t-statistic = -0.52, p-value = 0.6086
+
+T-test Result for gitremote vs gitcryptremote (net_sent): t-statistic = -0.59, p-value = 0.5635
+
+T-test Result for gitremote vs gitcryptremote (net_recv): t-statistic = -0.65, p-value = 0.5215
+
+T-test Result for gitremote vs gitcryptremote (disk_read): t-statistic = nan, p-value = nan
+
+T-test Result for gitremote vs gitcryptremote (disk_write): t-statistic = -3.03, p-value = 0.0062
+
+T-test Result for gitremote vs gitcryptremote (avg_cpu): t-statistic = 0.67, p-value = 0.5113
+
+T-test Result for gitremote vs gcryptremote (execution_time): t-statistic = -90.98, p-value = 0.0000
+
+T-test Result for gitremote vs gcryptremote (peak_memory): t-statistic = -76.95, p-value = 0.0000
+
+T-test Result for gitremote vs gcryptremote (net_sent): t-statistic = -138.29, p-value = 0.0000
+
+T-test Result for gitremote vs gcryptremote (net_recv): t-statistic = -69.31, p-value = 0.0000
+
+T-test Result for gitremote vs gcryptremote (disk_read): t-statistic = nan, p-value = nan
+
+T-test Result for gitremote vs gcryptremote (disk_write): t-statistic = -3.99, p-value = 0.0006
+
+T-test Result for gitremote vs gcryptremote (avg_cpu): t-statistic = -4.50, p-value = 0.0002
+
+T-test Result for gitremote vs zkgitremote (execution_time): t-statistic = -57.12, p-value = 0.0000
+
+T-test Result for gitremote vs zkgitremote (peak_memory): t-statistic = -13.41, p-value = 0.0000
+
+T-test Result for gitremote vs zkgitremote (net_sent): t-statistic = -148.24, p-value = 0.0000
+
+T-test Result for gitremote vs zkgitremote (net_recv): t-statistic = -31.29, p-value = 0.0000
+
+T-test Result for gitremote vs zkgitremote (disk_read): t-statistic = -1.00, p-value = 0.3282
+
+T-test Result for gitremote vs zkgitremote (disk_write): t-statistic = -3.98, p-value = 0.0006
+
+T-test Result for gitremote vs zkgitremote (avg_cpu): t-statistic = -6.11, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (execution_time): t-statistic = -72.68, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (peak_memory): t-statistic = -64.38, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (net_sent): t-statistic = -94.34, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (net_recv): t-statistic = -60.50, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (disk_read): t-statistic = nan, p-value = nan
+
+T-test Result for gitcryptremote vs gcryptremote (disk_write): t-statistic = -3.67, p-value = 0.0014
+
+T-test Result for gitcryptremote vs gcryptremote (avg_cpu): t-statistic = -6.92, p-value = 0.0000
+
+T-test Result for gitcryptremote vs zkgitremote (execution_time): t-statistic = -51.11, p-value = 0.0000
+
+T-test Result for gitcryptremote vs zkgitremote (peak_memory): t-statistic = -12.83, p-value = 0.0000
+
+T-test Result for gitcryptremote vs zkgitremote (net_sent): t-statistic = -101.38, p-value = 0.0000
+
+T-test Result for gitcryptremote vs zkgitremote (net_recv): t-statistic = -30.34, p-value = 0.0000
+
+T-test Result for gitcryptremote vs zkgitremote (disk_read): t-statistic = -1.00, p-value = 0.3282
+
+T-test Result for gitcryptremote vs zkgitremote (disk_write): t-statistic = -3.69, p-value = 0.0013
+
+T-test Result for gitcryptremote vs zkgitremote (avg_cpu): t-statistic = -8.74, p-value = 0.0000
+
+T-test Result for gcryptremote vs zkgitremote (execution_time): t-statistic = -0.65, p-value = 0.5198
+
+T-test Result for gcryptremote vs zkgitremote (peak_memory): t-statistic = 15.94, p-value = 0.0000
+
+T-test Result for gcryptremote vs zkgitremote (net_sent): t-statistic = -8.24, p-value = 0.0000
+
+T-test Result for gcryptremote vs zkgitremote (net_recv): t-statistic = -2.18, p-value = 0.0401
+
+T-test Result for gcryptremote vs zkgitremote (disk_read): t-statistic = -1.00, p-value = 0.3282
+
+T-test Result for gcryptremote vs zkgitremote (disk_write): t-statistic = -0.29, p-value = 0.7728
+
+T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = -2.80, p-value = 0.0105
+
+  Remote: gitremote (Total Runs: 12)
+  Avg Execution Time: 1.24 sec, Std Dev: 0.62 sec
+  Avg Peak Memory: 1260.44 MB, Std Dev: 12.09 MB
+  Avg Net Sent: 3.36 MB, Std Dev: 3.83 MB
+  Avg Net Recv: 0.13 MB, Std Dev: 0.14 MB
+  Avg Disk Read: 0.00 MB, Std Dev: 0.00 MB
+  Avg Disk Write: 0.72 MB, Std Dev: 0.72 MB
+  Avg Avg Cpu: 17.16 MB, Std Dev: 9.24 MB
+
+  Remote: gitcryptremote (Total Runs: 12)
+  Avg Execution Time: 2.09 sec, Std Dev: 1.10 sec
+  Avg Peak Memory: 1263.87 MB, Std Dev: 19.44 MB
+  Avg Net Sent: 5.21 MB, Std Dev: 10.22 MB
+  Avg Net Recv: 0.20 MB, Std Dev: 0.35 MB
+  Avg Disk Read: 0.00 MB, Std Dev: 0.00 MB
+  Avg Disk Write: 3.69 MB, Std Dev: 3.33 MB
+  Avg Avg Cpu: 15.00 MB, Std Dev: 6.39 MB
+
+  Remote: gcryptremote (Total Runs: 12)
+  Avg Execution Time: 35.11 sec, Std Dev: 1.13 sec
+  Avg Peak Memory: 1788.64 MB, Std Dev: 20.48 MB
+  Avg Net Sent: 359.78 MB, Std Dev: 8.06 MB
+  Avg Net Recv: 11.83 MB, Std Dev: 0.57 MB
+  Avg Disk Read: 0.00 MB, Std Dev: 0.00 MB
+  Avg Disk Write: 39.49 MB, Std Dev: 33.66 MB
+  Avg Avg Cpu: 30.43 MB, Std Dev: 4.34 MB
+
+  Remote: zkgitremote (Total Runs: 12)
+  Avg Execution Time: 35.54 sec, Std Dev: 1.98 sec
+  Avg Peak Memory: 1497.23 MB, Std Dev: 59.94 MB
+  Avg Net Sent: 386.99 MB, Std Dev: 8.11 MB
+  Avg Net Recv: 12.78 MB, Std Dev: 1.39 MB
+  Avg Disk Read: 0.01 MB, Std Dev: 0.02 MB
+  Avg Disk Write: 43.74 MB, Std Dev: 37.48 MB
+  Avg Avg Cpu: 35.97 MB, Std Dev: 5.31 MB
+
+Statistics for Repository: markitdown
+
+ANOVA Result for execution_time: F-statistic = 456.56, p-value = 0.0000
+
+ANOVA Result for peak_memory: F-statistic = 1057.03, p-value = 0.0000
+
+ANOVA Result for net_sent: F-statistic = 13500.57, p-value = 0.0000
+
+ANOVA Result for net_recv: F-statistic = 2785.96, p-value = 0.0000
+
+ANOVA Result for disk_read: F-statistic = nan, p-value = nan
+
+ANOVA Result for disk_write: F-statistic = 2.95, p-value = 0.0428
+
+ANOVA Result for avg_cpu: F-statistic = 33.16, p-value = 0.0000
+
+T-test Result for gitremote vs gitcryptremote (execution_time): t-statistic = -2.06, p-value = 0.0510
+
+T-test Result for gitremote vs gitcryptremote (peak_memory): t-statistic = -0.08, p-value = 0.9396
+
+T-test Result for gitremote vs gitcryptremote (net_sent): t-statistic = -0.59, p-value = 0.5614
+
+T-test Result for gitremote vs gitcryptremote (net_recv): t-statistic = -0.65, p-value = 0.5201
+
+T-test Result for gitremote vs gitcryptremote (disk_read): t-statistic = nan, p-value = nan
+
+T-test Result for gitremote vs gitcryptremote (disk_write): t-statistic = -2.56, p-value = 0.0180
+
+T-test Result for gitremote vs gitcryptremote (avg_cpu): t-statistic = 0.48, p-value = 0.6379
+
+T-test Result for gitremote vs gcryptremote (execution_time): t-statistic = -20.19, p-value = 0.0000
+
+T-test Result for gitremote vs gcryptremote (peak_memory): t-statistic = -44.49, p-value = 0.0000
+
+T-test Result for gitremote vs gcryptremote (net_sent): t-statistic = -173.13, p-value = 0.0000
+
+T-test Result for gitremote vs gcryptremote (net_recv): t-statistic = -171.18, p-value = 0.0000
+
+T-test Result for gitremote vs gcryptremote (disk_read): t-statistic = nan, p-value = nan
+
+T-test Result for gitremote vs gcryptremote (disk_write): t-statistic = -1.89, p-value = 0.0727
+
+T-test Result for gitremote vs gcryptremote (avg_cpu): t-statistic = -6.62, p-value = 0.0000
+
+T-test Result for gitremote vs zkgitremote (execution_time): t-statistic = -69.77, p-value = 0.0000
+
+T-test Result for gitremote vs zkgitremote (peak_memory): t-statistic = -14.19, p-value = 0.0000
+
+T-test Result for gitremote vs zkgitremote (net_sent): t-statistic = -183.28, p-value = 0.0000
+
+T-test Result for gitremote vs zkgitremote (net_recv): t-statistic = -49.88, p-value = 0.0000
+
+T-test Result for gitremote vs zkgitremote (disk_read): t-statistic = nan, p-value = nan
+
+T-test Result for gitremote vs zkgitremote (disk_write): t-statistic = -4.31, p-value = 0.0003
+
+T-test Result for gitremote vs zkgitremote (avg_cpu): t-statistic = -6.79, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (execution_time): t-statistic = -19.65, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (peak_memory): t-statistic = -43.27, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (net_sent): t-statistic = -118.06, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (net_recv): t-statistic = -114.91, p-value = 0.0000
+
+T-test Result for gitcryptremote vs gcryptremote (disk_read): t-statistic = nan, p-value = nan
+
+T-test Result for gitcryptremote vs gcryptremote (disk_write): t-statistic = -1.80, p-value = 0.0851
+
+T-test Result for gitcryptremote vs gcryptremote (avg_cpu): t-statistic = -7.29, p-value = 0.0000
+
+T-test Result for gitcryptremote vs zkgitremote (execution_time): t-statistic = -61.20, p-value = 0.0000
+
+T-test Result for gitcryptremote vs zkgitremote (peak_memory): t-statistic = -13.56, p-value = 0.0000
+
+T-test Result for gitcryptremote vs zkgitremote (net_sent): t-statistic = -125.19, p-value = 0.0000
+
+T-test Result for gitcryptremote vs zkgitremote (net_recv): t-statistic = -47.28, p-value = 0.0000
+
+T-test Result for gitcryptremote vs zkgitremote (disk_read): t-statistic = nan, p-value = nan
+
+T-test Result for gitcryptremote vs zkgitremote (disk_write): t-statistic = -3.86, p-value = 0.0008
+
+T-test Result for gitcryptremote vs zkgitremote (avg_cpu): t-statistic = -7.45, p-value = 0.0000
+
+T-test Result for gcryptremote vs zkgitremote (execution_time): t-statistic = 1.38, p-value = 0.1822
+
+T-test Result for gcryptremote vs zkgitremote (peak_memory): t-statistic = 26.70, p-value = 0.0000
+
+T-test Result for gcryptremote vs zkgitremote (net_sent): t-statistic = -8.34, p-value = 0.0000
+
+T-test Result for gcryptremote vs zkgitremote (net_recv): t-statistic = 0.11, p-value = 0.9159
+
+T-test Result for gcryptremote vs zkgitremote (disk_read): t-statistic = nan, p-value = nan
+
+T-test Result for gcryptremote vs zkgitremote (disk_write): t-statistic = 0.99, p-value = 0.3340
+
+T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = -0.66, p-value = 0.5179
+
+  Remote: gitremote (Total Runs: 12)
+  Avg Execution Time: 1.23 sec, Std Dev: 0.63 sec
+  Avg Peak Memory: 1261.16 MB, Std Dev: 12.72 MB
+  Avg Net Sent: 3.35 MB, Std Dev: 3.84 MB
+  Avg Net Recv: 0.15 MB, Std Dev: 0.15 MB
+  Avg Disk Read: 0.00 MB, Std Dev: 0.00 MB
+  Avg Disk Write: 0.39 MB, Std Dev: 0.91 MB
+  Avg Avg Cpu: 16.25 MB, Std Dev: 8.82 MB
+
+  Remote: gitcryptremote (Total Runs: 12)
+  Avg Execution Time: 2.05 sec, Std Dev: 1.23 sec
+  Avg Peak Memory: 1261.71 MB, Std Dev: 21.15 MB
+  Avg Net Sent: 5.21 MB, Std Dev: 10.22 MB
+  Avg Net Recv: 0.22 MB, Std Dev: 0.39 MB
+  Avg Disk Read: 0.00 MB, Std Dev: 0.00 MB
+  Avg Disk Write: 4.51 MB, Std Dev: 5.51 MB
+  Avg Avg Cpu: 14.53 MB, Std Dev: 8.78 MB
+
+  Remote: gcryptremote (Total Runs: 12)
+  Avg Execution Time: 46.86 sec, Std Dev: 7.80 sec
+  Avg Peak Memory: 2178.90 MB, Std Dev: 70.32 MB
+  Avg Net Sent: 448.24 MB, Std Dev: 8.03 MB
+  Avg Net Recv: 16.25 MB, Std Dev: 0.29 MB
+  Avg Disk Read: 0.00 MB, Std Dev: 0.00 MB
+  Avg Disk Write: 96.01 MB, Std Dev: 175.70 MB
+  Avg Avg Cpu: 33.86 MB, Std Dev: 2.70 MB
+
+  Remote: zkgitremote (Total Runs: 12)
+  Avg Execution Time: 43.65 sec, Std Dev: 2.01 sec
+  Avg Peak Memory: 1491.72 MB, Std Dev: 54.82 MB
+  Avg Net Sent: 475.64 MB, Std Dev: 8.06 MB
+  Avg Net Recv: 16.21 MB, Std Dev: 1.11 MB
+  Avg Disk Read: 0.00 MB, Std Dev: 0.00 MB
+  Avg Disk Write: 44.89 MB, Std Dev: 35.78 MB
+  Avg Avg Cpu: 34.66 MB, Std Dev: 3.23 MB
+
+Raw Data:
+{
+    "anime": {
+        "gitremote": [
+            {
+                "round": 0,
+                "peak_memory": 1306.0234375,
+                "avg_cpu": 26.98,
+                "execution_time": 9.191452264785767,
+                "net_sent": 82.12183952331543,
+                "net_recv": 2.7207565307617188,
+                "disk_read": 0.0,
+                "disk_write": 3.71875
+            },
+            {
+                "round": 1,
+                "peak_memory": 1178.890625,
+                "avg_cpu": 40.0,
+                "execution_time": 1.0336098670959473,
+                "net_sent": 2.233430862426758,
+                "net_recv": 0.09865951538085938,
+                "disk_read": 0.0,
+                "disk_write": 0.3984375
+            },
+            {
+                "round": 2,
+                "peak_memory": 1179.34375,
+                "avg_cpu": 20.0,
+                "execution_time": 1.006831169128418,
+                "net_sent": 2.299549102783203,
+                "net_recv": 0.09466552734375,
+                "disk_read": 0.0,
+                "disk_write": 0.01171875
+            },
+            {
+                "round": 3,
+                "peak_memory": 1178.71875,
+                "avg_cpu": 40.0,
+                "execution_time": 1.0329060554504395,
+                "net_sent": 2.239053726196289,
+                "net_recv": 0.12139511108398438,
+                "disk_read": 0.0,
+                "disk_write": 0.8671875
+            },
+            {
+                "round": 4,
+                "peak_memory": 1187.25390625,
+                "avg_cpu": 10.0,
+                "execution_time": 1.0885460376739502,
+                "net_sent": 2.4368114471435547,
+                "net_recv": 0.10804557800292969,
+                "disk_read": 0.0,
+                "disk_write": 0.50390625
+            },
+            {
+                "round": 5,
+                "peak_memory": 1179.265625,
+                "avg_cpu": 30.0,
+                "execution_time": 1.0255942344665527,
+                "net_sent": 2.525096893310547,
+                "net_recv": 0.10980987548828125,
+                "disk_read": 0.0,
+                "disk_write": 0.59765625
+            },
+            {
+                "round": 6,
+                "peak_memory": 1178.6953125,
+                "avg_cpu": 20.0,
+                "execution_time": 1.0405280590057373,
+                "net_sent": 2.2425079345703125,
+                "net_recv": 0.09986495971679688,
+                "disk_read": 0.0,
+                "disk_write": 0.421875
+            },
+            {
+                "round": 7,
+                "peak_memory": 1192.54296875,
+                "avg_cpu": 30.0,
+                "execution_time": 0.923302173614502,
+                "net_sent": 2.232421875,
+                "net_recv": 0.10024452209472656,
+                "disk_read": 0.0,
+                "disk_write": 0.01171875
+            },
+            {
+                "round": 8,
+                "peak_memory": 1187.30078125,
+                "avg_cpu": 20.0,
+                "execution_time": 1.0208373069763184,
+                "net_sent": 2.2381038665771484,
+                "net_recv": 0.10607719421386719,
+                "disk_read": 0.0,
+                "disk_write": 0.04296875
+            },
+            {
+                "round": 9,
+                "peak_memory": 1178.96875,
+                "avg_cpu": 19.95,
+                "execution_time": 1.5544757843017578,
+                "net_sent": 2.240781784057617,
+                "net_recv": 0.12360000610351562,
+                "disk_read": 0.0,
+                "disk_write": 0.8203125
+            },
+            {
+                "round": 10,
+                "peak_memory": 1179.109375,
+                "avg_cpu": 30.0,
+                "execution_time": 1.0083420276641846,
+                "net_sent": 2.232717514038086,
+                "net_recv": 0.09850120544433594,
+                "disk_read": 0.0,
+                "disk_write": 0.48046875
+            },
+            {
+                "round": 11,
+                "peak_memory": 1179.265625,
+                "avg_cpu": 30.0,
+                "execution_time": 1.0335373878479004,
+                "net_sent": 2.260997772216797,
+                "net_recv": 0.09339523315429688,
+                "disk_read": 0.0,
+                "disk_write": 0.65625
+            }
+        ],
+        "gitcryptremote": [
+            {
+                "round": 0,
+                "peak_memory": 1306.171875,
+                "avg_cpu": 36.300000000000004,
+                "execution_time": 9.599402666091919,
+                "net_sent": 81.93195724487305,
+                "net_recv": 2.794992446899414,
+                "disk_read": 0.0,
+                "disk_write": 21.80078125
+            },
+            {
+                "round": 1,
+                "peak_memory": 1193.41796875,
+                "avg_cpu": 30.0,
+                "execution_time": 1.6714043617248535,
+                "net_sent": 2.2328853607177734,
+                "net_recv": 0.09784317016601562,
+                "disk_read": 0.0,
+                "disk_write": 4.72265625
+            },
+            {
+                "round": 2,
+                "peak_memory": 1188.1328125,
+                "avg_cpu": 9.95,
+                "execution_time": 1.655696153640747,
+                "net_sent": 2.234159469604492,
+                "net_recv": 0.1005706787109375,
+                "disk_read": 0.0,
+                "disk_write": 3.0703125
+            },
+            {
+                "round": 3,
+                "peak_memory": 1188.91796875,
+                "avg_cpu": 20.0,
+                "execution_time": 1.7657251358032227,
+                "net_sent": 2.2326431274414062,
+                "net_recv": 0.10863113403320312,
+                "disk_read": 0.0,
+                "disk_write": 8.6015625
+            },
+            {
+                "round": 4,
+                "peak_memory": 1203.78125,
+                "avg_cpu": 10.0,
+                "execution_time": 1.637174367904663,
+                "net_sent": 2.234128952026367,
+                "net_recv": 0.09885025024414062,
+                "disk_read": 0.0,
+                "disk_write": 7.27734375
+            },
+            {
+                "round": 5,
+                "peak_memory": 1178.765625,
+                "avg_cpu": 20.0,
+                "execution_time": 1.6034064292907715,
+                "net_sent": 2.293722152709961,
+                "net_recv": 0.0944061279296875,
+                "disk_read": 0.0,
+                "disk_write": 2.51953125
+            },
+            {
+                "round": 6,
+                "peak_memory": 1178.9375,
+                "avg_cpu": 30.0,
+                "execution_time": 1.6446833610534668,
+                "net_sent": 2.2554492950439453,
+                "net_recv": 0.09454536437988281,
+                "disk_read": 0.0,
+                "disk_write": 0.75
+            },
+            {
+                "round": 7,
+                "peak_memory": 1178.6875,
+                "avg_cpu": 20.0,
+                "execution_time": 1.6457676887512207,
+                "net_sent": 2.2329158782958984,
+                "net_recv": 0.10238838195800781,
+                "disk_read": 0.0,
+                "disk_write": 10.2890625
+            },
+            {
+                "round": 8,
+                "peak_memory": 1179.703125,
+                "avg_cpu": 20.0,
+                "execution_time": 1.6047821044921875,
+                "net_sent": 2.233978271484375,
+                "net_recv": 0.10001754760742188,
+                "disk_read": 0.0,
+                "disk_write": 2.45703125
+            },
+            {
+                "round": 9,
+                "peak_memory": 1179.515625,
+                "avg_cpu": 30.0,
+                "execution_time": 1.6011321544647217,
+                "net_sent": 2.232461929321289,
+                "net_recv": 0.09638214111328125,
+                "disk_read": 0.0,
+                "disk_write": 1.2890625
+            },
+            {
+                "round": 10,
+                "peak_memory": 1184.98046875,
+                "avg_cpu": 30.0,
+                "execution_time": 1.5960211753845215,
+                "net_sent": 2.2367515563964844,
+                "net_recv": 0.10946846008300781,
+                "disk_read": 0.0,
+                "disk_write": 2.43359375
+            },
+            {
+                "round": 11,
+                "peak_memory": 1179.1328125,
+                "avg_cpu": 30.0,
+                "execution_time": 1.6041245460510254,
+                "net_sent": 2.2365283966064453,
+                "net_recv": 0.1047515869140625,
+                "disk_read": 0.0,
+                "disk_write": 0.73828125
+            }
+        ],
+        "gcryptremote": [
+            {
+                "round": 0,
+                "peak_memory": 2795.6640625,
+                "avg_cpu": 37.13982300884957,
+                "execution_time": 114.01123237609863,
+                "net_sent": 1095.5004529953003,
+                "net_recv": 42.07784557342529,
+                "disk_read": 0.0,
+                "disk_write": 290.59375
+            },
+            {
+                "round": 1,
+                "peak_memory": 2787.4453125,
+                "avg_cpu": 36.16725663716815,
+                "execution_time": 110.34116506576538,
+                "net_sent": 1097.487587928772,
+                "net_recv": 37.511085510253906,
+                "disk_read": 0.0,
+                "disk_write": 89.65234375
+            },
+            {
+                "round": 2,
+                "peak_memory": 3030.5234375,
+                "avg_cpu": 31.735114503816803,
+                "execution_time": 113.99917268753052,
+                "net_sent": 1099.8387727737427,
+                "net_recv": 37.36113452911377,
+                "disk_read": 0.0,
+                "disk_write": 72.734375
+            },
+            {
+                "round": 3,
+                "peak_memory": 2316.8203125,
+                "avg_cpu": 31.471962616822438,
+                "execution_time": 104.91494059562683,
+                "net_sent": 1101.9439001083374,
+                "net_recv": 37.62474250793457,
+                "disk_read": 0.0,
+                "disk_write": 84.2265625
+            },
+            {
+                "round": 4,
+                "peak_memory": 2261.1171875,
+                "avg_cpu": 31.46018518518519,
+                "execution_time": 105.04691910743713,
+                "net_sent": 1104.2811870574951,
+                "net_recv": 38.03476810455322,
+                "disk_read": 0.0,
+                "disk_write": 78.90625
+            },
+            {
+                "round": 5,
+                "peak_memory": 2267.125,
+                "avg_cpu": 30.94298245614036,
+                "execution_time": 107.16312098503113,
+                "net_sent": 1107.7738637924194,
+                "net_recv": 39.92881393432617,
+                "disk_read": 0.0,
+                "disk_write": 167.875
+            },
+            {
+                "round": 6,
+                "peak_memory": 2332.4453125,
+                "avg_cpu": 29.446902654867262,
+                "execution_time": 105.77997493743896,
+                "net_sent": 1108.860372543335,
+                "net_recv": 38.55348587036133,
+                "disk_read": 0.0,
+                "disk_write": 91.6875
+            },
+            {
+                "round": 7,
+                "peak_memory": 2348.7734375,
+                "avg_cpu": 30.71009174311927,
+                "execution_time": 105.65323853492737,
+                "net_sent": 1110.8591814041138,
+                "net_recv": 37.910508155822754,
+                "disk_read": 0.0234375,
+                "disk_write": 109.53515625
+            },
+            {
+                "round": 8,
+                "peak_memory": 2153.21875,
+                "avg_cpu": 28.877981651376153,
+                "execution_time": 104.22801423072815,
+                "net_sent": 1112.9576930999756,
+                "net_recv": 37.60182285308838,
+                "disk_read": 0.0,
+                "disk_write": 79.2265625
+            },
+            {
+                "round": 9,
+                "peak_memory": 2216.90625,
+                "avg_cpu": 32.71132075471699,
+                "execution_time": 105.99067616462708,
+                "net_sent": 1115.353684425354,
+                "net_recv": 37.961544036865234,
+                "disk_read": 0.0,
+                "disk_write": 105.109375
+            },
+            {
+                "round": 10,
+                "peak_memory": 2720.34765625,
+                "avg_cpu": 31.72038834951457,
+                "execution_time": 104.71002984046936,
+                "net_sent": 1118.68541431427,
+                "net_recv": 41.82767391204834,
+                "disk_read": 0.0,
+                "disk_write": 123.1015625
+            },
+            {
+                "round": 11,
+                "peak_memory": 2194.9140625,
+                "avg_cpu": 32.019387755102045,
+                "execution_time": 106.18374848365784,
+                "net_sent": 1120.1905841827393,
+                "net_recv": 39.21068096160889,
+                "disk_read": 0.08203125,
+                "disk_write": 128.41015625
+            }
+        ],
+        "zkgitremote": [
+            {
+                "round": 0,
+                "peak_memory": 1572.09375,
+                "avg_cpu": 40.98394160583941,
+                "execution_time": 113.7599425315857,
+                "net_sent": 1123.6554584503174,
+                "net_recv": 36.65103054046631,
+                "disk_read": 0.0,
+                "disk_write": 247.95703125
+            },
+            {
+                "round": 1,
+                "peak_memory": 1420.9453125,
+                "avg_cpu": 34.497391304347836,
+                "execution_time": 100.38002967834473,
+                "net_sent": 1126.0783348083496,
+                "net_recv": 38.22956943511963,
+                "disk_read": 0.0,
+                "disk_write": 77.55078125
+            },
+            {
+                "round": 2,
+                "peak_memory": 1492.796875,
+                "avg_cpu": 33.3274336283186,
+                "execution_time": 101.14004921913147,
+                "net_sent": 1129.0303297042847,
+                "net_recv": 54.008042335510254,
+                "disk_read": 0.234375,
+                "disk_write": 114.57421875
+            },
+            {
+                "round": 3,
+                "peak_memory": 1493.9375,
+                "avg_cpu": 33.21261261261263,
+                "execution_time": 106.88366794586182,
+                "net_sent": 1130.7415323257446,
+                "net_recv": 43.2172269821167,
+                "disk_read": 12.59765625,
+                "disk_write": 216.390625
+            },
+            {
+                "round": 4,
+                "peak_memory": 1496.25,
+                "avg_cpu": 34.785185185185206,
+                "execution_time": 101.84968709945679,
+                "net_sent": 1133.2787065505981,
+                "net_recv": 42.360177993774414,
+                "disk_read": 1.55859375,
+                "disk_write": 119.234375
+            },
+            {
+                "round": 5,
+                "peak_memory": 1485.6328125,
+                "avg_cpu": 36.96448598130843,
+                "execution_time": 106.81760478019714,
+                "net_sent": 1135.8055152893066,
+                "net_recv": 45.209463119506836,
+                "disk_read": 0.12890625,
+                "disk_write": 166.2265625
+            },
+            {
+                "round": 6,
+                "peak_memory": 1491.453125,
+                "avg_cpu": 35.57196261682245,
+                "execution_time": 102.7163553237915,
+                "net_sent": 1137.5199642181396,
+                "net_recv": 41.66308784484863,
+                "disk_read": 1.0546875,
+                "disk_write": 148.90234375
+            },
+            {
+                "round": 7,
+                "peak_memory": 1489.75,
+                "avg_cpu": 34.9638888888889,
+                "execution_time": 102.51457500457764,
+                "net_sent": 1139.3517723083496,
+                "net_recv": 40.81413459777832,
+                "disk_read": 0.0,
+                "disk_write": 112.796875
+            },
+            {
+                "round": 8,
+                "peak_memory": 1495.12109375,
+                "avg_cpu": 34.22685185185187,
+                "execution_time": 105.94598317146301,
+                "net_sent": 1141.4391641616821,
+                "net_recv": 37.57314872741699,
+                "disk_read": 0.0,
+                "disk_write": 84.2890625
+            },
+            {
+                "round": 9,
+                "peak_memory": 1489.82421875,
+                "avg_cpu": 36.26666666666668,
+                "execution_time": 102.47555565834045,
+                "net_sent": 1143.6692295074463,
+                "net_recv": 38.57686805725098,
+                "disk_read": 0.0,
+                "disk_write": 86.96484375
+            },
+            {
+                "round": 10,
+                "peak_memory": 2606.48046875,
+                "avg_cpu": 121.08749999999999,
+                "execution_time": 8.616822004318237,
+                "net_sent": 86.57339286804199,
+                "net_recv": 2.8879356384277344,
+                "disk_read": 0.0,
+                "disk_write": 1560.1484375
+            },
+            {
+                "round": 11,
+                "peak_memory": 1494.9921875,
+                "avg_cpu": 33.78211382113823,
+                "execution_time": 119.42370295524597,
+                "net_sent": 1252.1306610107422,
+                "net_recv": 43.82088661193848,
+                "disk_read": 0.0,
+                "disk_write": 88.41015625
+            }
+        ]
+    },
+    "build-your-own-x": {
+        "gitremote": [
+            {
+                "round": 0,
+                "peak_memory": 1376.5078125,
+                "avg_cpu": 49.93529411764706,
+                "execution_time": 9.826800107955933,
+                "net_sent": 79.73290920257568,
+                "net_recv": 2.682295799255371,
+                "disk_read": 0.0,
+                "disk_write": 6.58984375
+            },
+            {
+                "round": 1,
+                "peak_memory": 1248.671875,
+                "avg_cpu": 0.0,
+                "execution_time": 1.0369694232940674,
+                "net_sent": 2.2337684631347656,
+                "net_recv": 0.09951019287109375,
+                "disk_read": 0.03515625,
+                "disk_write": 5.9296875
+            },
+            {
+                "round": 2,
+                "peak_memory": 1248.7890625,
+                "avg_cpu": 0.0,
+                "execution_time": 1.1330554485321045,
+                "net_sent": 2.235950469970703,
+                "net_recv": 0.10581588745117188,
+                "disk_read": 0.0,
+                "disk_write": 1.109375
+            },
+            {
+                "round": 3,
+                "peak_memory": 1264.5234375,
+                "avg_cpu": 0.0,
+                "execution_time": 1.0314674377441406,
+                "net_sent": 2.2327651977539062,
+                "net_recv": 0.09457206726074219,
+                "disk_read": 0.0,
+                "disk_write": 0.74609375
+            },
+            {
+                "round": 4,
+                "peak_memory": 1262.2734375,
+                "avg_cpu": 10.0,
+                "execution_time": 1.035599946975708,
+                "net_sent": 2.233736038208008,
+                "net_recv": 0.09841346740722656,
+                "disk_read": 0.0,
+                "disk_write": 0.0234375
+            },
+            {
+                "round": 5,
+                "peak_memory": 1248.703125,
+                "avg_cpu": 20.0,
+                "execution_time": 1.0305378437042236,
+                "net_sent": 2.235198974609375,
+                "net_recv": 0.10097312927246094,
+                "disk_read": 0.0,
+                "disk_write": 0.0234375
+            },
+            {
+                "round": 6,
+                "peak_memory": 1249.125,
+                "avg_cpu": 0.0,
+                "execution_time": 1.1300601959228516,
+                "net_sent": 2.2569503784179688,
+                "net_recv": 0.095367431640625,
+                "disk_read": 0.0,
+                "disk_write": 0.0234375
+            },
+            {
+                "round": 7,
+                "peak_memory": 1256.640625,
+                "avg_cpu": 0.0,
+                "execution_time": 1.0338468551635742,
+                "net_sent": 2.234254837036133,
+                "net_recv": 0.09584236145019531,
+                "disk_read": 0.0,
+                "disk_write": 0.0234375
+            },
+            {
+                "round": 8,
+                "peak_memory": 1254.82421875,
+                "avg_cpu": 0.0,
+                "execution_time": 1.033905029296875,
+                "net_sent": 2.233675003051758,
+                "net_recv": 0.09613990783691406,
+                "disk_read": 0.0,
+                "disk_write": 0.01171875
+            },
+            {
+                "round": 9,
+                "peak_memory": 1255.80859375,
+                "avg_cpu": 10.0,
+                "execution_time": 1.0316526889801025,
+                "net_sent": 2.232492446899414,
+                "net_recv": 0.09763145446777344,
+                "disk_read": 0.0,
+                "disk_write": 0.01171875
+            },
+            {
+                "round": 10,
+                "peak_memory": 1261.71875,
+                "avg_cpu": 0.0,
+                "execution_time": 1.033280611038208,
+                "net_sent": 2.232250213623047,
+                "net_recv": 0.10065460205078125,
+                "disk_read": 0.0,
+                "disk_write": 0.01171875
+            },
+            {
+                "round": 11,
+                "peak_memory": 1249.6171875,
+                "avg_cpu": 0.0,
+                "execution_time": 1.134552240371704,
+                "net_sent": 2.2326431274414062,
+                "net_recv": 0.10906600952148438,
+                "disk_read": 0.0,
+                "disk_write": 0.59765625
+            }
+        ],
+        "gitcryptremote": [
+            {
+                "round": 0,
+                "peak_memory": 1376.2421875,
+                "avg_cpu": 38.69375,
+                "execution_time": 9.05880069732666,
+                "net_sent": 79.7531566619873,
+                "net_recv": 2.727315902709961,
+                "disk_read": 0.0,
+                "disk_write": 3.93359375
+            },
+            {
+                "round": 1,
+                "peak_memory": 1248.984375,
+                "avg_cpu": 0.0,
+                "execution_time": 1.7361462116241455,
+                "net_sent": 2.2357120513916016,
+                "net_recv": 0.10447120666503906,
+                "disk_read": 0.0,
+                "disk_write": 2.5078125
+            },
+            {
+                "round": 2,
+                "peak_memory": 1253.453125,
+                "avg_cpu": 10.0,
+                "execution_time": 1.0626599788665771,
+                "net_sent": 2.4098854064941406,
+                "net_recv": 0.10010719299316406,
+                "disk_read": 0.0,
+                "disk_write": 0.046875
+            },
+            {
+                "round": 3,
+                "peak_memory": 1249.1171875,
+                "avg_cpu": 10.0,
+                "execution_time": 1.0581645965576172,
+                "net_sent": 2.2344017028808594,
+                "net_recv": 0.10042572021484375,
+                "disk_read": 0.0,
+                "disk_write": 0.046875
+            },
+            {
+                "round": 4,
+                "peak_memory": 1248.8671875,
+                "avg_cpu": 10.0,
+                "execution_time": 1.0775647163391113,
+                "net_sent": 2.2329769134521484,
+                "net_recv": 0.09620094299316406,
+                "disk_read": 0.0,
+                "disk_write": 0.046875
+            },
+            {
+                "round": 5,
+                "peak_memory": 1254.76171875,
+                "avg_cpu": 0.0,
+                "execution_time": 1.0853350162506104,
+                "net_sent": 2.2331886291503906,
+                "net_recv": 0.09630012512207031,
+                "disk_read": 0.0,
+                "disk_write": 0.046875
+            },
+            {
+                "round": 6,
+                "peak_memory": 1249.484375,
+                "avg_cpu": 10.0,
+                "execution_time": 1.0793874263763428,
+                "net_sent": 2.239931106567383,
+                "net_recv": 0.12199783325195312,
+                "disk_read": 0.0,
+                "disk_write": 0.0703125
+            },
+            {
+                "round": 7,
+                "peak_memory": 1248.640625,
+                "avg_cpu": 20.0,
+                "execution_time": 1.1854636669158936,
+                "net_sent": 2.2330074310302734,
+                "net_recv": 0.10808753967285156,
+                "disk_read": 0.0,
+                "disk_write": 0.0703125
+            },
+            {
+                "round": 8,
+                "peak_memory": 1254.29296875,
+                "avg_cpu": 0.0,
+                "execution_time": 1.0666615962982178,
+                "net_sent": 2.282106399536133,
+                "net_recv": 0.09518623352050781,
+                "disk_read": 0.0,
+                "disk_write": 0.59765625
+            },
+            {
+                "round": 9,
+                "peak_memory": 1248.671875,
+                "avg_cpu": 10.0,
+                "execution_time": 1.171971321105957,
+                "net_sent": 2.2327651977539062,
+                "net_recv": 0.10010337829589844,
+                "disk_read": 0.0,
+                "disk_write": 1.04296875
+            },
+            {
+                "round": 10,
+                "peak_memory": 1249.09375,
+                "avg_cpu": 10.0,
+                "execution_time": 1.8292114734649658,
+                "net_sent": 2.234182357788086,
+                "net_recv": 0.10400962829589844,
+                "disk_read": 0.0,
+                "disk_write": 0.546875
+            },
+            {
+                "round": 11,
+                "peak_memory": 1249.4140625,
+                "avg_cpu": 9.9,
+                "execution_time": 1.158365249633789,
+                "net_sent": 2.2338085174560547,
+                "net_recv": 0.10518074035644531,
+                "disk_read": 0.0,
+                "disk_write": 0.52734375
+            }
+        ],
+        "gcryptremote": [
+            {
+                "round": 0,
+                "peak_memory": 1854.5546875,
+                "avg_cpu": 28.089189189189188,
+                "execution_time": 41.459052085876465,
+                "net_sent": 401.30088329315186,
+                "net_recv": 13.68615436553955,
+                "disk_read": 0.0,
+                "disk_write": 148.62109375
+            },
+            {
+                "round": 1,
+                "peak_memory": 1839.4921875,
+                "avg_cpu": 30.275757575757574,
+                "execution_time": 38.26779651641846,
+                "net_sent": 403.58773612976074,
+                "net_recv": 13.65594482421875,
+                "disk_read": 0.0,
+                "disk_write": 28.87890625
+            },
+            {
+                "round": 2,
+                "peak_memory": 1852.4296875,
+                "avg_cpu": 17.98857142857143,
+                "execution_time": 37.95781970024109,
+                "net_sent": 405.7437467575073,
+                "net_recv": 13.79158878326416,
+                "disk_read": 0.0,
+                "disk_write": 27.76171875
+            },
+            {
+                "round": 3,
+                "peak_memory": 1852.1328125,
+                "avg_cpu": 29.707894736842107,
+                "execution_time": 39.214133501052856,
+                "net_sent": 408.2801275253296,
+                "net_recv": 14.542709350585938,
+                "disk_read": 0.0,
+                "disk_write": 29.265625
+            },
+            {
+                "round": 4,
+                "peak_memory": 1855.3203125,
+                "avg_cpu": 28.9775,
+                "execution_time": 38.424883127212524,
+                "net_sent": 410.41428565979004,
+                "net_recv": 13.923534393310547,
+                "disk_read": 0.0,
+                "disk_write": 25.98828125
+            },
+            {
+                "round": 5,
+                "peak_memory": 1856.046875,
+                "avg_cpu": 29.707692307692312,
+                "execution_time": 38.851412534713745,
+                "net_sent": 412.38496017456055,
+                "net_recv": 14.067300796508789,
+                "disk_read": 0.0,
+                "disk_write": 37.79296875
+            },
+            {
+                "round": 6,
+                "peak_memory": 1849.2734375,
+                "avg_cpu": 27.61315789473684,
+                "execution_time": 40.54971098899841,
+                "net_sent": 414.7454900741577,
+                "net_recv": 14.050152778625488,
+                "disk_read": 0.0,
+                "disk_write": 28.90234375
+            },
+            {
+                "round": 7,
+                "peak_memory": 1837.3984375,
+                "avg_cpu": 31.169696969696968,
+                "execution_time": 39.2929630279541,
+                "net_sent": 416.82412815093994,
+                "net_recv": 15.040848731994629,
+                "disk_read": 0.0,
+                "disk_write": 39.33203125
+            },
+            {
+                "round": 8,
+                "peak_memory": 1851.46875,
+                "avg_cpu": 28.886486486486486,
+                "execution_time": 39.47613167762756,
+                "net_sent": 419.0710334777832,
+                "net_recv": 14.306777954101562,
+                "disk_read": 0.0,
+                "disk_write": 26.89453125
+            },
+            {
+                "round": 9,
+                "peak_memory": 1858.6953125,
+                "avg_cpu": 28.663157894736845,
+                "execution_time": 39.615779876708984,
+                "net_sent": 421.330828666687,
+                "net_recv": 14.35827350616455,
+                "disk_read": 0.0,
+                "disk_write": 37.015625
+            },
+            {
+                "round": 10,
+                "peak_memory": 1859.3984375,
+                "avg_cpu": 22.491666666666664,
+                "execution_time": 39.544408321380615,
+                "net_sent": 423.48938846588135,
+                "net_recv": 14.362689018249512,
+                "disk_read": 0.0,
+                "disk_write": 30.60546875
+            },
+            {
+                "round": 11,
+                "peak_memory": 2167.85546875,
+                "avg_cpu": 32.17777777777778,
+                "execution_time": 39.85555601119995,
+                "net_sent": 425.70051765441895,
+                "net_recv": 14.603038787841797,
+                "disk_read": 0.0,
+                "disk_write": 28.09375
+            }
+        ],
+        "zkgitremote": [
+            {
+                "round": 0,
+                "peak_memory": 1621.07421875,
+                "avg_cpu": 47.4867924528302,
+                "execution_time": 45.9384765625,
+                "net_sent": 428.5352210998535,
+                "net_recv": 14.003790855407715,
+                "disk_read": 0.0,
+                "disk_write": 194.265625
+            },
+            {
+                "round": 1,
+                "peak_memory": 1462.51171875,
+                "avg_cpu": 37.955000000000005,
+                "execution_time": 38.896907806396484,
+                "net_sent": 430.819034576416,
+                "net_recv": 14.947477340698242,
+                "disk_read": 0.0,
+                "disk_write": 38.390625
+            },
+            {
+                "round": 2,
+                "peak_memory": 1467.24609375,
+                "avg_cpu": 34.07179487179487,
+                "execution_time": 38.90035891532898,
+                "net_sent": 432.9866466522217,
+                "net_recv": 15.24985408782959,
+                "disk_read": 0.0,
+                "disk_write": 29.98828125
+            },
+            {
+                "round": 3,
+                "peak_memory": 1463.65234375,
+                "avg_cpu": 37.01764705882353,
+                "execution_time": 38.65885305404663,
+                "net_sent": 435.24622344970703,
+                "net_recv": 16.073983192443848,
+                "disk_read": 0.0,
+                "disk_write": 26.65234375
+            },
+            {
+                "round": 4,
+                "peak_memory": 1469.63671875,
+                "avg_cpu": 33.300000000000004,
+                "execution_time": 38.97183108329773,
+                "net_sent": 437.4718313217163,
+                "net_recv": 14.126652717590332,
+                "disk_read": 0.0,
+                "disk_write": 29.62890625
+            },
+            {
+                "round": 5,
+                "peak_memory": 1466.2890625,
+                "avg_cpu": 34.57435897435897,
+                "execution_time": 39.39536666870117,
+                "net_sent": 439.68475246429443,
+                "net_recv": 15.148245811462402,
+                "disk_read": 0.0,
+                "disk_write": 36.24609375
+            },
+            {
+                "round": 6,
+                "peak_memory": 1462.8359375,
+                "avg_cpu": 36.78780487804878,
+                "execution_time": 39.23818230628967,
+                "net_sent": 441.79888343811035,
+                "net_recv": 14.749898910522461,
+                "disk_read": 0.0,
+                "disk_write": 35.60546875
+            },
+            {
+                "round": 7,
+                "peak_memory": 1468.9375,
+                "avg_cpu": 41.57297297297298,
+                "execution_time": 39.82524752616882,
+                "net_sent": 444.782187461853,
+                "net_recv": 16.41458034515381,
+                "disk_read": 0.0,
+                "disk_write": 35.671875
+            },
+            {
+                "round": 8,
+                "peak_memory": 1470.59375,
+                "avg_cpu": 36.37619047619048,
+                "execution_time": 40.8093798160553,
+                "net_sent": 446.2634105682373,
+                "net_recv": 15.822561264038086,
+                "disk_read": 0.0,
+                "disk_write": 40.67578125
+            },
+            {
+                "round": 9,
+                "peak_memory": 1469.015625,
+                "avg_cpu": 33.08222222222222,
+                "execution_time": 40.49156212806702,
+                "net_sent": 448.60412979125977,
+                "net_recv": 15.72878646850586,
+                "disk_read": 0.0,
+                "disk_write": 28.21875
+            },
+            {
+                "round": 10,
+                "peak_memory": 1466.6484375,
+                "avg_cpu": 34.11463414634147,
+                "execution_time": 40.23825430870056,
+                "net_sent": 450.73823738098145,
+                "net_recv": 15.657783508300781,
+                "disk_read": 0.0,
+                "disk_write": 38.421875
+            },
+            {
+                "round": 11,
+                "peak_memory": 1462.22265625,
+                "avg_cpu": 34.25952380952382,
+                "execution_time": 40.38869547843933,
+                "net_sent": 452.9430675506592,
+                "net_recv": 14.714178085327148,
+                "disk_read": 0.0,
+                "disk_write": 28.9453125
+            }
+        ]
+    },
+    "awesome-llm-apps": {
+        "gitremote": [
+            {
+                "round": 0,
+                "peak_memory": 1377.90234375,
+                "avg_cpu": 34.65882352941177,
+                "execution_time": 9.588912963867188,
+                "net_sent": 81.98508167266846,
+                "net_recv": 2.7923059463500977,
+                "disk_read": 0.0,
+                "disk_write": 2.8046875
+            },
+            {
+                "round": 1,
+                "peak_memory": 1250.39453125,
+                "avg_cpu": 10.0,
+                "execution_time": 1.0325701236724854,
+                "net_sent": 2.318115234375,
+                "net_recv": 0.09731864929199219,
+                "disk_read": 0.0,
+                "disk_write": 0.01171875
+            },
+            {
+                "round": 2,
+                "peak_memory": 1249.98046875,
+                "avg_cpu": 10.0,
+                "execution_time": 1.1330413818359375,
+                "net_sent": 2.2331886291503906,
+                "net_recv": 0.09605598449707031,
+                "disk_read": 0.0,
+                "disk_write": 1.75
+            },
+            {
+                "round": 3,
+                "peak_memory": 1249.70703125,
+                "avg_cpu": 10.0,
+                "execution_time": 1.1344153881072998,
+                "net_sent": 2.233522415161133,
+                "net_recv": 0.10259437561035156,
+                "disk_read": 0.0,
+                "disk_write": 0.03515625
+            },
+            {
+                "round": 4,
+                "peak_memory": 1249.69140625,
+                "avg_cpu": 10.0,
+                "execution_time": 1.0444633960723877,
+                "net_sent": 2.2329158782958984,
+                "net_recv": 0.10168647766113281,
+                "disk_read": 0.0,
+                "disk_write": 0.07421875
+            },
+            {
+                "round": 5,
+                "peak_memory": 1249.91015625,
+                "avg_cpu": 10.0,
+                "execution_time": 1.1282639503479004,
+                "net_sent": 2.235198974609375,
+                "net_recv": 0.10154151916503906,
+                "disk_read": 0.0,
+                "disk_write": 0.8203125
+            },
+            {
+                "round": 6,
+                "peak_memory": 1250.16015625,
+                "avg_cpu": 0.0,
+                "execution_time": 1.0345687866210938,
+                "net_sent": 2.2374095916748047,
+                "net_recv": 0.10316658020019531,
+                "disk_read": 0.0,
+                "disk_write": 12.52734375
+            },
+            {
+                "round": 7,
+                "peak_memory": 1256.0703125,
+                "avg_cpu": 10.0,
+                "execution_time": 1.0331945419311523,
+                "net_sent": 2.244049072265625,
+                "net_recv": 0.09614944458007812,
+                "disk_read": 0.0,
+                "disk_write": 0.78515625
+            },
+            {
+                "round": 8,
+                "peak_memory": 1250.41015625,
+                "avg_cpu": 20.0,
+                "execution_time": 1.1323935985565186,
+                "net_sent": 2.233613967895508,
+                "net_recv": 0.09984588623046875,
+                "disk_read": 0.0,
+                "disk_write": 2.58984375
+            },
+            {
+                "round": 9,
+                "peak_memory": 1249.29296875,
+                "avg_cpu": 20.0,
+                "execution_time": 1.0399096012115479,
+                "net_sent": 2.2671546936035156,
+                "net_recv": 0.09477424621582031,
+                "disk_read": 0.0,
+                "disk_write": 1.04296875
+            },
+            {
+                "round": 10,
+                "peak_memory": 1249.58984375,
+                "avg_cpu": 20.0,
+                "execution_time": 1.0340466499328613,
+                "net_sent": 2.2332496643066406,
+                "net_recv": 0.09919929504394531,
+                "disk_read": 0.0,
+                "disk_write": 1.1015625
+            },
+            {
+                "round": 11,
+                "peak_memory": 1249.42578125,
+                "avg_cpu": 0.0,
+                "execution_time": 1.03818678855896,
+                "net_sent": 2.2335853576660156,
+                "net_recv": 0.09735679626464844,
+                "disk_read": 0.0,
+                "disk_write": 0.3515625
+            }
+        ],
+        "gitcryptremote": [
+            {
+                "round": 0,
+                "peak_memory": 1377.38671875,
+                "avg_cpu": 31.747058823529414,
+                "execution_time": 9.647920846939087,
+                "net_sent": 81.97323989868164,
+                "net_recv": 2.8136253356933594,
+                "disk_read": 0.0,
+                "disk_write": 32.19140625
+            },
+            {
+                "round": 1,
+                "peak_memory": 1259.24609375,
+                "avg_cpu": 0.0,
+                "execution_time": 1.8466756343841553,
+                "net_sent": 2.332172393798828,
+                "net_recv": 0.10011672973632812,
+                "disk_read": 0.0,
+                "disk_write": 0.8203125
+            },
+            {
+                "round": 2,
+                "peak_memory": 1250.40234375,
+                "avg_cpu": 20.0,
+                "execution_time": 1.7789740562438965,
+                "net_sent": 2.2834091186523438,
+                "net_recv": 0.09683799743652344,
+                "disk_read": 0.0,
+                "disk_write": 0.515625
+            },
+            {
+                "round": 3,
+                "peak_memory": 1249.73828125,
+                "avg_cpu": 0.0,
+                "execution_time": 1.7729339599609375,
+                "net_sent": 2.2330684661865234,
+                "net_recv": 0.10293388366699219,
+                "disk_read": 0.0,
+                "disk_write": 0.97265625
+            },
+            {
+                "round": 4,
+                "peak_memory": 1249.98046875,
+                "avg_cpu": 10.0,
+                "execution_time": 1.7907373905181885,
+                "net_sent": 2.234100341796875,
+                "net_recv": 0.10314750671386719,
+                "disk_read": 0.0,
+                "disk_write": 9.140625
+            },
+            {
+                "round": 5,
+                "peak_memory": 1250.15234375,
+                "avg_cpu": 15.0,
+                "execution_time": 1.751112937927246,
+                "net_sent": 2.2354965209960938,
+                "net_recv": 0.10040092468261719,
+                "disk_read": 0.0,
+                "disk_write": 0.421875
+            },
+            {
+                "round": 6,
+                "peak_memory": 1263.66015625,
+                "avg_cpu": 10.0,
+                "execution_time": 1.0739421844482422,
+                "net_sent": 2.233858108520508,
+                "net_recv": 0.10010528564453125,
+                "disk_read": 0.0,
+                "disk_write": 2.80078125
+            },
+            {
+                "round": 7,
+                "peak_memory": 1250.08984375,
+                "avg_cpu": 0.0,
+                "execution_time": 1.1658673286437988,
+                "net_sent": 2.232522964477539,
+                "net_recv": 0.09713935852050781,
+                "disk_read": 0.0,
+                "disk_write": 2.7890625
+            },
+            {
+                "round": 8,
+                "peak_memory": 1263.7421875,
+                "avg_cpu": 10.0,
+                "execution_time": 1.7249038219451904,
+                "net_sent": 2.238809585571289,
+                "net_recv": 0.11921310424804688,
+                "disk_read": 0.0,
+                "disk_write": 0.36328125
+            },
+            {
+                "round": 9,
+                "peak_memory": 1249.22265625,
+                "avg_cpu": 20.0,
+                "execution_time": 1.1174633502960205,
+                "net_sent": 2.510305404663086,
+                "net_recv": 0.11046600341796875,
+                "disk_read": 0.0,
+                "disk_write": 0.3515625
+            },
+            {
+                "round": 10,
+                "peak_memory": 1250.01171875,
+                "avg_cpu": 10.0,
+                "execution_time": 1.1747634410858154,
+                "net_sent": 2.2328567504882812,
+                "net_recv": 0.10114097595214844,
+                "disk_read": 0.0,
+                "disk_write": 2.02734375
+            },
+            {
+                "round": 11,
+                "peak_memory": 1257.01953125,
+                "avg_cpu": 20.0,
+                "execution_time": 1.0917603969573975,
+                "net_sent": 2.2327957153320312,
+                "net_recv": 0.1050567626953125,
+                "disk_read": 0.0,
+                "disk_write": 0.3515625
+            }
+        ],
+        "gcryptremote": [
+            {
+                "round": 0,
+                "peak_memory": 1981.1953125,
+                "avg_cpu": 39.966,
+                "execution_time": 48.649688720703125,
+                "net_sent": 452.7680501937866,
+                "net_recv": 15.318022727966309,
+                "disk_read": 0.0,
+                "disk_write": 166.1953125
+            },
+            {
+                "round": 1,
+                "peak_memory": 2013.75390625,
+                "avg_cpu": 35.25686274509805,
+                "execution_time": 46.317628383636475,
+                "net_sent": 454.92480278015137,
+                "net_recv": 15.341876029968262,
+                "disk_read": 0.0,
+                "disk_write": 30.86328125
+            },
+            {
+                "round": 2,
+                "peak_memory": 2087.86328125,
+                "avg_cpu": 36.86197183098593,
+                "execution_time": 77.9016547203064,
+                "net_sent": 457.5661687850952,
+                "net_recv": 15.894078254699707,
+                "disk_read": 0.0,
+                "disk_write": 1313.33984375
+            },
+            {
+                "round": 3,
+                "peak_memory": 2107.09765625,
+                "avg_cpu": 33.52,
+                "execution_time": 44.78002429008484,
+                "net_sent": 459.24421405792236,
+                "net_recv": 15.708687782287598,
+                "disk_read": 0.0,
+                "disk_write": 41.1015625
+            },
+            {
+                "round": 4,
+                "peak_memory": 2108.17578125,
+                "avg_cpu": 23.102083333333336,
+                "execution_time": 43.876436948776245,
+                "net_sent": 461.526029586792,
+                "net_recv": 15.317405700683594,
+                "disk_read": 0.0,
+                "disk_write": 31.140625
+            },
+            {
+                "round": 5,
+                "peak_memory": 2114.54296875,
+                "avg_cpu": 33.75714285714287,
+                "execution_time": 44.618492603302,
+                "net_sent": 463.7841148376465,
+                "net_recv": 15.84562873840332,
+                "disk_read": 0.0,
+                "disk_write": 74.703125
+            },
+            {
+                "round": 6,
+                "peak_memory": 2119.40234375,
+                "avg_cpu": 36.91515151515151,
+                "execution_time": 44.854326486587524,
+                "net_sent": 465.9269676208496,
+                "net_recv": 15.787460327148438,
+                "disk_read": 0.0,
+                "disk_write": 30.5703125
+            },
+            {
+                "round": 7,
+                "peak_memory": 2103.94921875,
+                "avg_cpu": 27.29024390243902,
+                "execution_time": 44.87174201011658,
+                "net_sent": 468.1323404312134,
+                "net_recv": 15.79015827178955,
+                "disk_read": 0.0,
+                "disk_write": 32.46484375
+            },
+            {
+                "round": 8,
+                "peak_memory": 2111.86328125,
+                "avg_cpu": 30.632608695652177,
+                "execution_time": 44.44836926460266,
+                "net_sent": 470.66801834106445,
+                "net_recv": 15.715984344482422,
+                "disk_read": 0.0,
+                "disk_write": 38.68359375
+            },
+            {
+                "round": 9,
+                "peak_memory": 2109.62109375,
+                "avg_cpu": 32.82619047619048,
+                "execution_time": 44.9786581993103,
+                "net_sent": 472.52638244628906,
+                "net_recv": 15.603216171264648,
+                "disk_read": 0.0,
+                "disk_write": 29.6484375
+            },
+            {
+                "round": 10,
+                "peak_memory": 2111.46484375,
+                "avg_cpu": 31.62500000000001,
+                "execution_time": 45.26572871208191,
+                "net_sent": 474.96313190460205,
+                "net_recv": 16.03011989593506,
+                "disk_read": 0.0,
+                "disk_write": 57.421875
+            },
+            {
+                "round": 11,
+                "peak_memory": 2099.56640625,
+                "avg_cpu": 32.00681818181818,
+                "execution_time": 49.26470756530762,
+                "net_sent": 477.2777223587036,
+                "net_recv": 16.01445198059082,
+                "disk_read": 0.0,
+                "disk_write": 62.515625
+            }
+        ],
+        "zkgitremote": [
+            {
+                "round": 0,
+                "peak_memory": 1624.19140625,
+                "avg_cpu": 47.72592592592594,
+                "execution_time": 49.364951610565186,
+                "net_sent": 463.7447919845581,
+                "net_recv": 14.841504096984863,
+                "disk_read": 0.0,
+                "disk_write": 147.7421875
+            },
+            {
+                "round": 1,
+                "peak_memory": 1465.11328125,
+                "avg_cpu": 33.742222222222225,
+                "execution_time": 41.88255429267883,
+                "net_sent": 465.94346046447754,
+                "net_recv": 14.442535400390625,
+                "disk_read": 0.0,
+                "disk_write": 30.40625
+            },
+            {
+                "round": 2,
+                "peak_memory": 1458.046875,
+                "avg_cpu": 33.602272727272734,
+                "execution_time": 42.76075839996338,
+                "net_sent": 468.1525602340698,
+                "net_recv": 14.940463066101074,
+                "disk_read": 0.0,
+                "disk_write": 40.6171875
+            },
+            {
+                "round": 3,
+                "peak_memory": 1461.64453125,
+                "avg_cpu": 34.71904761904763,
+                "execution_time": 42.55919075012207,
+                "net_sent": 470.7153949737549,
+                "net_recv": 16.736910820007324,
+                "disk_read": 0.0,
+                "disk_write": 29.18359375
+            },
+            {
+                "round": 4,
+                "peak_memory": 1463.66796875,
+                "avg_cpu": 34.28181818181818,
+                "execution_time": 42.626603841781616,
+                "net_sent": 472.70994663238525,
+                "net_recv": 15.809243202209473,
+                "disk_read": 0.0,
+                "disk_write": 40.21875
+            },
+            {
+                "round": 5,
+                "peak_memory": 1461.16015625,
+                "avg_cpu": 32.63333333333334,
+                "execution_time": 42.158082485198975,
+                "net_sent": 475.0137310028076,
+                "net_recv": 15.799507141113281,
+                "disk_read": 0.0,
+                "disk_write": 29.9453125
+            },
+            {
+                "round": 6,
+                "peak_memory": 1465.74609375,
+                "avg_cpu": 35.18863636363637,
+                "execution_time": 43.54483604431152,
+                "net_sent": 477.0519485473633,
+                "net_recv": 15.533214569091797,
+                "disk_read": 0.0,
+                "disk_write": 40.765625
+            },
+            {
+                "round": 7,
+                "peak_memory": 1461.89453125,
+                "avg_cpu": 34.85957446808511,
+                "execution_time": 43.22337532043457,
+                "net_sent": 479.47929096221924,
+                "net_recv": 17.584078788757324,
+                "disk_read": 0.0,
+                "disk_write": 27.32421875
+            },
+            {
+                "round": 8,
+                "peak_memory": 1458.86328125,
+                "avg_cpu": 39.4658536585366,
+                "execution_time": 42.89673089981079,
+                "net_sent": 481.59778213500977,
+                "net_recv": 17.26589298248291,
+                "disk_read": 0.0,
+                "disk_write": 28.8125
+            },
+            {
+                "round": 9,
+                "peak_memory": 1580.33984375,
+                "avg_cpu": 35.705,
+                "execution_time": 42.73027420043945,
+                "net_sent": 483.91972827911377,
+                "net_recv": 17.541224479675293,
+                "disk_read": 0.0,
+                "disk_write": 32.23828125
+            },
+            {
+                "round": 10,
+                "peak_memory": 1582.54296875,
+                "avg_cpu": 35.218421052631584,
+                "execution_time": 44.355592489242554,
+                "net_sent": 486.4677438735962,
+                "net_recv": 17.17731761932373,
+                "disk_read": 0.0,
+                "disk_write": 32.97265625
+            },
+            {
+                "round": 11,
+                "peak_memory": 1465.26953125,
+                "avg_cpu": 32.10638297872341,
+                "execution_time": 43.697007179260254,
+                "net_sent": 488.549427986145,
+                "net_recv": 16.709346771240234,
+                "disk_read": 0.0,
+                "disk_write": 49.48828125
+            }
+        ]
+    },
+    "gitdiagram": {
+        "gitremote": [
+            {
+                "round": 0,
+                "peak_memory": 1377.22265625,
+                "avg_cpu": 35.84090909090909,
+                "execution_time": 9.771112442016602,
+                "net_sent": 81.96525001525879,
+                "net_recv": 2.8356494903564453,
+                "disk_read": 0.0,
+                "disk_write": 8.36328125
+            },
+            {
+                "round": 1,
+                "peak_memory": 1255.828125,
+                "avg_cpu": 20.0,
+                "execution_time": 1.036698818206787,
+                "net_sent": 2.2721900939941406,
+                "net_recv": 0.09283256530761719,
+                "disk_read": 0.0,
+                "disk_write": 0.01171875
+            },
+            {
+                "round": 2,
+                "peak_memory": 1258.4140625,
+                "avg_cpu": 20.0,
+                "execution_time": 1.0587184429168701,
+                "net_sent": 2.316326141357422,
+                "net_recv": 0.11480522155761719,
+                "disk_read": 0.0,
+                "disk_write": 0.0234375
+            },
+            {
+                "round": 3,
+                "peak_memory": 1250.22265625,
+                "avg_cpu": 0.0,
+                "execution_time": 1.1413078308105469,
+                "net_sent": 2.240121841430664,
+                "net_recv": 0.125640869140625,
+                "disk_read": 0.0,
+                "disk_write": 0.01171875
+            },
+            {
+                "round": 4,
+                "peak_memory": 1249.68359375,
+                "avg_cpu": 10.0,
+                "execution_time": 0.9374947547912598,
+                "net_sent": 2.232522964477539,
+                "net_recv": 0.09662437438964844,
+                "disk_read": 0.0,
+                "disk_write": 0.19921875
+            },
+            {
+                "round": 5,
+                "peak_memory": 1255.83984375,
+                "avg_cpu": 20.0,
+                "execution_time": 1.0482001304626465,
+                "net_sent": 2.2335987091064453,
+                "net_recv": 0.10320281982421875,
+                "disk_read": 0.0,
+                "disk_write": 0.57421875
+            },
+            {
+                "round": 6,
+                "peak_memory": 1259.36328125,
+                "avg_cpu": 10.0,
+                "execution_time": 1.0758068561553955,
+                "net_sent": 2.2505664825439453,
+                "net_recv": 0.09774398803710938,
+                "disk_read": 0.0,
+                "disk_write": 0.01171875
+            },
+            {
+                "round": 7,
+                "peak_memory": 1264.6484375,
+                "avg_cpu": 10.0,
+                "execution_time": 1.030052661895752,
+                "net_sent": 2.3449535369873047,
+                "net_recv": 0.09550666809082031,
+                "disk_read": 0.0,
+                "disk_write": 0.65625
+            },
+            {
+                "round": 8,
+                "peak_memory": 1250.47265625,
+                "avg_cpu": 0.0,
+                "execution_time": 1.0484600067138672,
+                "net_sent": 2.2823963165283203,
+                "net_recv": 0.09980201721191406,
+                "disk_read": 0.0,
+                "disk_write": 0.78515625
+            },
+            {
+                "round": 9,
+                "peak_memory": 1250.76171875,
+                "avg_cpu": 0.0,
+                "execution_time": 1.0296900272369385,
+                "net_sent": 2.302316665649414,
+                "net_recv": 0.09622764587402344,
+                "disk_read": 0.0,
+                "disk_write": 1.6171875
+            },
+            {
+                "round": 10,
+                "peak_memory": 1249.66796875,
+                "avg_cpu": 0.0,
+                "execution_time": 1.0459918975830078,
+                "net_sent": 2.2333431243896484,
+                "net_recv": 0.09923171997070312,
+                "disk_read": 0.0,
+                "disk_write": 0.01171875
+            },
+            {
+                "round": 11,
+                "peak_memory": 1263.62890625,
+                "avg_cpu": 10.0,
+                "execution_time": 1.037482738494873,
+                "net_sent": 2.265777587890625,
+                "net_recv": 0.09364700317382812,
+                "disk_read": 0.0,
+                "disk_write": 0.796875
+            }
+        ],
+        "gitcryptremote": [
+            {
+                "round": 0,
+                "peak_memory": 1377.72265625,
+                "avg_cpu": 37.456250000000004,
+                "execution_time": 9.076694011688232,
+                "net_sent": 81.93036460876465,
+                "net_recv": 2.7929458618164062,
+                "disk_read": 0.0,
+                "disk_write": 28.01953125
+            },
+            {
+                "round": 1,
+                "peak_memory": 1249.89453125,
+                "avg_cpu": 10.0,
+                "execution_time": 1.7692930698394775,
+                "net_sent": 2.23516845703125,
+                "net_recv": 0.10627555847167969,
+                "disk_read": 0.0,
+                "disk_write": 1.9453125
+            },
+            {
+                "round": 2,
+                "peak_memory": 1262.75390625,
+                "avg_cpu": 0.0,
+                "execution_time": 1.7712748050689697,
+                "net_sent": 2.2331886291503906,
+                "net_recv": 0.10715675354003906,
+                "disk_read": 0.0,
+                "disk_write": 1.453125
+            },
+            {
+                "round": 3,
+                "peak_memory": 1255.9765625,
+                "avg_cpu": 15.0,
+                "execution_time": 1.7641088962554932,
+                "net_sent": 2.2386646270751953,
+                "net_recv": 0.09406280517578125,
+                "disk_read": 0.0,
+                "disk_write": 0.5390625
+            },
+            {
+                "round": 4,
+                "peak_memory": 1250.04296875,
+                "avg_cpu": 10.0,
+                "execution_time": 1.7566578388214111,
+                "net_sent": 2.2395877838134766,
+                "net_recv": 0.1292247772216797,
+                "disk_read": 0.0,
+                "disk_write": 0.72265625
+            },
+            {
+                "round": 5,
+                "peak_memory": 1259.0703125,
+                "avg_cpu": 10.0,
+                "execution_time": 1.7633388042449951,
+                "net_sent": 2.23394775390625,
+                "net_recv": 0.10444259643554688,
+                "disk_read": 0.0,
+                "disk_write": 3.24609375
+            },
+            {
+                "round": 6,
+                "peak_memory": 1249.74609375,
+                "avg_cpu": 19.9,
+                "execution_time": 1.769737958908081,
+                "net_sent": 2.325209617614746,
+                "net_recv": 0.11588191986083984,
+                "disk_read": 0.0,
+                "disk_write": 3.33984375
+            },
+            {
+                "round": 7,
+                "peak_memory": 1250.06640625,
+                "avg_cpu": 20.0,
+                "execution_time": 1.087158441543579,
+                "net_sent": 2.233734130859375,
+                "net_recv": 0.09789085388183594,
+                "disk_read": 0.0,
+                "disk_write": 0.5390625
+            },
+            {
+                "round": 8,
+                "peak_memory": 1250.02734375,
+                "avg_cpu": 0.0,
+                "execution_time": 1.7727994918823242,
+                "net_sent": 2.2351016998291016,
+                "net_recv": 0.10055160522460938,
+                "disk_read": 0.0,
+                "disk_write": 1.453125
+            },
+            {
+                "round": 9,
+                "peak_memory": 1264.3828125,
+                "avg_cpu": 10.0,
+                "execution_time": 1.7630043029785156,
+                "net_sent": 2.2343616485595703,
+                "net_recv": 0.09589767456054688,
+                "disk_read": 0.0,
+                "disk_write": 15.046875
+            },
+            {
+                "round": 10,
+                "peak_memory": 1250.03515625,
+                "avg_cpu": 20.0,
+                "execution_time": 1.7924525737762451,
+                "net_sent": 2.2332630157470703,
+                "net_recv": 0.1018524169921875,
+                "disk_read": 0.0,
+                "disk_write": 2.3984375
+            },
+            {
+                "round": 11,
+                "peak_memory": 1256.7265625,
+                "avg_cpu": 10.0,
+                "execution_time": 1.752227783203125,
+                "net_sent": 2.294417381286621,
+                "net_recv": 0.14746379852294922,
+                "disk_read": 0.0,
+                "disk_write": 2.33203125
+            }
+        ],
+        "gcryptremote": [
+            {
+                "round": 0,
+                "peak_memory": 1554.58203125,
+                "avg_cpu": 31.96666666666666,
+                "execution_time": 28.498971462249756,
+                "net_sent": 253.7419672012329,
+                "net_recv": 8.63457202911377,
+                "disk_read": 0.0,
+                "disk_write": 145.6953125
+            },
+            {
+                "round": 1,
+                "peak_memory": 1555.14453125,
+                "avg_cpu": 29.006451612903223,
+                "execution_time": 25.67409348487854,
+                "net_sent": 256.0022277832031,
+                "net_recv": 8.789196014404297,
+                "disk_read": 0.0,
+                "disk_write": 24.5234375
+            },
+            {
+                "round": 2,
+                "peak_memory": 1731.14453125,
+                "avg_cpu": 40.96250000000002,
+                "execution_time": 51.61940240859985,
+                "net_sent": 259.1219711303711,
+                "net_recv": 10.865262985229492,
+                "disk_read": 0.0,
+                "disk_write": 764.375
+            },
+            {
+                "round": 3,
+                "peak_memory": 1985.99609375,
+                "avg_cpu": 28.677419354838705,
+                "execution_time": 29.60981273651123,
+                "net_sent": 260.8218307495117,
+                "net_recv": 9.763386726379395,
+                "disk_read": 0.0,
+                "disk_write": 33.375
+            },
+            {
+                "round": 4,
+                "peak_memory": 1753.87109375,
+                "avg_cpu": 28.934482758620685,
+                "execution_time": 28.985853672027588,
+                "net_sent": 262.96978282928467,
+                "net_recv": 8.90168571472168,
+                "disk_read": 0.0,
+                "disk_write": 43.984375
+            },
+            {
+                "round": 5,
+                "peak_memory": 1745.17578125,
+                "avg_cpu": 39.455,
+                "execution_time": 25.601300716400146,
+                "net_sent": 264.8239641189575,
+                "net_recv": 8.405475616455078,
+                "disk_read": 0.0,
+                "disk_write": 27.07421875
+            },
+            {
+                "round": 6,
+                "peak_memory": 1747.29296875,
+                "avg_cpu": 28.53928571428571,
+                "execution_time": 27.603966236114502,
+                "net_sent": 266.9932498931885,
+                "net_recv": 8.611698150634766,
+                "disk_read": 0.0,
+                "disk_write": 26.7890625
+            },
+            {
+                "round": 7,
+                "peak_memory": 1737.15234375,
+                "avg_cpu": 28.31,
+                "execution_time": 27.15581488609314,
+                "net_sent": 269.2420721054077,
+                "net_recv": 9.548377990722656,
+                "disk_read": 0.0,
+                "disk_write": 28.7578125
+            },
+            {
+                "round": 8,
+                "peak_memory": 1757.17578125,
+                "avg_cpu": 26.784000000000002,
+                "execution_time": 26.335882425308228,
+                "net_sent": 271.5089750289917,
+                "net_recv": 8.938679695129395,
+                "disk_read": 0.234375,
+                "disk_write": 37.53125
+            },
+            {
+                "round": 9,
+                "peak_memory": 1751.56640625,
+                "avg_cpu": 31.866666666666664,
+                "execution_time": 26.359957695007324,
+                "net_sent": 273.63137340545654,
+                "net_recv": 8.736948013305664,
+                "disk_read": 0.0,
+                "disk_write": 24.2890625
+            },
+            {
+                "round": 10,
+                "peak_memory": 1735.30859375,
+                "avg_cpu": 28.823076923076922,
+                "execution_time": 26.53233551979065,
+                "net_sent": 275.8585548400879,
+                "net_recv": 8.842018127441406,
+                "disk_read": 0.0,
+                "disk_write": 24.30859375
+            },
+            {
+                "round": 11,
+                "peak_memory": 1739.68359375,
+                "avg_cpu": 29.279310344827582,
+                "execution_time": 27.349716424942017,
+                "net_sent": 278.14100074768066,
+                "net_recv": 8.791955947875977,
+                "disk_read": 0.0,
+                "disk_write": 31.20703125
+            }
+        ],
+        "zkgitremote": [
+            {
+                "round": 0,
+                "peak_memory": 1618.38671875,
+                "avg_cpu": 50.93414634146343,
+                "execution_time": 33.26437211036682,
+                "net_sent": 280.7054214477539,
+                "net_recv": 9.424278259277344,
+                "disk_read": 0.3984375,
+                "disk_write": 144.25
+            },
+            {
+                "round": 1,
+                "peak_memory": 1461.47265625,
+                "avg_cpu": 35.172,
+                "execution_time": 25.348668575286865,
+                "net_sent": 282.9899320602417,
+                "net_recv": 8.69840145111084,
+                "disk_read": 0.0,
+                "disk_write": 44.1796875
+            },
+            {
+                "round": 2,
+                "peak_memory": 1456.32421875,
+                "avg_cpu": 35.783333333333324,
+                "execution_time": 25.48967671394348,
+                "net_sent": 285.2107763290405,
+                "net_recv": 9.47197437286377,
+                "disk_read": 0.0,
+                "disk_write": 33.0546875
+            },
+            {
+                "round": 3,
+                "peak_memory": 1462.23046875,
+                "avg_cpu": 32.27307692307692,
+                "execution_time": 25.648224115371704,
+                "net_sent": 287.36691093444824,
+                "net_recv": 8.883804321289062,
+                "disk_read": 0.0,
+                "disk_write": 32.04296875
+            },
+            {
+                "round": 4,
+                "peak_memory": 1576.8515625,
+                "avg_cpu": 42.323809523809516,
+                "execution_time": 26.806870937347412,
+                "net_sent": 290.4014844894409,
+                "net_recv": 8.86119556427002,
+                "disk_read": 0.0,
+                "disk_write": 23.9375
+            },
+            {
+                "round": 5,
+                "peak_memory": 1456.42578125,
+                "avg_cpu": 35.12962962962962,
+                "execution_time": 27.082494497299194,
+                "net_sent": 291.86646461486816,
+                "net_recv": 8.915542602539062,
+                "disk_read": 0.0,
+                "disk_write": 23.82421875
+            },
+            {
+                "round": 6,
+                "peak_memory": 1458.32421875,
+                "avg_cpu": 34.96333333333334,
+                "execution_time": 26.595563411712646,
+                "net_sent": 294.0299005508423,
+                "net_recv": 8.988292694091797,
+                "disk_read": 0.0,
+                "disk_write": 25.515625
+            },
+            {
+                "round": 7,
+                "peak_memory": 1455.02734375,
+                "avg_cpu": 33.2962962962963,
+                "execution_time": 26.954015731811523,
+                "net_sent": 296.26351165771484,
+                "net_recv": 9.067829132080078,
+                "disk_read": 0.0,
+                "disk_write": 25.16015625
+            },
+            {
+                "round": 8,
+                "peak_memory": 1462.51171875,
+                "avg_cpu": 33.18214285714286,
+                "execution_time": 27.002338409423828,
+                "net_sent": 298.5324010848999,
+                "net_recv": 9.496341705322266,
+                "disk_read": 0.0,
+                "disk_write": 24.8125
+            },
+            {
+                "round": 9,
+                "peak_memory": 1460.54296875,
+                "avg_cpu": 33.18571428571428,
+                "execution_time": 27.154756546020508,
+                "net_sent": 300.7088203430176,
+                "net_recv": 9.93852424621582,
+                "disk_read": 0.0,
+                "disk_write": 22.46875
+            },
+            {
+                "round": 10,
+                "peak_memory": 1462.58984375,
+                "avg_cpu": 31.221874999999997,
+                "execution_time": 30.6083664894104,
+                "net_sent": 302.9539680480957,
+                "net_recv": 9.784889221191406,
+                "disk_read": 0.0,
+                "disk_write": 28.34375
+            },
+            {
+                "round": 11,
+                "peak_memory": 1578.02734375,
+                "avg_cpu": 34.407407407407405,
+                "execution_time": 28.591801404953003,
+                "net_sent": 305.19396686553955,
+                "net_recv": 9.636580467224121,
+                "disk_read": 0.0,
+                "disk_write": 13.0703125
+            }
+        ]
+    },
+    "glance": {
+        "gitremote": [
+            {
+                "round": 0,
+                "peak_memory": 1378.65234375,
+                "avg_cpu": 37.576190476190476,
+                "execution_time": 9.92927074432373,
+                "net_sent": 81.94103050231934,
+                "net_recv": 2.874418258666992,
+                "disk_read": 0.0,
+                "disk_write": 4.7734375
+            },
+            {
+                "round": 1,
+                "peak_memory": 1250.49609375,
+                "avg_cpu": 10.0,
+                "execution_time": 1.0603375434875488,
+                "net_sent": 2.2331008911132812,
+                "net_recv": 0.10047531127929688,
+                "disk_read": 0.0,
+                "disk_write": 0.15625
+            },
+            {
+                "round": 2,
+                "peak_memory": 1251.19921875,
+                "avg_cpu": 20.0,
+                "execution_time": 1.074409008026123,
+                "net_sent": 2.235097885131836,
+                "net_recv": 0.10076904296875,
+                "disk_read": 0.0,
+                "disk_write": 0.01171875
+            },
+            {
+                "round": 3,
+                "peak_memory": 1256.28515625,
+                "avg_cpu": 30.0,
+                "execution_time": 1.064246654510498,
+                "net_sent": 2.2332401275634766,
+                "net_recv": 0.09731864929199219,
+                "disk_read": 0.0,
+                "disk_write": 0.0234375
+            },
+            {
+                "round": 4,
+                "peak_memory": 1250.70703125,
+                "avg_cpu": 25.0,
+                "execution_time": 1.0821690559387207,
+                "net_sent": 2.232769012451172,
+                "net_recv": 0.097564697265625,
+                "disk_read": 0.0,
+                "disk_write": 0.0234375
+            },
+            {
+                "round": 5,
+                "peak_memory": 1266.06640625,
+                "avg_cpu": 20.0,
+                "execution_time": 1.0494663715362549,
+                "net_sent": 2.2335243225097656,
+                "net_recv": 0.10009574890136719,
+                "disk_read": 0.0,
+                "disk_write": 0.01171875
+            },
+            {
+                "round": 6,
+                "peak_memory": 1264.99609375,
+                "avg_cpu": 10.0,
+                "execution_time": 1.0537714958190918,
+                "net_sent": 2.277132034301758,
+                "net_recv": 0.09440040588378906,
+                "disk_read": 0.0,
+                "disk_write": 0.5703125
+            },
+            {
+                "round": 7,
+                "peak_memory": 1256.23046875,
+                "avg_cpu": 0.0,
+                "execution_time": 1.05411958694458,
+                "net_sent": 2.2327957153320312,
+                "net_recv": 0.09630775451660156,
+                "disk_read": 0.0,
+                "disk_write": 0.0234375
+            },
+            {
+                "round": 8,
+                "peak_memory": 1257.09765625,
+                "avg_cpu": 10.0,
+                "execution_time": 1.0322048664093018,
+                "net_sent": 2.233976364135742,
+                "net_recv": 0.09335517883300781,
+                "disk_read": 0.0,
+                "disk_write": 0.7734375
+            },
+            {
+                "round": 9,
+                "peak_memory": 1250.69140625,
+                "avg_cpu": 10.0,
+                "execution_time": 1.0441532135009766,
+                "net_sent": 2.232778549194336,
+                "net_recv": 0.09332847595214844,
+                "disk_read": 0.0,
+                "disk_write": 0.80859375
+            },
+            {
+                "round": 10,
+                "peak_memory": 1258.20703125,
+                "avg_cpu": 10.0,
+                "execution_time": 1.0408973693847656,
+                "net_sent": 2.310649871826172,
+                "net_recv": 0.09358024597167969,
+                "disk_read": 0.0,
+                "disk_write": 2.12890625
+            },
+            {
+                "round": 11,
+                "peak_memory": 1256.9453125,
+                "avg_cpu": 20.0,
+                "execution_time": 1.0505077838897705,
+                "net_sent": 2.2354488372802734,
+                "net_recv": 0.09209442138671875,
+                "disk_read": 0.0,
+                "disk_write": 0.734375
+            }
+        ],
+        "gitcryptremote": [
+            {
+                "round": 0,
+                "peak_memory": 1379.35546875,
+                "avg_cpu": 36.077777777777776,
+                "execution_time": 10.855781316757202,
+                "net_sent": 81.93282318115234,
+                "net_recv": 2.662466049194336,
+                "disk_read": 0.0,
+                "disk_write": 10.7421875
+            },
+            {
+                "round": 1,
+                "peak_memory": 1251.05078125,
+                "avg_cpu": 20.0,
+                "execution_time": 1.7656340599060059,
+                "net_sent": 2.233987808227539,
+                "net_recv": 0.0999755859375,
+                "disk_read": 0.0,
+                "disk_write": 2.00390625
+            },
+            {
+                "round": 2,
+                "peak_memory": 1265.7265625,
+                "avg_cpu": 10.0,
+                "execution_time": 1.749133825302124,
+                "net_sent": 2.2330379486083984,
+                "net_recv": 0.09209823608398438,
+                "disk_read": 0.0,
+                "disk_write": 0.83203125
+            },
+            {
+                "round": 3,
+                "peak_memory": 1250.83984375,
+                "avg_cpu": 10.0,
+                "execution_time": 1.7538115978240967,
+                "net_sent": 2.23480224609375,
+                "net_recv": 0.10000419616699219,
+                "disk_read": 0.0,
+                "disk_write": 2.31640625
+            },
+            {
+                "round": 4,
+                "peak_memory": 1251.05078125,
+                "avg_cpu": 10.0,
+                "execution_time": 1.771709680557251,
+                "net_sent": 2.2371158599853516,
+                "net_recv": 0.09836387634277344,
+                "disk_read": 0.0,
+                "disk_write": 3.265625
+            },
+            {
+                "round": 5,
+                "peak_memory": 1250.72265625,
+                "avg_cpu": 20.0,
+                "execution_time": 1.7640082836151123,
+                "net_sent": 2.234098434448242,
+                "net_recv": 0.09558296203613281,
+                "disk_read": 0.0,
+                "disk_write": 2.07421875
+            },
+            {
+                "round": 6,
+                "peak_memory": 1259.37109375,
+                "avg_cpu": 20.0,
+                "execution_time": 1.7700722217559814,
+                "net_sent": 2.2330684661865234,
+                "net_recv": 0.09506607055664062,
+                "disk_read": 0.0,
+                "disk_write": 1.96875
+            },
+            {
+                "round": 7,
+                "peak_memory": 1257.4453125,
+                "avg_cpu": 20.0,
+                "execution_time": 1.7763299942016602,
+                "net_sent": 2.233888626098633,
+                "net_recv": 0.10037612915039062,
+                "disk_read": 0.0,
+                "disk_write": 1.79296875
+            },
+            {
+                "round": 8,
+                "peak_memory": 1256.51171875,
+                "avg_cpu": 20.0,
+                "execution_time": 1.7512338161468506,
+                "net_sent": 2.234283447265625,
+                "net_recv": 0.09391975402832031,
+                "disk_read": 0.0,
+                "disk_write": 1.2890625
+            },
+            {
+                "round": 9,
+                "peak_memory": 1251.61328125,
+                "avg_cpu": 20.0,
+                "execution_time": 1.7584571838378906,
+                "net_sent": 2.234281539916992,
+                "net_recv": 0.10135173797607422,
+                "disk_read": 0.0,
+                "disk_write": 3.8125
+            },
+            {
+                "round": 10,
+                "peak_memory": 1250.76953125,
+                "avg_cpu": 10.0,
+                "execution_time": 1.7492411136627197,
+                "net_sent": 2.2835092544555664,
+                "net_recv": 0.17070293426513672,
+                "disk_read": 0.0,
+                "disk_write": 5.7421875
+            },
+            {
+                "round": 11,
+                "peak_memory": 1257.6953125,
+                "avg_cpu": 30.0,
+                "execution_time": 1.7720270156860352,
+                "net_sent": 2.2463912963867188,
+                "net_recv": 0.1529407501220703,
+                "disk_read": 0.0,
+                "disk_write": 5.73046875
+            }
+        ],
+        "gcryptremote": [
+            {
+                "round": 0,
+                "peak_memory": 1640.84765625,
+                "avg_cpu": 39.26551724137932,
+                "execution_time": 31.37436866760254,
+                "net_sent": 283.39208126068115,
+                "net_recv": 9.63115406036377,
+                "disk_read": 0.0,
+                "disk_write": 79.8359375
+            },
+            {
+                "round": 1,
+                "peak_memory": 1809.83203125,
+                "avg_cpu": 31.75714285714286,
+                "execution_time": 27.898783683776855,
+                "net_sent": 285.61927700042725,
+                "net_recv": 9.717002868652344,
+                "disk_read": 0.0,
+                "disk_write": 23.81640625
+            },
+            {
+                "round": 2,
+                "peak_memory": 1638.828125,
+                "avg_cpu": 30.296774193548384,
+                "execution_time": 28.297651290893555,
+                "net_sent": 287.77769660949707,
+                "net_recv": 9.730525970458984,
+                "disk_read": 0.0,
+                "disk_write": 20.67578125
+            },
+            {
+                "round": 3,
+                "peak_memory": 1614.69140625,
+                "avg_cpu": 36.392857142857146,
+                "execution_time": 28.535480499267578,
+                "net_sent": 289.88972187042236,
+                "net_recv": 9.394562721252441,
+                "disk_read": 0.0,
+                "disk_write": 25.40234375
+            },
+            {
+                "round": 4,
+                "peak_memory": 1626.83203125,
+                "avg_cpu": 32.97,
+                "execution_time": 29.084920406341553,
+                "net_sent": 291.97177505493164,
+                "net_recv": 9.436002731323242,
+                "disk_read": 0.0,
+                "disk_write": 33.3359375
+            },
+            {
+                "round": 5,
+                "peak_memory": 1620.32421875,
+                "avg_cpu": 32.64333333333333,
+                "execution_time": 28.49819302558899,
+                "net_sent": 294.2974147796631,
+                "net_recv": 9.70592975616455,
+                "disk_read": 0.0,
+                "disk_write": 17.2890625
+            },
+            {
+                "round": 6,
+                "peak_memory": 1802.84765625,
+                "avg_cpu": 35.74038461538463,
+                "execution_time": 56.67779517173767,
+                "net_sent": 297.38360023498535,
+                "net_recv": 10.936025619506836,
+                "disk_read": 0.0,
+                "disk_write": 874.328125
+            },
+            {
+                "round": 7,
+                "peak_memory": 2100.34375,
+                "avg_cpu": 32.69090909090909,
+                "execution_time": 28.647517204284668,
+                "net_sent": 298.86412048339844,
+                "net_recv": 10.072800636291504,
+                "disk_read": 0.0,
+                "disk_write": 16.140625
+            },
+            {
+                "round": 8,
+                "peak_memory": 2116.7734375,
+                "avg_cpu": 28.680645161290318,
+                "execution_time": 29.23512077331543,
+                "net_sent": 300.8989095687866,
+                "net_recv": 9.769206047058105,
+                "disk_read": 0.0,
+                "disk_write": 24.44921875
+            },
+            {
+                "round": 9,
+                "peak_memory": 1817.59765625,
+                "avg_cpu": 22.803125,
+                "execution_time": 28.7320818901062,
+                "net_sent": 303.0135078430176,
+                "net_recv": 9.931509017944336,
+                "disk_read": 0.0,
+                "disk_write": 17.859375
+            },
+            {
+                "round": 10,
+                "peak_memory": 1829.88671875,
+                "avg_cpu": 38.459999999999994,
+                "execution_time": 29.24086022377014,
+                "net_sent": 305.2971429824829,
+                "net_recv": 9.974153518676758,
+                "disk_read": 0.0,
+                "disk_write": 24.609375
+            },
+            {
+                "round": 11,
+                "peak_memory": 1810.42578125,
+                "avg_cpu": 23.43103448275862,
+                "execution_time": 29.379116535186768,
+                "net_sent": 307.69206523895264,
+                "net_recv": 10.247174263000488,
+                "disk_read": 0.0,
+                "disk_write": 22.95703125
+            }
+        ],
+        "zkgitremote": [
+            {
+                "round": 0,
+                "peak_memory": 1641.05078125,
+                "avg_cpu": 50.41162790697676,
+                "execution_time": 37.056867599487305,
+                "net_sent": 310.71026611328125,
+                "net_recv": 11.315082550048828,
+                "disk_read": 0.0,
+                "disk_write": 215.203125
+            },
+            {
+                "round": 1,
+                "peak_memory": 1461.51953125,
+                "avg_cpu": 31.306666666666665,
+                "execution_time": 30.043562173843384,
+                "net_sent": 312.57626819610596,
+                "net_recv": 10.101269721984863,
+                "disk_read": 0.0,
+                "disk_write": 33.06640625
+            },
+            {
+                "round": 2,
+                "peak_memory": 1464.015625,
+                "avg_cpu": 35.94333333333332,
+                "execution_time": 28.901622772216797,
+                "net_sent": 314.59185123443604,
+                "net_recv": 9.68388843536377,
+                "disk_read": 0.0,
+                "disk_write": 20.20703125
+            },
+            {
+                "round": 3,
+                "peak_memory": 1460.42578125,
+                "avg_cpu": 34.629999999999995,
+                "execution_time": 28.448655605316162,
+                "net_sent": 316.79396057128906,
+                "net_recv": 10.414697647094727,
+                "disk_read": 0.0,
+                "disk_write": 25.75
+            },
+            {
+                "round": 4,
+                "peak_memory": 1464.60546875,
+                "avg_cpu": 32.778125,
+                "execution_time": 28.567132711410522,
+                "net_sent": 319.0437650680542,
+                "net_recv": 10.41641616821289,
+                "disk_read": 0.0,
+                "disk_write": 21.8203125
+            },
+            {
+                "round": 5,
+                "peak_memory": 1460.37890625,
+                "avg_cpu": 34.44137931034482,
+                "execution_time": 28.810716152191162,
+                "net_sent": 321.2602310180664,
+                "net_recv": 9.84617805480957,
+                "disk_read": 0.0,
+                "disk_write": 21.79296875
+            },
+            {
+                "round": 6,
+                "peak_memory": 1462.0703125,
+                "avg_cpu": 35.438709677419354,
+                "execution_time": 29.264697551727295,
+                "net_sent": 323.6070804595947,
+                "net_recv": 9.9744234085083,
+                "disk_read": 0.0,
+                "disk_write": 77.7265625
+            },
+            {
+                "round": 7,
+                "peak_memory": 1464.78125,
+                "avg_cpu": 35.754838709677415,
+                "execution_time": 29.231156826019287,
+                "net_sent": 325.74350929260254,
+                "net_recv": 11.249977111816406,
+                "disk_read": 0.0,
+                "disk_write": 22.4140625
+            },
+            {
+                "round": 8,
+                "peak_memory": 1579.8828125,
+                "avg_cpu": 33.666666666666664,
+                "execution_time": 29.42800807952881,
+                "net_sent": 327.9033193588257,
+                "net_recv": 10.18455696105957,
+                "disk_read": 0.0,
+                "disk_write": 23.1953125
+            },
+            {
+                "round": 9,
+                "peak_memory": 1463.68359375,
+                "avg_cpu": 35.813793103448276,
+                "execution_time": 29.245261669158936,
+                "net_sent": 331.2132043838501,
+                "net_recv": 10.275599479675293,
+                "disk_read": 0.0,
+                "disk_write": 34.4453125
+            },
+            {
+                "round": 10,
+                "peak_memory": 1458.44140625,
+                "avg_cpu": 33.51290322580645,
+                "execution_time": 30.48952031135559,
+                "net_sent": 332.3900661468506,
+                "net_recv": 10.927824974060059,
+                "disk_read": 0.0,
+                "disk_write": 25.05078125
+            },
+            {
+                "round": 11,
+                "peak_memory": 1457.21875,
+                "avg_cpu": 32.68181818181817,
+                "execution_time": 30.56494688987732,
+                "net_sent": 334.6319360733032,
+                "net_recv": 9.919745445251465,
+                "disk_read": 0.0,
+                "disk_write": 24.10546875
+            }
+        ]
+    },
+    "llama-models": {
+        "gitremote": [
+            {
+                "round": 0,
+                "peak_memory": 1296.37890625,
+                "avg_cpu": 25.96,
+                "execution_time": 3.2118048667907715,
+                "net_sent": 15.523880004882812,
+                "net_recv": 0.5664443969726562,
+                "disk_read": 0.0,
+                "disk_write": 1.58984375
+            },
+            {
+                "round": 1,
+                "peak_memory": 1258.390625,
+                "avg_cpu": 20.0,
+                "execution_time": 1.0391383171081543,
+                "net_sent": 2.232370376586914,
+                "net_recv": 0.09392547607421875,
+                "disk_read": 0.0,
+                "disk_write": 2.15625
+            },
+            {
+                "round": 2,
+                "peak_memory": 1257.5625,
+                "avg_cpu": 20.0,
+                "execution_time": 1.0405170917510986,
+                "net_sent": 2.2653045654296875,
+                "net_recv": 0.08977317810058594,
+                "disk_read": 0.0,
+                "disk_write": 0.01171875
+            },
+            {
+                "round": 3,
+                "peak_memory": 1256.1640625,
+                "avg_cpu": 30.0,
+                "execution_time": 1.0658061504364014,
+                "net_sent": 2.2368125915527344,
+                "net_recv": 0.09525299072265625,
+                "disk_read": 0.0,
+                "disk_write": 1.16015625
+            },
+            {
+                "round": 4,
+                "peak_memory": 1250.4453125,
+                "avg_cpu": 10.0,
+                "execution_time": 1.0521314144134521,
+                "net_sent": 2.371551513671875,
+                "net_recv": 0.09690093994140625,
+                "disk_read": 0.0,
+                "disk_write": 1.0078125
+            },
+            {
+                "round": 5,
+                "peak_memory": 1250.421875,
+                "avg_cpu": 0.0,
+                "execution_time": 1.0489935874938965,
+                "net_sent": 2.276273727416992,
+                "net_recv": 0.08903884887695312,
+                "disk_read": 0.0,
+                "disk_write": 0.0703125
+            },
+            {
+                "round": 6,
+                "peak_memory": 1256.3125,
+                "avg_cpu": 30.0,
+                "execution_time": 1.050635814666748,
+                "net_sent": 2.2827415466308594,
+                "net_recv": 0.09246635437011719,
+                "disk_read": 0.0,
+                "disk_write": 0.01171875
+            },
+            {
+                "round": 7,
+                "peak_memory": 1264.9609375,
+                "avg_cpu": 10.0,
+                "execution_time": 1.1438496112823486,
+                "net_sent": 2.2335243225097656,
+                "net_recv": 0.10429763793945312,
+                "disk_read": 0.0,
+                "disk_write": 0.83203125
+            },
+            {
+                "round": 8,
+                "peak_memory": 1256.38671875,
+                "avg_cpu": 10.0,
+                "execution_time": 1.041886329650879,
+                "net_sent": 2.232583999633789,
+                "net_recv": 0.09387588500976562,
+                "disk_read": 0.0,
+                "disk_write": 1.1015625
+            },
+            {
+                "round": 9,
+                "peak_memory": 1258.5546875,
+                "avg_cpu": 20.0,
+                "execution_time": 1.0488977432250977,
+                "net_sent": 2.2335433959960938,
+                "net_recv": 0.09985733032226562,
+                "disk_read": 0.0,
+                "disk_write": 0.62109375
+            },
+            {
+                "round": 10,
+                "peak_memory": 1256.23828125,
+                "avg_cpu": 20.0,
+                "execution_time": 1.0796101093292236,
+                "net_sent": 2.2356491088867188,
+                "net_recv": 0.093963623046875,
+                "disk_read": 0.0,
+                "disk_write": 0.03515625
+            },
+            {
+                "round": 11,
+                "peak_memory": 1263.4140625,
+                "avg_cpu": 10.0,
+                "execution_time": 1.041356086730957,
+                "net_sent": 2.232797622680664,
+                "net_recv": 0.099853515625,
+                "disk_read": 0.0,
+                "disk_write": 0.01171875
+            }
+        ],
+        "gitcryptremote": [
+            {
+                "round": 0,
+                "peak_memory": 1318.6484375,
+                "avg_cpu": 29.977777777777778,
+                "execution_time": 5.568690538406372,
+                "net_sent": 37.66977500915527,
+                "net_recv": 1.3036823272705078,
+                "disk_read": 0.0,
+                "disk_write": 6.11328125
+            },
+            {
+                "round": 1,
+                "peak_memory": 1250.8515625,
+                "avg_cpu": 10.0,
+                "execution_time": 1.7652356624603271,
+                "net_sent": 2.23382568359375,
+                "net_recv": 0.10015487670898438,
+                "disk_read": 0.0,
+                "disk_write": 1.00390625
+            },
+            {
+                "round": 2,
+                "peak_memory": 1257.3125,
+                "avg_cpu": 20.0,
+                "execution_time": 1.763009786605835,
+                "net_sent": 2.232461929321289,
+                "net_recv": 0.09515380859375,
+                "disk_read": 0.0,
+                "disk_write": 2.18359375
+            },
+            {
+                "round": 3,
+                "peak_memory": 1256.1640625,
+                "avg_cpu": 15.0,
+                "execution_time": 1.7519333362579346,
+                "net_sent": 2.288858413696289,
+                "net_recv": 0.09345245361328125,
+                "disk_read": 0.0,
+                "disk_write": 6.38671875
+            },
+            {
+                "round": 4,
+                "peak_memory": 1250.609375,
+                "avg_cpu": 20.0,
+                "execution_time": 1.768864631652832,
+                "net_sent": 2.249065399169922,
+                "net_recv": 0.14495277404785156,
+                "disk_read": 0.0,
+                "disk_write": 2.40234375
+            },
+            {
+                "round": 5,
+                "peak_memory": 1251.53125,
+                "avg_cpu": 10.0,
+                "execution_time": 1.7926125526428223,
+                "net_sent": 2.260293960571289,
+                "net_recv": 0.09814834594726562,
+                "disk_read": 0.0,
+                "disk_write": 1.11328125
+            },
+            {
+                "round": 6,
+                "peak_memory": 1250.7265625,
+                "avg_cpu": 10.0,
+                "execution_time": 1.767138957977295,
+                "net_sent": 2.2359046936035156,
+                "net_recv": 0.09482765197753906,
+                "disk_read": 0.0,
+                "disk_write": 2.390625
+            },
+            {
+                "round": 7,
+                "peak_memory": 1265.32421875,
+                "avg_cpu": 15.0,
+                "execution_time": 1.7656614780426025,
+                "net_sent": 2.3251399993896484,
+                "net_recv": 0.09903526306152344,
+                "disk_read": 0.0,
+                "disk_write": 0.75
+            },
+            {
+                "round": 8,
+                "peak_memory": 1274.9765625,
+                "avg_cpu": 10.0,
+                "execution_time": 1.7812871932983398,
+                "net_sent": 2.2330989837646484,
+                "net_recv": 0.09681892395019531,
+                "disk_read": 0.0,
+                "disk_write": 6.8203125
+            },
+            {
+                "round": 9,
+                "peak_memory": 1265.15625,
+                "avg_cpu": 20.0,
+                "execution_time": 1.7692651748657227,
+                "net_sent": 2.2394466400146484,
+                "net_recv": 0.12022209167480469,
+                "disk_read": 0.0,
+                "disk_write": 3.69921875
+            },
+            {
+                "round": 10,
+                "peak_memory": 1251.3125,
+                "avg_cpu": 10.0,
+                "execution_time": 1.7934374809265137,
+                "net_sent": 2.2381114959716797,
+                "net_recv": 0.10593223571777344,
+                "disk_read": 0.0,
+                "disk_write": 11.3046875
+            },
+            {
+                "round": 11,
+                "peak_memory": 1273.80859375,
+                "avg_cpu": 10.0,
+                "execution_time": 1.7918453216552734,
+                "net_sent": 2.3317489624023438,
+                "net_recv": 0.10309791564941406,
+                "disk_read": 0.0,
+                "disk_write": 0.125
+            }
+        ],
+        "gcryptremote": [
+            {
+                "round": 0,
+                "peak_memory": 1780.28125,
+                "avg_cpu": 28.972500000000004,
+                "execution_time": 36.00098514556885,
+                "net_sent": 347.49363136291504,
+                "net_recv": 11.237473487854004,
+                "disk_read": 0.0,
+                "disk_write": 145.109375
+            },
+            {
+                "round": 1,
+                "peak_memory": 1729.1953125,
+                "avg_cpu": 34.151612903225804,
+                "execution_time": 33.211727142333984,
+                "net_sent": 349.7317419052124,
+                "net_recv": 11.187775611877441,
+                "disk_read": 0.0,
+                "disk_write": 29.875
+            },
+            {
+                "round": 2,
+                "peak_memory": 1780.828125,
+                "avg_cpu": 30.60967741935484,
+                "execution_time": 33.85655951499939,
+                "net_sent": 351.9610900878906,
+                "net_recv": 11.434354782104492,
+                "disk_read": 0.0,
+                "disk_write": 36.05859375
+            },
+            {
+                "round": 3,
+                "peak_memory": 1798.1484375,
+                "avg_cpu": 34.965625,
+                "execution_time": 34.20112705230713,
+                "net_sent": 354.16136837005615,
+                "net_recv": 11.499951362609863,
+                "disk_read": 0.0,
+                "disk_write": 24.9921875
+            },
+            {
+                "round": 4,
+                "peak_memory": 1799.90625,
+                "avg_cpu": 26.05,
+                "execution_time": 34.740394115448,
+                "net_sent": 356.38787174224854,
+                "net_recv": 11.626191139221191,
+                "disk_read": 0.0,
+                "disk_write": 30.1171875
+            },
+            {
+                "round": 5,
+                "peak_memory": 1783.734375,
+                "avg_cpu": 29.397142857142853,
+                "execution_time": 34.772114276885986,
+                "net_sent": 358.57322120666504,
+                "net_recv": 11.59736442565918,
+                "disk_read": 0.0,
+                "disk_write": 25.76953125
+            },
+            {
+                "round": 6,
+                "peak_memory": 1803.15625,
+                "avg_cpu": 24.976190476190474,
+                "execution_time": 34.555408239364624,
+                "net_sent": 360.8463430404663,
+                "net_recv": 11.726062774658203,
+                "disk_read": 0.0,
+                "disk_write": 25.296875
+            },
+            {
+                "round": 7,
+                "peak_memory": 1798.546875,
+                "avg_cpu": 23.203225806451613,
+                "execution_time": 35.12593126296997,
+                "net_sent": 363.135009765625,
+                "net_recv": 11.913518905639648,
+                "disk_read": 0.0,
+                "disk_write": 23.8515625
+            },
+            {
+                "round": 8,
+                "peak_memory": 1799.7109375,
+                "avg_cpu": 36.720588235294116,
+                "execution_time": 37.15033030509949,
+                "net_sent": 365.5747594833374,
+                "net_recv": 13.21301555633545,
+                "disk_read": 0.0,
+                "disk_write": 32.07421875
+            },
+            {
+                "round": 9,
+                "peak_memory": 1794.4140625,
+                "avg_cpu": 32.32647058823529,
+                "execution_time": 35.33206391334534,
+                "net_sent": 367.8515729904175,
+                "net_recv": 12.464666366577148,
+                "disk_read": 0.0,
+                "disk_write": 41.93359375
+            },
+            {
+                "round": 10,
+                "peak_memory": 1803.828125,
+                "avg_cpu": 28.66052631578948,
+                "execution_time": 35.78468036651611,
+                "net_sent": 369.7680015563965,
+                "net_recv": 12.075721740722656,
+                "disk_read": 0.0,
+                "disk_write": 31.1953125
+            },
+            {
+                "round": 11,
+                "peak_memory": 1791.9296875,
+                "avg_cpu": 35.131034482758615,
+                "execution_time": 36.52950191497803,
+                "net_sent": 371.9024419784546,
+                "net_recv": 12.025899887084961,
+                "disk_read": 0.0,
+                "disk_write": 27.6015625
+            }
+        ],
+        "zkgitremote": [
+            {
+                "round": 0,
+                "peak_memory": 1625.35546875,
+                "avg_cpu": 51.81250000000003,
+                "execution_time": 41.38187003135681,
+                "net_sent": 374.7112064361572,
+                "net_recv": 11.679940223693848,
+                "disk_read": 0.0,
+                "disk_write": 145.00390625
+            },
+            {
+                "round": 1,
+                "peak_memory": 1469.1640625,
+                "avg_cpu": 34.01081081081081,
+                "execution_time": 33.90501570701599,
+                "net_sent": 376.8937015533447,
+                "net_recv": 11.65977668762207,
+                "disk_read": 0.0,
+                "disk_write": 33.1875
+            },
+            {
+                "round": 2,
+                "peak_memory": 1461.1484375,
+                "avg_cpu": 36.129411764705885,
+                "execution_time": 34.05591654777527,
+                "net_sent": 379.11287784576416,
+                "net_recv": 11.77491283416748,
+                "disk_read": 0.0,
+                "disk_write": 26.43359375
+            },
+            {
+                "round": 3,
+                "peak_memory": 1463.90625,
+                "avg_cpu": 37.088571428571434,
+                "execution_time": 34.20747208595276,
+                "net_sent": 381.3386535644531,
+                "net_recv": 12.327932357788086,
+                "disk_read": 0.0,
+                "disk_write": 36.078125
+            },
+            {
+                "round": 4,
+                "peak_memory": 1465.671875,
+                "avg_cpu": 36.87179487179487,
+                "execution_time": 35.08677315711975,
+                "net_sent": 383.7861633300781,
+                "net_recv": 12.670940399169922,
+                "disk_read": 0.0703125,
+                "disk_write": 95.87109375
+            },
+            {
+                "round": 5,
+                "peak_memory": 1462.28515625,
+                "avg_cpu": 30.797222222222224,
+                "execution_time": 35.71305751800537,
+                "net_sent": 385.783579826355,
+                "net_recv": 12.019819259643555,
+                "disk_read": 0.0,
+                "disk_write": 29.24609375
+            },
+            {
+                "round": 6,
+                "peak_memory": 1468.39453125,
+                "avg_cpu": 36.02424242424243,
+                "execution_time": 34.4052050113678,
+                "net_sent": 387.99872970581055,
+                "net_recv": 12.003744125366211,
+                "disk_read": 0.0,
+                "disk_write": 25.65625
+            },
+            {
+                "round": 7,
+                "peak_memory": 1462.43359375,
+                "avg_cpu": 34.55135135135135,
+                "execution_time": 35.56687664985657,
+                "net_sent": 390.19756984710693,
+                "net_recv": 11.917872428894043,
+                "disk_read": 0.0,
+                "disk_write": 27.9765625
+            },
+            {
+                "round": 8,
+                "peak_memory": 1464.80078125,
+                "avg_cpu": 32.667567567567566,
+                "execution_time": 35.036537408828735,
+                "net_sent": 392.4213876724243,
+                "net_recv": 12.343050956726074,
+                "disk_read": 0.0,
+                "disk_write": 25.55859375
+            },
+            {
+                "round": 9,
+                "peak_memory": 1464.66796875,
+                "avg_cpu": 33.54871794871795,
+                "execution_time": 35.03783893585205,
+                "net_sent": 394.9386978149414,
+                "net_recv": 14.769079208374023,
+                "disk_read": 0.0,
+                "disk_write": 24.6015625
+            },
+            {
+                "round": 10,
+                "peak_memory": 1577.4921875,
+                "avg_cpu": 34.646874999999994,
+                "execution_time": 35.84046792984009,
+                "net_sent": 397.1915102005005,
+                "net_recv": 14.482953071594238,
+                "disk_read": 0.0,
+                "disk_write": 29.625
+            },
+            {
+                "round": 11,
+                "peak_memory": 1581.4765625,
+                "avg_cpu": 33.51290322580645,
+                "execution_time": 36.19924759864807,
+                "net_sent": 399.4867057800293,
+                "net_recv": 15.728608131408691,
+                "disk_read": 0.0,
+                "disk_write": 25.640625
+            }
+        ]
+    },
+    "markitdown": {
+        "gitremote": [
+            {
+                "round": 0,
+                "peak_memory": 1295.72265625,
+                "avg_cpu": 34.975,
+                "execution_time": 3.22387957572937,
+                "net_sent": 15.552644729614258,
+                "net_recv": 0.6116447448730469,
+                "disk_read": 0.0,
+                "disk_write": 3.17578125
+            },
+            {
+                "round": 1,
+                "peak_memory": 1263.57421875,
+                "avg_cpu": 20.0,
+                "execution_time": 1.0416314601898193,
+                "net_sent": 2.2333106994628906,
+                "net_recv": 0.10424995422363281,
+                "disk_read": 0.0,
+                "disk_write": 0.01171875
+            },
+            {
+                "round": 2,
+                "peak_memory": 1249.91015625,
+                "avg_cpu": 20.0,
+                "execution_time": 1.0312159061431885,
+                "net_sent": 2.3636512756347656,
+                "net_recv": 0.10159492492675781,
+                "disk_read": 0.0,
+                "disk_write": 0.046875
+            },
+            {
+                "round": 3,
+                "peak_memory": 1250.33984375,
+                "avg_cpu": 10.0,
+                "execution_time": 1.0626096725463867,
+                "net_sent": 2.2334632873535156,
+                "net_recv": 0.10131072998046875,
+                "disk_read": 0.0,
+                "disk_write": 0.796875
+            },
+            {
+                "round": 4,
+                "peak_memory": 1250.49609375,
+                "avg_cpu": 10.0,
+                "execution_time": 1.0241351127624512,
+                "net_sent": 2.2329158782958984,
+                "net_recv": 0.10126876831054688,
+                "disk_read": 0.0,
+                "disk_write": 0.24609375
+            },
+            {
+                "round": 5,
+                "peak_memory": 1250.30078125,
+                "avg_cpu": 10.0,
+                "execution_time": 1.042788028717041,
+                "net_sent": 2.232797622680664,
+                "net_recv": 0.10529136657714844,
+                "disk_read": 0.0,
+                "disk_write": 0.01171875
+            },
+            {
+                "round": 6,
+                "peak_memory": 1256.625,
+                "avg_cpu": 30.0,
+                "execution_time": 1.066490650177002,
+                "net_sent": 2.2331924438476562,
+                "net_recv": 0.10503387451171875,
+                "disk_read": 0.0,
+                "disk_write": 0.01171875
+            },
+            {
+                "round": 7,
+                "peak_memory": 1265.6640625,
+                "avg_cpu": 20.0,
+                "execution_time": 1.0400910377502441,
+                "net_sent": 2.2331295013427734,
+                "net_recv": 0.10292816162109375,
+                "disk_read": 0.0,
+                "disk_write": 0.01171875
+            },
+            {
+                "round": 8,
+                "peak_memory": 1257.0,
+                "avg_cpu": 10.0,
+                "execution_time": 1.0364508628845215,
+                "net_sent": 2.233888626098633,
+                "net_recv": 0.09894371032714844,
+                "disk_read": 0.0,
+                "disk_write": 0.01171875
+            },
+            {
+                "round": 9,
+                "peak_memory": 1264.828125,
+                "avg_cpu": 10.0,
+                "execution_time": 1.0509369373321533,
+                "net_sent": 2.2338294982910156,
+                "net_recv": 0.10449600219726562,
+                "disk_read": 0.0,
+                "disk_write": 0.17578125
+            },
+            {
+                "round": 10,
+                "peak_memory": 1262.90625,
+                "avg_cpu": 10.0,
+                "execution_time": 1.0693190097808838,
+                "net_sent": 2.233461380004883,
+                "net_recv": 0.10767936706542969,
+                "disk_read": 0.0,
+                "disk_write": 0.1171875
+            },
+            {
+                "round": 11,
+                "peak_memory": 1266.5859375,
+                "avg_cpu": 10.0,
+                "execution_time": 1.0608081817626953,
+                "net_sent": 2.2339820861816406,
+                "net_recv": 0.1024322509765625,
+                "disk_read": 0.0,
+                "disk_write": 0.01171875
+            }
+        ],
+        "gitcryptremote": [
+            {
+                "round": 0,
+                "peak_memory": 1326.57421875,
+                "avg_cpu": 34.400000000000006,
+                "execution_time": 5.895724534988403,
+                "net_sent": 37.67553901672363,
+                "net_recv": 1.4471893310546875,
+                "disk_read": 0.0,
+                "disk_write": 15.5703125
+            },
+            {
+                "round": 1,
+                "peak_memory": 1263.67578125,
+                "avg_cpu": 20.0,
+                "execution_time": 1.79544997215271,
+                "net_sent": 2.2550392150878906,
+                "net_recv": 0.1384868621826172,
+                "disk_read": 0.0,
+                "disk_write": 0.8203125
+            },
+            {
+                "round": 2,
+                "peak_memory": 1250.83203125,
+                "avg_cpu": 10.0,
+                "execution_time": 1.7574973106384277,
+                "net_sent": 2.247044563293457,
+                "net_recv": 0.12695026397705078,
+                "disk_read": 0.0,
+                "disk_write": 6.57421875
+            },
+            {
+                "round": 3,
+                "peak_memory": 1257.57421875,
+                "avg_cpu": 10.0,
+                "execution_time": 1.740708827972412,
+                "net_sent": 2.234804153442383,
+                "net_recv": 0.10236740112304688,
+                "disk_read": 0.0,
+                "disk_write": 1.75
+            },
+            {
+                "round": 4,
+                "peak_memory": 1257.1484375,
+                "avg_cpu": 10.0,
+                "execution_time": 1.7458627223968506,
+                "net_sent": 2.3200416564941406,
+                "net_recv": 0.09568977355957031,
+                "disk_read": 0.0,
+                "disk_write": 1.078125
+            },
+            {
+                "round": 5,
+                "peak_memory": 1253.92578125,
+                "avg_cpu": 10.0,
+                "execution_time": 1.7597875595092773,
+                "net_sent": 2.2362823486328125,
+                "net_recv": 0.1117095947265625,
+                "disk_read": 0.0,
+                "disk_write": 11.73046875
+            },
+            {
+                "round": 6,
+                "peak_memory": 1263.46875,
+                "avg_cpu": 20.0,
+                "execution_time": 1.7406303882598877,
+                "net_sent": 2.2340126037597656,
+                "net_recv": 0.10760879516601562,
+                "disk_read": 0.0,
+                "disk_write": 0.265625
+            },
+            {
+                "round": 7,
+                "peak_memory": 1250.82421875,
+                "avg_cpu": 10.0,
+                "execution_time": 1.772341251373291,
+                "net_sent": 2.389772415161133,
+                "net_recv": 0.104095458984375,
+                "disk_read": 0.0,
+                "disk_write": 1.81640625
+            },
+            {
+                "round": 8,
+                "peak_memory": 1251.00390625,
+                "avg_cpu": 0.0,
+                "execution_time": 1.098318099975586,
+                "net_sent": 2.233736038208008,
+                "net_recv": 0.10070037841796875,
+                "disk_read": 0.0,
+                "disk_write": 1.1484375
+            },
+            {
+                "round": 9,
+                "peak_memory": 1250.98828125,
+                "avg_cpu": 10.0,
+                "execution_time": 1.7688443660736084,
+                "net_sent": 2.2396583557128906,
+                "net_recv": 0.12483024597167969,
+                "disk_read": 0.0,
+                "disk_write": 1.140625
+            },
+            {
+                "round": 10,
+                "peak_memory": 1250.15234375,
+                "avg_cpu": 20.0,
+                "execution_time": 1.7658696174621582,
+                "net_sent": 2.2377395629882812,
+                "net_recv": 0.12361717224121094,
+                "disk_read": 0.0,
+                "disk_write": 11.9765625
+            },
+            {
+                "round": 11,
+                "peak_memory": 1264.33203125,
+                "avg_cpu": 20.0,
+                "execution_time": 1.75948166847229,
+                "net_sent": 2.2546310424804688,
+                "net_recv": 0.09793472290039062,
+                "disk_read": 0.0,
+                "disk_write": 0.19140625
+            }
+        ],
+        "gcryptremote": [
+            {
+                "round": 0,
+                "peak_memory": 2236.18359375,
+                "avg_cpu": 31.668085106382986,
+                "execution_time": 45.18686604499817,
+                "net_sent": 435.98427867889404,
+                "net_recv": 16.27843189239502,
+                "disk_read": 0.0,
+                "disk_write": 127.0234375
+            },
+            {
+                "round": 1,
+                "peak_memory": 2208.24609375,
+                "avg_cpu": 34.62325581395349,
+                "execution_time": 43.52658224105835,
+                "net_sent": 438.2007417678833,
+                "net_recv": 15.913764953613281,
+                "disk_read": 0.0,
+                "disk_write": 28.90234375
+            },
+            {
+                "round": 2,
+                "peak_memory": 2138.41796875,
+                "avg_cpu": 28.988235294117647,
+                "execution_time": 43.362783908843994,
+                "net_sent": 440.51580715179443,
+                "net_recv": 15.943582534790039,
+                "disk_read": 0.0,
+                "disk_write": 41.23046875
+            },
+            {
+                "round": 3,
+                "peak_memory": 2269.85546875,
+                "avg_cpu": 34.15116279069768,
+                "execution_time": 43.50958228111267,
+                "net_sent": 442.61930751800537,
+                "net_recv": 15.991999626159668,
+                "disk_read": 0.0,
+                "disk_write": 50.3671875
+            },
+            {
+                "round": 4,
+                "peak_memory": 2214.04296875,
+                "avg_cpu": 36.83333333333334,
+                "execution_time": 43.88828492164612,
+                "net_sent": 445.0321044921875,
+                "net_recv": 16.091825485229492,
+                "disk_read": 0.0,
+                "disk_write": 37.21484375
+            },
+            {
+                "round": 5,
+                "peak_memory": 2231.78515625,
+                "avg_cpu": 35.79791666666667,
+                "execution_time": 43.412144899368286,
+                "net_sent": 447.0570602416992,
+                "net_recv": 16.074536323547363,
+                "disk_read": 0.0,
+                "disk_write": 29.94140625
+            },
+            {
+                "round": 6,
+                "peak_memory": 2243.69921875,
+                "avg_cpu": 34.63555555555556,
+                "execution_time": 43.8204460144043,
+                "net_sent": 449.27571964263916,
+                "net_recv": 16.188014030456543,
+                "disk_read": 0.0,
+                "disk_write": 42.1875
+            },
+            {
+                "round": 7,
+                "peak_memory": 2148.16796875,
+                "avg_cpu": 34.25306122448979,
+                "execution_time": 46.929277658462524,
+                "net_sent": 451.60516834259033,
+                "net_recv": 16.23759651184082,
+                "disk_read": 0.0,
+                "disk_write": 37.53515625
+            },
+            {
+                "round": 8,
+                "peak_memory": 2072.41796875,
+                "avg_cpu": 31.927450980392166,
+                "execution_time": 44.72436785697937,
+                "net_sent": 453.75040340423584,
+                "net_recv": 16.33288860321045,
+                "disk_read": 0.0,
+                "disk_write": 27.8203125
+            },
+            {
+                "round": 9,
+                "peak_memory": 2050.65234375,
+                "avg_cpu": 30.169387755102044,
+                "execution_time": 44.289597272872925,
+                "net_sent": 455.97754096984863,
+                "net_recv": 16.378986358642578,
+                "disk_read": 0.0,
+                "disk_write": 41.515625
+            },
+            {
+                "round": 10,
+                "peak_memory": 2127.44921875,
+                "avg_cpu": 38.19354838709679,
+                "execution_time": 71.12667226791382,
+                "net_sent": 458.58234691619873,
+                "net_recv": 16.93025302886963,
+                "disk_read": 0.0,
+                "disk_write": 647.56640625
+            },
+            {
+                "round": 11,
+                "peak_memory": 2205.82421875,
+                "avg_cpu": 35.06595744680852,
+                "execution_time": 48.50315046310425,
+                "net_sent": 460.3135290145874,
+                "net_recv": 16.582377433776855,
+                "disk_read": 0.0,
+                "disk_write": 40.83984375
+            }
+        ],
+        "zkgitremote": [
+            {
+                "round": 0,
+                "peak_memory": 1624.73046875,
+                "avg_cpu": 43.666129032258084,
+                "execution_time": 49.64109134674072,
+                "net_sent": 463.27189350128174,
+                "net_recv": 15.9032564163208,
+                "disk_read": 0.0,
+                "disk_write": 157.39453125
+            },
+            {
+                "round": 1,
+                "peak_memory": 1470.98046875,
+                "avg_cpu": 30.441860465116285,
+                "execution_time": 42.086260080337524,
+                "net_sent": 465.5461378097534,
+                "net_recv": 15.896112442016602,
+                "disk_read": 0.0,
+                "disk_write": 30.01171875
+            },
+            {
+                "round": 2,
+                "peak_memory": 1591.0390625,
+                "avg_cpu": 33.38947368421052,
+                "execution_time": 43.04495859146118,
+                "net_sent": 467.6954231262207,
+                "net_recv": 16.08370590209961,
+                "disk_read": 0.0,
+                "disk_write": 38.125
+            },
+            {
+                "round": 3,
+                "peak_memory": 1471.46484375,
+                "avg_cpu": 34.04772727272728,
+                "execution_time": 41.87335991859436,
+                "net_sent": 469.9319086074829,
+                "net_recv": 17.100984573364258,
+                "disk_read": 0.0,
+                "disk_write": 35.328125
+            },
+            {
+                "round": 4,
+                "peak_memory": 1471.17578125,
+                "avg_cpu": 36.38809523809524,
+                "execution_time": 43.76016902923584,
+                "net_sent": 472.18194103240967,
+                "net_recv": 16.279769897460938,
+                "disk_read": 0.0,
+                "disk_write": 28.875
+            },
+            {
+                "round": 5,
+                "peak_memory": 1471.63671875,
+                "avg_cpu": 32.58695652173913,
+                "execution_time": 42.99695658683777,
+                "net_sent": 474.62114810943604,
+                "net_recv": 17.755745887756348,
+                "disk_read": 0.0,
+                "disk_write": 40.25390625
+            },
+            {
+                "round": 6,
+                "peak_memory": 1464.98828125,
+                "avg_cpu": 35.87045454545456,
+                "execution_time": 43.62859916687012,
+                "net_sent": 477.1775302886963,
+                "net_recv": 17.09210205078125,
+                "disk_read": 0.0,
+                "disk_write": 30.46484375
+            },
+            {
+                "round": 7,
+                "peak_memory": 1463.61328125,
+                "avg_cpu": 34.22127659574469,
+                "execution_time": 43.114646196365356,
+                "net_sent": 479.23698902130127,
+                "net_recv": 18.104483604431152,
+                "disk_read": 0.0,
+                "disk_write": 40.703125
+            },
+            {
+                "round": 8,
+                "peak_memory": 1469.01171875,
+                "avg_cpu": 34.091304347826096,
+                "execution_time": 44.30209159851074,
+                "net_sent": 481.481822013855,
+                "net_recv": 15.567328453063965,
+                "disk_read": 0.0,
+                "disk_write": 35.6875
+            },
+            {
+                "round": 9,
+                "peak_memory": 1463.17578125,
+                "avg_cpu": 33.597727272727276,
+                "execution_time": 42.8522732257843,
+                "net_sent": 483.4514579772949,
+                "net_recv": 15.283666610717773,
+                "disk_read": 0.0,
+                "disk_write": 42.53125
+            },
+            {
+                "round": 10,
+                "peak_memory": 1471.2734375,
+                "avg_cpu": 32.85555555555556,
+                "execution_time": 42.75542712211609,
+                "net_sent": 485.42130947113037,
+                "net_recv": 14.835389137268066,
+                "disk_read": 0.0,
+                "disk_write": 30.91796875
+            },
+            {
+                "round": 11,
+                "peak_memory": 1467.5234375,
+                "avg_cpu": 34.728571428571435,
+                "execution_time": 43.76318693161011,
+                "net_sent": 487.65946769714355,
+                "net_recv": 14.618624687194824,
+                "disk_read": 0.0,
+                "disk_write": 28.3515625
+            }
+        ]
+    }
+}
