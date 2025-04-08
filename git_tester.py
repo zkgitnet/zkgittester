@@ -440,6 +440,7 @@ def calculate_statistics(data):
         for repo_dir, remotes in data.items():
             LOGGER.info(config.LOG_STATS_REPO, os.path.basename(repo_dir))
             file.write(f"\nStatistics for Repository: {os.path.basename(repo_dir)}\n")
+            calc_stats = True
 
             # Perform ANOVA and T-tests within each repository
             for remote, entries in remotes.items():
@@ -472,7 +473,7 @@ def calculate_statistics(data):
                     )
 
                 # Perform ANOVA if multiple remotes exist in the repository
-                if len(remotes) > 1:
+                if len(remotes) > 1 and calc_stats:
                     remote_data = {metric: [] for metric in config.STATS}
 
                     for remote_name, remote_entries in remotes.items():
@@ -500,7 +501,8 @@ def calculate_statistics(data):
                         LOGGER.info(config.LOG_ANOVA, metric, result.statistic, result.pvalue)
 
                 # Perform pairwise T-tests for each possible pair of remotes
-                if len(remotes) > 1:
+                if len(remotes) > 1 and calc_stats:
+                    calc_stats = False
                     for remote1, remote2 in itertools.combinations(remotes.keys(), 2):
                         ttest_result = {}
                         for metric in config.STATS:
