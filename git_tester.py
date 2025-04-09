@@ -64,23 +64,27 @@ def load_existing_data():
 
         path = os.path.join(tmp_dir, filename)
 
-        match = re.match(r"(.+)_(.+)_round_(\d+).json", filename)
-        if match:
-            repo = match.group(1)
-            remote = match.group(2)
-        else:
-            LOGGER.warning(config.LOG_FILE_NOT_FOUND, filename)
-            continue
-
         with open(path, config.FILE_READ, encoding=config.FILE_UTF8) as f:
             entry = json.load(f)
 
-        if repo not in performance_data:
-            performance_data[repo] = {}
-        if remote not in performance_data[repo]:
-            performance_data[repo][remote] = []
+        if isinstance(entry, dict) and all(isinstance(v, dict) for v in entry.values()):
+            for repo, remotes in entry.items():
+                for remote, entries in remotes.items():
+                    if repo not in performance_data:
+                        performance_data[repo] = {}
+                    if remote not in performance_data[repo]:
+                        performance_data[repo][remote] = []
+                    performance_data[repo][remote].extend(entries)
+        else:
+            repo = entry.get(config.STATS_REPODIR, "unknown_repo")
+            remote = entry.get(config.STATS_REMOTE, "unknown_remote")
 
-        performance_data[repo][remote].append(entry)
+            if repo not in performance_data:
+                performance_data[repo] = {}
+            if remote not in performance_data[repo]:
+                performance_data[repo][remote] = []
+
+            performance_data[repo][remote].append(entry)
 
 
 def get_round_data_path(repo_dir, remote, round_entry):
@@ -273,7 +277,7 @@ def create_and_commit_file(directory, filename="random_file.bin", commit_msg="Ad
         with open(filepath, config.FILE_WRITE_BINARY) as f:
             f.write(os.urandom(1024 * 1024))
 
->        subprocess.run([config.GIT_GIT, config.GIT_ADD, "*"], check=True,
+        subprocess.run([config.GIT_GIT, config.GIT_ADD, "*"], check=True,
                         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         time.sleep(1)
 

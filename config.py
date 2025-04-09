@@ -27,7 +27,7 @@ GIT_LOCK = "lock"
 GIT_UNLOCK = "unlock"
 
 # Test Configuration
-TEST_NUM_ROUNDS = 12
+TEST_NUM_ROUNDS = 2
 PID_TERMS = ["git", "gcrypt"]
 PID = "pid"
 CMDLINE = "cmdline"

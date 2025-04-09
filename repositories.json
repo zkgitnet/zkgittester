@@ -1,39 +1,14 @@
 {
     "repositories": [
         {
-            "repo_dir": "/home/leif/programming/test_zkgit/anime",
-            "branch": "master",
-            "remotes": ["gitremote","gitcryptremote","gcryptremote","zkgitremote"]
-        },
-        {
-            "repo_dir": "/home/leif/programming/test_zkgit/build-your-own-x",
-            "branch": "master",
-            "remotes": ["gitremote","gitcryptremote","gcryptremote","zkgitremote"]
-        },
-        {
-            "repo_dir": "/home/leif/programming/test_zkgit/awesome-llm-apps",
-            "branch": "main",
-            "remotes": ["gitremote","gitcryptremote","gcryptremote","zkgitremote"]
-        },
-        {
-            "repo_dir": "/home/leif/programming/test_zkgit/gitdiagram",
-            "branch": "main",
-            "remotes": ["gitremote","gitcryptremote","gcryptremote","zkgitremote"]
-        },
-        {
-            "repo_dir": "/home/leif/programming/test_zkgit/glance",
-            "branch": "main",
-            "remotes": ["gitremote","gitcryptremote","gcryptremote","zkgitremote"]
-        },
-        {
             "repo_dir": "/home/leif/programming/test_zkgit/llama-models",
             "branch": "main",
-            "remotes": ["gitremote","gitcryptremote","gcryptremote","zkgitremote"]
+            "remotes": ["gitremote","gcryptremote","zkgitremote"]
         },
         {
             "repo_dir": "/home/leif/programming/test_zkgit/markitdown",
             "branch": "main",
-            "remotes": ["gitremote","gitcryptremote","gcryptremote","zkgitremote"]
+            "remotes": ["gitremote","gcryptremote","zkgitremote"]
         }
     ]
 }
