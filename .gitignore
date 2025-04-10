@@ -3,6 +3,7 @@ __pycach*
 outputs/
 tmp/
 bkp/
+repos/
 
 *~
 *#

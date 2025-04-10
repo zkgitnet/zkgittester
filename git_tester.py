@@ -76,8 +76,11 @@ def load_existing_data():
                         performance_data[repo][remote] = []
                     performance_data[repo][remote].extend(entries)
         else:
-            repo = entry.get(config.STATS_REPODIR, "unknown_repo")
-            remote = entry.get(config.STATS_REMOTE, "unknown_remote")
+            match = re.match(r"(.+?)_(.+?)_round", filename)
+            if match:
+                repo, remote = match.groups()
+            else:
+                repo, remote = "unknown_repo", "unknown_remote"
 
             if repo not in performance_data:
                 performance_data[repo] = {}
@@ -263,19 +266,18 @@ def delete_remote_branch(directory, remote, branch):
         LOGGER.critical(config.LOG_ERROR, e)
 
 
-def create_and_commit_file(directory, filename="random_file.bin", commit_msg="Add 1MB random file"):
+def create_and_commit_file(repo_dir, remote, filename="random_file.bin", commit_msg="Add 1MB random file"):
     """Creates a 1MB random file, adds it to the Git repo, and commits it."""
-    filepath = os.path.join(directory, filename)
+    if remote.lower() == config.GIT_CRYPT_REMOTE:
+        repo_dir += "_gitcrypt"
 
-    if not os.path.isdir(directory):
-        LOGGER.error(config.LOG_DIRECTORY, directory)
-        return
+    filepath = os.path.join(repo_dir, filename)
 
     try:
-        os.chdir(directory)
+        os.chdir(repo_dir)
 
         with open(filepath, config.FILE_WRITE_BINARY) as f:
-            f.write(os.urandom(1024 * 1024))
+            f.write(os.urandom(1024))
 
         subprocess.run([config.GIT_GIT, config.GIT_ADD, "*"], check=True,
                         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
@@ -356,17 +358,15 @@ def monitor_memory(pids, max_memory_usage, process):
     """Monitors the memory usage in a separate thread."""
     while process.poll() is None:
         max_memory_usage[0] = max(max_memory_usage[0], get_memory_usage(pids))
-        time.sleep(0.1)
     return max_memory_usage[0]
-
-
+ 
+ 
 def monitor_cpu(pids, tot_cpu_usage, rounds, process):
     """Monitors the CPU usage in a separate thread."""
     while process.poll() is None:
         cpu, r = get_cpu_usage(pids)
         tot_cpu_usage[0] += cpu
         rounds[0] += r
-        time.sleep(0.1)
     return tot_cpu_usage[0], rounds[0]
 
 
@@ -394,8 +394,8 @@ def monitor_process(process, label=config.LABEL_PROCESS):
     process.wait()
 
     return max_memory_usage[0], tot_cpu_usage[0] / rounds[0] if rounds[0] > 0 else 0
-
-
+ 
+          
 @measure_performance
 def git_push(repo_dir, remote, branch, i):
     """Performs a git push in the specified directory."""
@@ -404,7 +404,10 @@ def git_push(repo_dir, remote, branch, i):
         return
 
     try:
-        os.chdir(repo_dir)
+        if remote.lower() == config.GIT_CRYPT_REMOTE:
+            os.chdir(repo_dir + "_gitcrypt")            
+        else:
+            os.chdir(repo_dir)
 
         max_memory_usage = 0.0
         avg_cpu_usage = 0.0
@@ -591,7 +594,7 @@ def main():
                     current_round += 1
                     continue
 
-                create_and_commit_file(repo_dir)
+                create_and_commit_file(repo_dir, remote)
                 git_push(repo_dir, remote, branch, _)
 
                 if remote.lower() == config.GIT_CRYPT_REMOTE:

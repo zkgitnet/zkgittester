@@ -1,14 +1,39 @@
 {
     "repositories": [
         {
-            "repo_dir": "/home/leif/programming/test_zkgit/llama-models",
-            "branch": "main",
-            "remotes": ["gitremote","gcryptremote","zkgitremote"]
+            "repo_dir": "/home/leif/programming/miun/dt133g/zkgittester/repos/anime",
+            "branch": "master",
+            "remotes": ["gitremote","gitcryptremote","gcryptremote","zkgitremote"]
         },
         {
-            "repo_dir": "/home/leif/programming/test_zkgit/markitdown",
+            "repo_dir": "/home/leif/programming/miun/dt133g/zkgittester/repos/awesome-llm-apps",
             "branch": "main",
-            "remotes": ["gitremote","gcryptremote","zkgitremote"]
+            "remotes": ["gitremote","gitcryptremote","gcryptremote","zkgitremote"]
+        },
+        {
+            "repo_dir": "/home/leif/programming/miun/dt133g/zkgittester/repos/build-your-own-x",
+            "branch": "master",
+            "remotes": ["gitremote","gitcryptremote","gcryptremote","zkgitremote"]
+        },
+        {
+            "repo_dir": "/home/leif/programming/miun/dt133g/zkgittester/repos/gitdiagram",
+            "branch": "main",
+            "remotes": ["gitremote","gitcryptremote","gcryptremote","zkgitremote"]
+        },
+        {
+            "repo_dir": "/home/leif/programming/miun/dt133g/zkgittester/repos/glance",
+            "branch": "main",
+            "remotes": ["gitremote","gitcryptremote","gcryptremote","zkgitremote"]
+        },
+        {
+            "repo_dir": "/home/leif/programming/miun/dt133g/zkgittester/repos/llama-models",
+            "branch": "main",
+            "remotes": ["gitremote","gitcryptremote","gcryptremote","zkgitremote"]
+        },
+        {
+            "repo_dir": "/home/leif/programming/miun/dt133g/zkgittester/repos/markitdown",
+            "branch": "main",
+            "remotes": ["gitremote","gitcryptremote","gcryptremote","zkgitremote"]
         }
     ]
 }
