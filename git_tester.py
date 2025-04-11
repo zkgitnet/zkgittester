@@ -137,6 +137,7 @@ def generate_box_plots(data):
         return
 
     for metric in config.STATS:
+        # Per repo boxplots
         metric_df = df[df[config.STATS_METRIC] == metric]
         if metric_df.empty:
             continue
@@ -166,6 +167,41 @@ def generate_box_plots(data):
 
         timestamp = datetime.now().strftime(config.DATETIME_FORMAT)
         filename = f"outputs/{timestamp}_{metric}_comparison.png"
+        plt.savefig(filename)
+        LOGGER.info(config.LOG_BOXPLOT, filename)
+        plt.show()
+
+        # Concentated boxplots
+        remote_palette = {
+            "gitremote": "#1f77b4",       # blue
+            "gitcryptremote": "#ff7f0e",  # orange
+            "gcryptremote": "#2ca02c",    # green
+            "zkgitremote": "#d62728"      # red
+        }
+        plt.figure(figsize=(2, 6))
+        sns.boxplot(data=metric_df, hue=config.STATS_REMOTE,
+                    y=config.STATS_VALUE, legend=False)
+
+        handles, labels = plt.gca().get_legend_handles_labels()
+        label_map = {
+            "gitremote": "git",
+            "gitcryptremote": "git-crypt",
+            "gcryptremote": "gcrypt",
+            "zkgitremote": "ZK Git"
+        }
+        new_xticklabels = [label_map.get(t.get_text(), t.get_text()) for t in plt.gca().get_xticklabels()]
+        plt.gca().set_xticklabels(new_xticklabels)
+
+        plt.title("")
+        plt.xlabel("")
+        plt.ylabel(metric.replace('_', ' ').title())
+        plt.ylim(bottom=0)
+        plt.xticks(rotation=90)
+        plt.grid(True)
+        plt.tight_layout()
+
+        timestamp = datetime.now().strftime(config.DATETIME_FORMAT)
+        filename = f"outputs/{timestamp}_{metric}_combined_comparison.png"
         plt.savefig(filename)
         LOGGER.info(config.LOG_BOXPLOT, filename)
         plt.show()
@@ -458,6 +494,16 @@ def calculate_statistics(data):
 
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
     with open(filename, config.FILE_WRITE, encoding=config.FILE_UTF8) as file:
+
+        # === New: collect global (cross-repo) metric values per remote ===
+        global_remote_data = {metric: {} for metric in config.STATS}
+        for repo_dir, remotes in data.items():
+            for remote, entries in remotes.items():
+                for metric in config.STATS:
+                    values = [entry[metric] for entry in entries if metric in entry]
+                    if values:
+                        global_remote_data[metric].setdefault(remote, []).extend(values)
+        
         for repo_dir, remotes in data.items():
             LOGGER.info(config.LOG_STATS_REPO, os.path.basename(repo_dir))
             file.write(f"\nStatistics for Repository: {os.path.basename(repo_dir)}\n")
@@ -518,7 +564,7 @@ def calculate_statistics(data):
 
                     for metric, result in anova_result.items():
                         file.write(f"\nANOVA Result for {metric}: F-statistic = "
-                                   f"{result.statistic:.2f}, p-value = {result.pvalue:.4f}\n")
+                                   f"{result.statistic:.2f}, p-value = {result.pvalue:.8f}\n")
                         LOGGER.info(config.LOG_ANOVA, metric, result.statistic, result.pvalue)
 
                 # Perform pairwise T-tests for each possible pair of remotes
@@ -534,7 +580,7 @@ def calculate_statistics(data):
                                 t_stat, p_val = stats.ttest_ind(values1, values2)
                                 ttest_result[metric] = {"t-statistic": t_stat, "p-value": p_val}
                                 file.write(f"\nT-test Result for {remote1} vs {remote2} ({metric}): "
-                                           f"t-statistic = {t_stat:.2f}, p-value = {p_val:.4f}\n")
+                                           f"t-statistic = {t_stat:.2f}, p-value = {p_val:.8f}\n")
                                 LOGGER.info(config.LOG_TTEST, remote1, remote2, metric, t_stat, p_val)
                             else:
                                 file.write(f"\nT-test skipped for {remote1} vs "
@@ -543,6 +589,32 @@ def calculate_statistics(data):
 
                 LOGGER.info(output)
                 file.write(output)
+
+                file.write("\n\n=== Global (Combined) Statistics Across All Repositories ===\n")
+
+        # ANOVA across remotes globally
+        file.write("\n--- Global ANOVA Results ---\n")
+        for metric, remote_values in global_remote_data.items():
+            if len(remote_values) < 2:
+                file.write(f"{metric}: Not enough remotes for ANOVA.\n")
+                continue
+            anova_input = list(remote_values.values())
+            result = stats.f_oneway(*anova_input)
+            file.write(f"ANOVA for {metric}: F = {result.statistic:.2f}, p = {result.pvalue:.8f}\n")
+            LOGGER.info(f"ANOVA for {metric}: F = {result.statistic:.2f}, p = {result.pvalue:.8f}\n")
+
+        file.write("\n--- Global Pairwise T-Tests ---\n")
+        for metric, remote_values in global_remote_data.items():
+            remotes = list(remote_values.keys())
+            for r1, r2 in itertools.combinations(remotes, 2):
+                values1 = remote_values[r1]
+                values2 = remote_values[r2]
+                if values1 and values2:
+                    t_stat, p_val = stats.ttest_ind(values1, values2)
+                    file.write(f"{metric}: {r1} vs {r2}: t = {t_stat:.2f}, p = {p_val:.8f}\n")
+                    LOGGER.info(f"{metric}: {r1} vs {r2}: t = {t_stat:.2f}, p = {p_val:.8f}\n")
+                else:
+                    file.write(f"{metric}: {r1} vs {r2}: Skipped due to missing data.\n")
 
         file.write(config.LOG_RAWDATA)
         json.dump(data, file, indent=4)

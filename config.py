@@ -27,7 +27,7 @@ GIT_LOCK = "lock"
 GIT_UNLOCK = "unlock"
 
 # Test Configuration
-TEST_NUM_ROUNDS = 15
+TEST_NUM_ROUNDS = 30
 PID_TERMS = ["git", "gcrypt"]
 PID = "pid"
 CMDLINE = "cmdline"
@@ -60,8 +60,8 @@ LOG_ROUND_INFO = "Round %d of %d: %s at %s"
 LOG_ROUND_SKIP = "Skipping existing round %d for %s/%s"
 LOG_FILE_DELETE_FAIL = "Error deleting file %s: %s"
 LOG_DELETE_FAIL = "Delete failed: %s"
-LOG_ANOVA = "ANOVA result for %s: F-statistic = %.2f, p-value = %.4f"
-LOG_TTEST = "T-test result for %s vs %s (%s): t-statistic = %.2f, p-value = %.4f"
+LOG_ANOVA = "ANOVA result for %s: F-statistic = %.2f, p-value = %.8f"
+LOG_TTEST = "T-test result for %s vs %s (%s): t-statistic = %.2f, p-value = %.8f"
 LOG_TTEST_FAIL = "T-test skipped for {%s} vs {%s} (%s) due to missing data"
 LOG_METRIC_MISSING = "Metric '%s' is missing for one or more remotes in repository %s"
 LOG_PUSH_FAIL = "Git push failed: %s"
