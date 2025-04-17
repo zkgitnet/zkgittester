@@ -137,7 +137,6 @@ def generate_box_plots(data):
         return
 
     for metric in config.STATS:
-        # Per repo boxplots
         metric_df = df[df[config.STATS_METRIC] == metric]
         if metric_df.empty:
             continue
@@ -145,6 +144,49 @@ def generate_box_plots(data):
         plt.figure(figsize=(6, 6))
         sns.boxplot(data=metric_df, x=config.STATS_REPODIR,
                     y=config.STATS_VALUE, hue=config.STATS_REMOTE)
+        
+        x_order = metric_df[config.STATS_REPODIR].unique()
+        hue_order = metric_df[config.STATS_REMOTE].unique()
+        
+        # Total number of hue levels (remotes) per repo
+        num_hue = len(hue_order)
+        ax = plt.gca()
+
+        # Get hatch styles and create a hatch map for consistent styling
+        hatch_styles = ['///', '\\\\\\', 'xxx', '---']
+        unique_remotes = metric_df[config.STATS_REMOTE].unique()
+        hatch_map = {remote: hatch_styles[i % len(hatch_styles)] for i, remote in enumerate(unique_remotes)}
+
+        # Extract the legend mapping (label to artist)
+        handles, labels = ax.get_legend_handles_labels()
+
+        # Create reverse legend map to match labels to remotes
+        label_to_remote = {v: k for k, v in {
+            "gitremote": "git",
+            "gitcryptremote": "git-grypt",
+            "gcryptremote": "gcrypt",
+            "zkgitremote": "ZK Git"
+        }.items()}
+
+        # Fix inconsistent hatch styles by examining each patch’s color (which encodes the hue)
+        # Create a mapping from facecolor to hatch
+        color_to_remote = {
+            handle.get_facecolor(): label for handle, label in zip(handles, labels)
+        }
+        remote_to_hatch = {
+            label: hatch_map.get(label, '') for label in labels
+        }
+
+        # Apply hatch pattern based on the color (which maps to remote)
+        for patch in ax.patches:
+            facecolor = patch.get_facecolor()
+            remote_label = color_to_remote.get(facecolor)
+            if remote_label:
+                hatch = hatch_map.get(remote_label, '')
+                patch.set_facecolor('white') 
+                patch.set_hatch(hatch)
+                patch.set_edgecolor('black')
+        
 
         handles, labels = plt.gca().get_legend_handles_labels()
         
@@ -160,7 +202,11 @@ def generate_box_plots(data):
         plt.title("")
         plt.xlabel("")
         plt.ylabel(metric.replace('_', ' ').title())
-        plt.ylim(bottom=0)
+        if metric == config.STATS_AVG_CPU:
+            plt.ylim(bottom=0, top=200)
+        else:
+            y_max = metric_df[config.STATS_VALUE].max()
+            plt.ylim(bottom=0, top=y_max * 1.1)
         plt.grid(True)
         plt.xticks(rotation=90)
         plt.tight_layout()
