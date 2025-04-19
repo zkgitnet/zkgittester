@@ -111,6 +111,80 @@ def save_round_data(repo_dir, remote, round_entry):
         json.dump(round_entry, f, indent=4)
 
 
+def generate_bar_plots(data):
+    """Generates bar plots with standard deviation error bars for each metric."""
+    if not data:
+        LOGGER.warning(config.ERROR_NO_BOXPLOT)
+        return
+
+    records = []
+    for repo_dir, remotes in data.items():
+        for remote, entries in remotes.items():
+            for entry in entries:
+                for metric in config.STATS:
+                    if metric in entry:
+                        records.append({
+                            config.STATS_REPODIR: os.path.basename(repo_dir),
+                            config.STATS_REMOTE: remote,
+                            config.STATS_METRIC: metric,
+                            config.STATS_VALUE: entry[metric]
+                        })
+
+    df = pd.DataFrame(records)
+
+    if df.empty:
+        LOGGER.warning(config.ERROR_NO_METRICS)
+        return
+
+    for metric in config.STATS:
+        metric_df = df[df[config.STATS_METRIC] == metric]
+        if metric_df.empty:
+            continue
+
+        plt.figure(figsize=(6, 6))
+        gray_palette = sns.color_palette("gray",n_colors=metric_df[config.STATS_REMOTE].nunique())[::-1]
+
+        sns.barplot(
+            data=metric_df,
+            x=config.STATS_REPODIR,
+            y=config.STATS_VALUE,
+            hue=config.STATS_REMOTE,
+            errorbar="sd",
+            palette=gray_palette,
+            capsize=0.1,
+            errwidth=1.5
+        )
+
+        handles, labels = plt.gca().get_legend_handles_labels()
+        label_map = {
+            "gitremote": "git",
+            "gitcryptremote": "git-grypt",
+            "gcryptremote": "gcrypt",
+            "zkgitremote": "ZK Git"
+        }
+        new_labels = [label_map.get(label, label) for label in labels]
+        plt.legend(handles=handles, labels=new_labels, title=None)
+
+        plt.title("")
+        plt.xlabel("")
+        plt.ylabel(metric.replace('_', ' ').title())
+        if metric == config.STATS_AVG_CPU:
+            plt.ylim(bottom=0, top=200)
+        else:
+            y_max = metric_df[config.STATS_VALUE].max()
+            plt.ylim(bottom=0, top=y_max * 1.1)
+
+        plt.grid(True)
+        plt.xticks(rotation=90)
+        plt.tight_layout()
+
+        timestamp = datetime.now().strftime(config.DATETIME_FORMAT)
+        filename = f"outputs/{timestamp}_{metric}_barplot.png"
+        plt.savefig(filename)
+        LOGGER.info(config.LOG_BOXPLOT, filename)
+        plt.show()
+
+
 def generate_box_plots(data):
     """Generates boxplots for each metric, grouped by repo_dir and remote."""
     if not data:
@@ -144,23 +218,17 @@ def generate_box_plots(data):
         plt.figure(figsize=(6, 6))
         sns.boxplot(data=metric_df, x=config.STATS_REPODIR,
                     y=config.STATS_VALUE, hue=config.STATS_REMOTE)
-        
-        x_order = metric_df[config.STATS_REPODIR].unique()
+
         hue_order = metric_df[config.STATS_REMOTE].unique()
-        
-        # Total number of hue levels (remotes) per repo
         num_hue = len(hue_order)
         ax = plt.gca()
 
-        # Get hatch styles and create a hatch map for consistent styling
         hatch_styles = ['///', '\\\\\\', 'xxx', '---']
         unique_remotes = metric_df[config.STATS_REMOTE].unique()
         hatch_map = {remote: hatch_styles[i % len(hatch_styles)] for i, remote in enumerate(unique_remotes)}
 
-        # Extract the legend mapping (label to artist)
         handles, labels = ax.get_legend_handles_labels()
 
-        # Create reverse legend map to match labels to remotes
         label_to_remote = {v: k for k, v in {
             "gitremote": "git",
             "gitcryptremote": "git-grypt",
@@ -168,8 +236,6 @@ def generate_box_plots(data):
             "zkgitremote": "ZK Git"
         }.items()}
 
-        # Fix inconsistent hatch styles by examining each patch’s color (which encodes the hue)
-        # Create a mapping from facecolor to hatch
         color_to_remote = {
             handle.get_facecolor(): label for handle, label in zip(handles, labels)
         }
@@ -177,19 +243,18 @@ def generate_box_plots(data):
             label: hatch_map.get(label, '') for label in labels
         }
 
-        # Apply hatch pattern based on the color (which maps to remote)
         for patch in ax.patches:
             facecolor = patch.get_facecolor()
             remote_label = color_to_remote.get(facecolor)
             if remote_label:
                 hatch = hatch_map.get(remote_label, '')
-                patch.set_facecolor('white') 
+                patch.set_facecolor('white')
                 patch.set_hatch(hatch)
                 patch.set_edgecolor('black')
-        
+
 
         handles, labels = plt.gca().get_legend_handles_labels()
-        
+
         label_map = {
             "gitremote": "git",
             "gitcryptremote": "git-grypt",
@@ -213,41 +278,6 @@ def generate_box_plots(data):
 
         timestamp = datetime.now().strftime(config.DATETIME_FORMAT)
         filename = f"outputs/{timestamp}_{metric}_comparison.png"
-        plt.savefig(filename)
-        LOGGER.info(config.LOG_BOXPLOT, filename)
-        plt.show()
-
-        # Concentated boxplots
-        remote_palette = {
-            "gitremote": "#1f77b4",       # blue
-            "gitcryptremote": "#ff7f0e",  # orange
-            "gcryptremote": "#2ca02c",    # green
-            "zkgitremote": "#d62728"      # red
-        }
-        plt.figure(figsize=(2, 6))
-        sns.boxplot(data=metric_df, hue=config.STATS_REMOTE,
-                    y=config.STATS_VALUE, legend=False)
-
-        handles, labels = plt.gca().get_legend_handles_labels()
-        label_map = {
-            "gitremote": "git",
-            "gitcryptremote": "git-crypt",
-            "gcryptremote": "gcrypt",
-            "zkgitremote": "ZK Git"
-        }
-        new_xticklabels = [label_map.get(t.get_text(), t.get_text()) for t in plt.gca().get_xticklabels()]
-        plt.gca().set_xticklabels(new_xticklabels)
-
-        plt.title("")
-        plt.xlabel("")
-        plt.ylabel(metric.replace('_', ' ').title())
-        plt.ylim(bottom=0)
-        plt.xticks(rotation=90)
-        plt.grid(True)
-        plt.tight_layout()
-
-        timestamp = datetime.now().strftime(config.DATETIME_FORMAT)
-        filename = f"outputs/{timestamp}_{metric}_combined_comparison.png"
         plt.savefig(filename)
         LOGGER.info(config.LOG_BOXPLOT, filename)
         plt.show()
@@ -441,8 +471,8 @@ def monitor_memory(pids, max_memory_usage, process):
     while process.poll() is None:
         max_memory_usage[0] = max(max_memory_usage[0], get_memory_usage(pids))
     return max_memory_usage[0]
- 
- 
+
+
 def monitor_cpu(pids, tot_cpu_usage, rounds, process):
     """Monitors the CPU usage in a separate thread."""
     while process.poll() is None:
@@ -476,8 +506,8 @@ def monitor_process(process, label=config.LABEL_PROCESS):
     process.wait()
 
     return max_memory_usage[0], tot_cpu_usage[0] / rounds[0] if rounds[0] > 0 else 0
- 
-          
+
+
 @measure_performance
 def git_push(repo_dir, remote, branch, i):
     """Performs a git push in the specified directory."""
@@ -487,7 +517,7 @@ def git_push(repo_dir, remote, branch, i):
 
     try:
         if remote.lower() == config.GIT_CRYPT_REMOTE:
-            os.chdir(repo_dir + "_gitcrypt")            
+            os.chdir(repo_dir + "_gitcrypt")
         else:
             os.chdir(repo_dir)
 
@@ -541,7 +571,6 @@ def calculate_statistics(data):
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
     with open(filename, config.FILE_WRITE, encoding=config.FILE_UTF8) as file:
 
-        # === New: collect global (cross-repo) metric values per remote ===
         global_remote_data = {metric: {} for metric in config.STATS}
         for repo_dir, remotes in data.items():
             for remote, entries in remotes.items():
@@ -549,7 +578,7 @@ def calculate_statistics(data):
                     values = [entry[metric] for entry in entries if metric in entry]
                     if values:
                         global_remote_data[metric].setdefault(remote, []).extend(values)
-        
+
         for repo_dir, remotes in data.items():
             LOGGER.info(config.LOG_STATS_REPO, os.path.basename(repo_dir))
             file.write(f"\nStatistics for Repository: {os.path.basename(repo_dir)}\n")
@@ -647,7 +676,8 @@ def calculate_statistics(data):
             anova_input = list(remote_values.values())
             result = stats.f_oneway(*anova_input)
             file.write(f"ANOVA for {metric}: F = {result.statistic:.2f}, p = {result.pvalue:.8f}\n")
-            LOGGER.info(f"ANOVA for {metric}: F = {result.statistic:.2f}, p = {result.pvalue:.8f}\n")
+            LOGGER.info(f"ANOVA for {metric}: F = {result.statistic:.2f}, "
+                        + "p = {result.pvalue:.8f}\n")
 
         file.write("\n--- Global Pairwise T-Tests ---\n")
         for metric, remote_values in global_remote_data.items():
@@ -722,7 +752,8 @@ def main():
                 time.sleep(2)
 
     calculate_statistics(performance_data)
-    generate_box_plots(performance_data)
+    generate_bar_plots(performance_data)
+    #generate_box_plots(performance_data)
     delete_tmp_directory_contents()
 
 if __name__ == "__main__":
