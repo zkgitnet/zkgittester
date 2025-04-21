@@ -48,6 +48,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import psutil
 import config
+import ip_config
 import logger
 
 performance_data = {}
@@ -76,21 +77,23 @@ def load_existing_data():
                         performance_data[repo][remote] = []
                     performance_data[repo][remote].extend(entries)
         else:
-            match = re.match(r"(.+?)_(.+?)_round", filename)
+            match = re.match(r"(.+?)_(.+?)_(.+?)_round", filename)
             if match:
-                repo, remote = match.groups()
+                repo, remote, command = match.groups()
             else:
-                repo, remote = "unknown_repo", "unknown_remote"
+                repo, remote, command = "unknown_repo", "unknown_remote", "unknown_command"
 
-            if repo not in performance_data:
-                performance_data[repo] = {}
-            if remote not in performance_data[repo]:
-                performance_data[repo][remote] = []
+            if command not in performance_data:
+                performance_data[command] = {}
+            if repo not in performance_data[command]:
+                performance_data[command][repo] = {}
+            if remote not in performance_data[command][repo]:
+                performance_data[command][repo][remote] = []
 
-            performance_data[repo][remote].append(entry)
+            performance_data[command][repo][remote].append(entry)
 
 
-def get_round_data_path(repo_dir, remote, round_entry):
+def get_round_data_path(repo_dir, remote, round_entry, command):
     """Returns the path to save a round's data in ./tmp, relative to the script directory."""
     script_dir = os.path.dirname(os.path.abspath(__file__))
     tmp_dir = os.path.join(script_dir, config.DIR_TMP)
@@ -98,25 +101,26 @@ def get_round_data_path(repo_dir, remote, round_entry):
 
     round_number = round_entry[config.STATS_ROUND]
 
-    filename = f"{os.path.basename(repo_dir)}_{remote}_round_{round_number}.json"
+    filename = f"{os.path.basename(repo_dir)}_{remote}_{command}_round_{round_number}.json"
 
     return os.path.join(tmp_dir, filename)
 
 
-def save_round_data(repo_dir, remote, round_entry):
+def save_round_data(repo_dir, remote, round_entry, command):
     """Saves a single round's performance data to ./tmp directory."""
-    path = get_round_data_path(repo_dir, remote, round_entry)
+    path = get_round_data_path(repo_dir, remote, round_entry, command)
 
     with open(path, config.FILE_WRITE, encoding=config.FILE_UTF8) as f:
         json.dump(round_entry, f, indent=4)
 
 
-def generate_bar_plots(data):
+def generate_bar_plots(data, command):
     """Generates bar plots with standard deviation error bars for each metric."""
-    if not data:
+    if not data or command not in data:
         LOGGER.warning(config.ERROR_NO_BOXPLOT)
         return
 
+    data = data.get(command, {})
     records = []
     for repo_dir, remotes in data.items():
         for remote, entries in remotes.items():
@@ -179,18 +183,20 @@ def generate_bar_plots(data):
         plt.tight_layout()
 
         timestamp = datetime.now().strftime(config.DATETIME_FORMAT)
-        filename = f"outputs/{timestamp}_{metric}_barplot.png"
+        filename = f"outputs/{timestamp}_{command}_{metric}_barplot.png"
         plt.savefig(filename)
         LOGGER.info(config.LOG_BOXPLOT, filename)
-        plt.show()
+        if config.SHOW_PLOTS:
+            plt.show()
 
 
-def generate_box_plots(data):
+def generate_box_plots(data, command):
     """Generates boxplots for each metric, grouped by repo_dir and remote."""
-    if not data:
+    if not data or command not in data:
         LOGGER.warning(config.ERROR_NO_BOXPLOT)
         return
 
+    data = data.get(command, {})
     records = []
     for repo_dir, remotes in data.items():
         for remote, entries in remotes.items():
@@ -219,28 +225,15 @@ def generate_box_plots(data):
         sns.boxplot(data=metric_df, x=config.STATS_REPODIR,
                     y=config.STATS_VALUE, hue=config.STATS_REMOTE)
 
-        hue_order = metric_df[config.STATS_REMOTE].unique()
-        num_hue = len(hue_order)
         ax = plt.gca()
-
         hatch_styles = ['///', '\\\\\\', 'xxx', '---']
         unique_remotes = metric_df[config.STATS_REMOTE].unique()
         hatch_map = {remote: hatch_styles[i % len(hatch_styles)] for i, remote in enumerate(unique_remotes)}
 
         handles, labels = ax.get_legend_handles_labels()
 
-        label_to_remote = {v: k for k, v in {
-            "gitremote": "git",
-            "gitcryptremote": "git-grypt",
-            "gcryptremote": "gcrypt",
-            "zkgitremote": "ZK Git"
-        }.items()}
-
         color_to_remote = {
             handle.get_facecolor(): label for handle, label in zip(handles, labels)
-        }
-        remote_to_hatch = {
-            label: hatch_map.get(label, '') for label in labels
         }
 
         for patch in ax.patches:
@@ -277,10 +270,11 @@ def generate_box_plots(data):
         plt.tight_layout()
 
         timestamp = datetime.now().strftime(config.DATETIME_FORMAT)
-        filename = f"outputs/{timestamp}_{metric}_comparison.png"
+        filename = f"outputs/{timestamp}_{command}_{metric}_comparison.png"
         plt.savefig(filename)
         LOGGER.info(config.LOG_BOXPLOT, filename)
-        plt.show()
+        if config.SHOW_PLOTS:
+            plt.show()
 
 
 def find_processes(terms):
@@ -320,10 +314,11 @@ def measure_performance(func):
 
         repo_dir = args[0]
         remote = args[1]
-        round_num = args[3]
+        command = args[3]
+        round_num = args[4]
 
         existing_round_entry = next((entry for entry
-                                     in performance_data[os.path.basename(repo_dir)][remote]
+                                     in performance_data[command][os.path.basename(repo_dir)][remote]
                                      if entry.get(config.STATS_ROUND) == round_num), None)
 
         if existing_round_entry is not None:
@@ -335,7 +330,7 @@ def measure_performance(func):
                 config.STATS_DISK_WRITE: disk_write
             })
 
-        save_round_data(repo_dir, remote, existing_round_entry)
+        save_round_data(repo_dir, remote, existing_round_entry, command)
 
         LOGGER.debug(config.LOG_ROUND_DATA, os.path.basename(repo_dir), remote, round_num + 1)
         LOGGER.debug(config.LOG_ROUND_TIME, execution_time)
@@ -374,8 +369,6 @@ def delete_remote_branch(directory, remote, branch):
         process.wait()
     except subprocess.CalledProcessError as e:
         LOGGER.warning(config.LOG_DELETE_FAIL, e.stderr)
-    except Exception as e:
-        LOGGER.critical(config.LOG_ERROR, e)
 
 
 def create_and_commit_file(repo_dir, remote, filename="random_file.bin", commit_msg="Add 1MB random file"):
@@ -404,8 +397,6 @@ def create_and_commit_file(repo_dir, remote, filename="random_file.bin", commit_
 
     except subprocess.CalledProcessError as e:
         LOGGER.warning(config.LOG_COMMIT_FAIL, e)
-    except Exception as e:
-        LOGGER.critical(config.LOG_ERROR, e)
 
 
 def run_command(command, cwd=None):
@@ -509,14 +500,16 @@ def monitor_process(process, label=config.LABEL_PROCESS):
 
 
 @measure_performance
-def git_push(repo_dir, remote, branch, i):
+def git_command(repo_dir, remote, branch, command, i):
     """Performs a git push in the specified directory."""
     if not os.path.isdir(repo_dir):
         LOGGER.error(config.LOG_DIRECTORY, repo_dir)
         return
 
     try:
-        if remote.lower() == config.GIT_CRYPT_REMOTE:
+        if command == config.GIT_CLONE:
+            os.chdir(os.path.join(os.path.dirname(repo_dir), config.GIT_CLONE))
+        elif remote.lower() == config.GIT_CRYPT_REMOTE:
             os.chdir(repo_dir + "_gitcrypt")
         else:
             os.chdir(repo_dir)
@@ -524,24 +517,51 @@ def git_push(repo_dir, remote, branch, i):
         max_memory_usage = 0.0
         avg_cpu_usage = 0.0
 
-        if remote.lower() == config.GIT_CRYPT_REMOTE:
+        if remote.lower() == config.GIT_CRYPT_REMOTE and command == config.GIT_PUSH:
             process = run_command([config.GIT_CRYPT, config.GIT_LOCK])
             mem, cpu = monitor_process(process, label=config.LABEL_ENCRYPT)
             max_memory_usage = max(max_memory_usage, mem)
             avg_cpu_usage = max(avg_cpu_usage, cpu)
             process.wait()
 
-        process = run_command([config.GIT_GIT, config.GIT_PUSH, remote, branch, config.GIT_FORCE])
-        mem, cpu = monitor_process(process, label=config.LABEL_PUSH)
+        git_command = []
+        if command == config.GIT_PUSH:
+            git_command = [config.GIT_GIT, config.GIT_PUSH, remote, branch, config.GIT_FORCE]
+        elif command == config.GIT_PULL:
+            git_command = [config.GIT_GIT, config.GIT_PULL, remote, branch]
+        elif command == config.GIT_CLONE:
+            remote_uri = ""
+            if remote.lower() == config.GIT_REMOTE:
+                remote_uri = ip_config.GIT + os.path.basename(repo_dir) + ip_config.SUFFIX
+            if remote.lower() == config.GIT_GCRYPT_REMOTE:
+                remote_uri = ip_config.GCRYPT + os.path.basename(repo_dir) + ip_config.SUFFIX
+            if remote.lower() == config.GIT_ZKGIT_REMOTE:
+                remote_uri = ip_config.ZKGIT + os.path.basename(repo_dir) + ip_config.SUFFIX
+            if remote.lower() == config.GIT_CRYPT_REMOTE:
+                remote_uri = ip_config.GITCRYPT + os.path.basename(repo_dir) + ip_config.SUFFIX
+            git_command = [config.GIT_GIT, config.GIT_CLONE, remote_uri]
+        process = run_command(git_command)
+        mem, cpu = monitor_process(process, label=command.title())
         max_memory_usage = max(max_memory_usage, mem)
         avg_cpu_usage = max(avg_cpu_usage, cpu)
         process.wait()
 
-        if os.path.basename(repo_dir) not in performance_data:
-            performance_data[os.path.basename(repo_dir)] = {}
+        if remote.lower() == config.GIT_CRYPT_REMOTE and command == config.GIT_CLONE:
+            os.chdir(os.path.join(os.getcwd(), os.path.basename(repo_dir)))
+            process = run_command([config.GIT_CRYPT, config.GIT_UNLOCK])
+            mem, cpu = monitor_process(process, label=config.LABEL_DECRYPT)
+            max_memory_usage = max(max_memory_usage, mem)
+            avg_cpu_usage = max(avg_cpu_usage, cpu)
+            process.wait()
 
-        if remote not in performance_data[os.path.basename(repo_dir)]:
-            performance_data[os.path.basename(repo_dir)][remote] = []
+        if command not in performance_data:
+            performance_data[command] = {}
+
+        if os.path.basename(repo_dir) not in performance_data[command]:
+            performance_data[command][os.path.basename(repo_dir)] = {}
+
+        if remote not in performance_data[command][os.path.basename(repo_dir)]:
+            performance_data[command][os.path.basename(repo_dir)][remote] = []
 
         round_entry = {
             config.STATS_ROUND: i,
@@ -549,7 +569,7 @@ def git_push(repo_dir, remote, branch, i):
             config.STATS_AVG_CPU: avg_cpu_usage
         }
 
-        performance_data[os.path.basename(repo_dir)][remote].append(round_entry)
+        performance_data[command][os.path.basename(repo_dir)][remote].append(round_entry)
 
     except subprocess.CalledProcessError as e:
         LOGGER.error(config.LOG_PUSH_FAIL, e.stderr)
@@ -557,16 +577,17 @@ def git_push(repo_dir, remote, branch, i):
         LOGGER.error(config.LOG_ERROR, e)
 
 
-def calculate_statistics(data):
+def calculate_statistics(data, command):
     """Calculates statistics (average & standard deviation) from
     the collected performance data and writes to a file. 
     Performs ANOVA and T-tests to compare remotes."""
-    if not data:
+    if not data or command not in data:
         LOGGER.warning(config.ERROR_NO_STATS)
         return
 
+    data = data.get(command, {})
     timestamp = datetime.now().strftime(config.DATETIME_FORMAT)
-    filename = f"outputs/{timestamp}_stats.txt"
+    filename = f"outputs/{timestamp}_{command}_stats.txt"
 
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
     with open(filename, config.FILE_WRITE, encoding=config.FILE_UTF8) as file:
@@ -618,7 +639,7 @@ def calculate_statistics(data):
                 if len(remotes) > 1 and calc_stats:
                     remote_data = {metric: [] for metric in config.STATS}
 
-                    for remote_name, remote_entries in remotes.items():
+                    for _, remote_entries in remotes.items():
                         for metric in config.STATS:
                             if metric in remote_entries[0]:
                                 values = [entry[metric] for entry
@@ -688,7 +709,7 @@ def calculate_statistics(data):
                 if values1 and values2:
                     t_stat, p_val = stats.ttest_ind(values1, values2)
                     file.write(f"{metric}: {r1} vs {r2}: t = {t_stat:.2f}, p = {p_val:.8f}\n")
-                    LOGGER.info(f"{metric}: {r1} vs {r2}: t = {t_stat:.2f}, p = {p_val:.8f}\n")
+                    LOGGER.info(config.LOG_TTEST_GLOBAL, metric, r1, r2, t_stat, p_val)
                 else:
                     file.write(f"{metric}: {r1} vs {r2}: Skipped due to missing data.\n")
 
@@ -711,7 +732,7 @@ def delete_tmp_directory_contents():
                     os.remove(file_path)
                 elif os.path.isdir(file_path):
                     shutil.rmtree(file_path)
-            except Exception as e:
+            except (OSError, PermissionError) as e:
                 print(config.LOG_FILE_DELETE_FAIL, file_path, e)
 
 
@@ -719,41 +740,50 @@ def main():
     """Main method to conduct all measurements over all repos and remotes"""
     repo_data = read_repository_information(config.JSON_REPOSITORIES)
     total_rounds = sum(len(repo[config.JSON_REMOTES])
-                       for repo in repo_data) * config.TEST_NUM_ROUNDS
+                       for repo in repo_data) * config.TEST_NUM_ROUNDS * len(config.TEST_COMMANDS)
     load_existing_data()
 
     current_round = 1
-    for repo in repo_data:
-        repo_dir = repo[config.JSON_REPODIR]
-        branch = repo[config.JSON_BRANCHES]
-        for remote in repo[config.JSON_REMOTES]:
-            for _ in range(config.TEST_NUM_ROUNDS):
-                LOGGER.info(config.LOG_ROUND_INFO, current_round,
-                            total_rounds, os.path.basename(repo_dir), remote)
-                #delete_remote_branch(repo_dir, remote, branch)
+    for command in config.TEST_COMMANDS:
+        for repo in repo_data:
+            repo_dir = repo[config.JSON_REPODIR]
+            branch = repo[config.JSON_BRANCHES]
+            for remote in repo[config.JSON_REMOTES]:
+                for _ in range(config.TEST_NUM_ROUNDS):
+                    LOGGER.info(config.LOG_ROUND_INFO, current_round,
+                                total_rounds, os.path.basename(repo_dir), remote)
+                    #delete_remote_branch(repo_dir, remote, branch)
 
-                existing_rounds = [
-                    entry[config.STATS_ROUND]
-                    for entry in performance_data.get(os.path.basename(repo_dir),
-                                                      {}).get(remote, [])
-                ]
-                if _ in existing_rounds:
-                    LOGGER.info(config.LOG_ROUND_SKIP, _, os.path.basename(repo_dir), remote)
-                    current_round += 1
-                    continue
+                    existing_rounds = [
+                        entry[config.STATS_ROUND]
+                        for entry in performance_data
+                        .get(command, {})
+                        .get(os.path.basename(repo_dir), {})
+                        .get(remote, [])
+                    ]
+                    if _ in existing_rounds:
+                        LOGGER.info(config.LOG_ROUND_SKIP, _, os.path.basename(repo_dir), remote)
+                        current_round += 1
+                        continue
 
-                create_and_commit_file(repo_dir, remote)
-                git_push(repo_dir, remote, branch, _)
+                    if command == config.GIT_PUSH:
+                        create_and_commit_file(repo_dir, remote)
+                    git_command(repo_dir, remote, branch, command, _)
 
-                if remote.lower() == config.GIT_CRYPT_REMOTE:
-                    run_command([config.GIT_CRYPT, config.GIT_UNLOCK])
+                    if remote.lower() == config.GIT_CRYPT_REMOTE and command == config.GIT_PUSH:
+                        run_command([config.GIT_CRYPT, config.GIT_UNLOCK])
+                        current_round += 1
+                        time.sleep(2)
+                    elif command == config.GIT_CLONE:
+                        os.chdir(os.path.join(os.path.dirname(repo_dir), config.GIT_CLONE))
+                        run_command([config.OS_RM, config.OS_RF, os.path.basename(repo_dir)])
+                        current_round += 1
+                        time.sleep(2)
 
-                current_round += 1
-                time.sleep(2)
+        calculate_statistics(performance_data, command)
+        generate_bar_plots(performance_data, command)
+        #generate_box_plots(performance_data, command)
 
-    calculate_statistics(performance_data)
-    generate_bar_plots(performance_data)
-    #generate_box_plots(performance_data)
     delete_tmp_directory_contents()
 
 if __name__ == "__main__":

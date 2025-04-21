@@ -17,6 +17,8 @@ JSON_REPOS = "repositories"
 # Git Configuration
 GIT_GIT = "git"
 GIT_PUSH = "push"
+GIT_PULL = "pull"
+GIT_CLONE = "clone"
 GIT_ADD = "add"
 GIT_COMMIT = "commit"
 GIT_MESSAGE = "-m"
@@ -25,13 +27,20 @@ GIT_FORCE = "--force"
 GIT_CRYPT = "git-crypt"
 GIT_LOCK = "lock"
 GIT_UNLOCK = "unlock"
+OS_RM = "rm"
+OS_RF = "-rf"
 
 # Test Configuration
 TEST_NUM_ROUNDS = 30
+SHOW_PLOTS = False
+TEST_COMMANDS = ["clone", "push", "pull"]
 PID_TERMS = ["git", "gcrypt"]
 PID = "pid"
 CMDLINE = "cmdline"
 GIT_CRYPT_REMOTE = "gitcryptremote"
+GIT_REMOTE = "gitremote"
+GIT_GCRYPT_REMOTE = "gcryptremote"
+GIT_ZKGIT_REMOTE = "zkgitremote"
 DATETIME_FORMAT = "%Y-%m-%d_%H-%M-%S"
 
 # File Configuration
@@ -44,10 +53,11 @@ DIR_TMP = "tmp"
 
 # Logger Configuration
 LOGGING_LEVEL = logging.DEBUG
-
+LABEL_DECRYPT = ""
 LABEL_ENCRYPT = "Encryption"
-LABEL_PUSH = "Push"
+LABEL_REMOVE_DIR = "Deleting directory"
 LABEL_PROCESS = "Process"
+
 
 LOG_BOXPLOT = "Boxplot saved as %s"
 LOG_DIRECTORY = "Error: Directory '%s' does not exist"
@@ -62,10 +72,11 @@ LOG_FILE_DELETE_FAIL = "Error deleting file %s: %s"
 LOG_DELETE_FAIL = "Delete failed: %s"
 LOG_ANOVA = "ANOVA result for %s: F-statistic = %.2f, p-value = %.8f"
 LOG_TTEST = "T-test result for %s vs %s (%s): t-statistic = %.2f, p-value = %.8f"
+LOG_TTEST_GLOBAL = "%s: %s vs %s: t = %.2f, p = %.8f"
 LOG_TTEST_FAIL = "T-test skipped for {%s} vs {%s} (%s) due to missing data"
 LOG_METRIC_MISSING = "Metric '%s' is missing for one or more remotes in repository %s"
 LOG_PUSH_FAIL = "Git push failed: %s"
-LOG_COMMIT = "Created and committed 1MB file: %s"
+LOG_COMMIT = "Created and committed 1KB file: %s"
 LOG_COMMIT_FAIL = "Git commit failed: %s"
 LOG_STATS_REPO = "\nStatistics for Repository: %s"
 LOG_ERROR = "Unexpected error: %s"
