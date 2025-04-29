@@ -108,9 +108,6 @@ T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 3.89, p-v
   Avg Disk Write: 13.11 MB, Std Dev: 58.24 MB
   Avg Avg Cpu: 90.73 MB, Std Dev: 19.23 MB
 
-
-=== Global (Combined) Statistics Across All Repositories ===
-
   Remote: gitcryptremote (Total Runs: 30)
   Avg Execution Time: 0.92 sec, Std Dev: 0.13 sec
   Avg Peak Memory: 1521.14 MB, Std Dev: 6.63 MB
@@ -119,9 +116,6 @@ T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 3.89, p-v
   Avg Disk Read: 109.62 MB, Std Dev: 43.42 MB
   Avg Disk Write: 65.17 MB, Std Dev: 335.68 MB
   Avg Avg Cpu: 80.24 MB, Std Dev: 22.33 MB
-
-
-=== Global (Combined) Statistics Across All Repositories ===
 
   Remote: gcryptremote (Total Runs: 30)
   Avg Execution Time: 6.05 sec, Std Dev: 3.09 sec
@@ -132,9 +126,6 @@ T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 3.89, p-v
   Avg Disk Write: 544.90 MB, Std Dev: 1197.46 MB
   Avg Avg Cpu: 70.83 MB, Std Dev: 8.70 MB
 
-
-=== Global (Combined) Statistics Across All Repositories ===
-
   Remote: zkgitremote (Total Runs: 30)
   Avg Execution Time: 4.88 sec, Std Dev: 1.21 sec
   Avg Peak Memory: 1812.27 MB, Std Dev: 18.25 MB
@@ -143,9 +134,6 @@ T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 3.89, p-v
   Avg Disk Read: 502.46 MB, Std Dev: 252.47 MB
   Avg Disk Write: 428.42 MB, Std Dev: 1103.77 MB
   Avg Avg Cpu: 62.45 MB, Std Dev: 7.95 MB
-
-
-=== Global (Combined) Statistics Across All Repositories ===
 
 Statistics for Repository: awesome-llm-apps
 
@@ -256,9 +244,6 @@ T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 5.07, p-v
   Avg Disk Write: 79.03 MB, Std Dev: 300.55 MB
   Avg Avg Cpu: 89.56 MB, Std Dev: 20.31 MB
 
-
-=== Global (Combined) Statistics Across All Repositories ===
-
   Remote: gitcryptremote (Total Runs: 30)
   Avg Execution Time: 0.89 sec, Std Dev: 0.08 sec
   Avg Peak Memory: 1587.11 MB, Std Dev: 5.06 MB
@@ -267,9 +252,6 @@ T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 5.07, p-v
   Avg Disk Read: 101.05 MB, Std Dev: 35.49 MB
   Avg Disk Write: 88.20 MB, Std Dev: 472.01 MB
   Avg Avg Cpu: 92.88 MB, Std Dev: 17.57 MB
-
-
-=== Global (Combined) Statistics Across All Repositories ===
 
   Remote: gcryptremote (Total Runs: 30)
   Avg Execution Time: 20.55 sec, Std Dev: 2.98 sec
@@ -280,9 +262,6 @@ T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 5.07, p-v
   Avg Disk Write: 1006.08 MB, Std Dev: 1092.49 MB
   Avg Avg Cpu: 70.92 MB, Std Dev: 6.51 MB
 
-
-=== Global (Combined) Statistics Across All Repositories ===
-
   Remote: zkgitremote (Total Runs: 30)
   Avg Execution Time: 16.88 sec, Std Dev: 0.50 sec
   Avg Peak Memory: 1868.05 MB, Std Dev: 44.39 MB
@@ -291,9 +270,6 @@ T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 5.07, p-v
   Avg Disk Read: 1385.79 MB, Std Dev: 924.12 MB
   Avg Disk Write: 1030.77 MB, Std Dev: 1170.51 MB
   Avg Avg Cpu: 63.82 MB, Std Dev: 4.03 MB
-
-
-=== Global (Combined) Statistics Across All Repositories ===
 
 Statistics for Repository: build-your-own-x
 
@@ -404,9 +380,6 @@ T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 9.00, p-v
   Avg Disk Write: 0.34 MB, Std Dev: 0.60 MB
   Avg Avg Cpu: 86.25 MB, Std Dev: 21.27 MB
 
-
-=== Global (Combined) Statistics Across All Repositories ===
-
   Remote: gitcryptremote (Total Runs: 30)
   Avg Execution Time: 0.85 sec, Std Dev: 0.04 sec
   Avg Peak Memory: 1631.89 MB, Std Dev: 0.25 MB
@@ -415,9 +388,6 @@ T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 9.00, p-v
   Avg Disk Read: 102.84 MB, Std Dev: 35.20 MB
   Avg Disk Write: 83.17 MB, Std Dev: 440.26 MB
   Avg Avg Cpu: 87.73 MB, Std Dev: 18.98 MB
-
-
-=== Global (Combined) Statistics Across All Repositories ===
 
   Remote: gcryptremote (Total Runs: 30)
   Avg Execution Time: 2.25 sec, Std Dev: 3.03 sec
@@ -428,9 +398,6 @@ T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 9.00, p-v
   Avg Disk Write: 56.40 MB, Std Dev: 287.78 MB
   Avg Avg Cpu: 99.33 MB, Std Dev: 5.26 MB
 
-
-=== Global (Combined) Statistics Across All Repositories ===
-
   Remote: zkgitremote (Total Runs: 30)
   Avg Execution Time: 0.98 sec, Std Dev: 0.07 sec
   Avg Peak Memory: 1866.38 MB, Std Dev: 22.28 MB
@@ -439,9 +406,6 @@ T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 9.00, p-v
   Avg Disk Read: 140.94 MB, Std Dev: 20.78 MB
   Avg Disk Write: 207.00 MB, Std Dev: 832.14 MB
   Avg Avg Cpu: 64.75 MB, Std Dev: 20.37 MB
-
-
-=== Global (Combined) Statistics Across All Repositories ===
 
 Statistics for Repository: gitdiagram
 
@@ -552,9 +516,6 @@ T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 4.65, p-v
   Avg Disk Write: 0.54 MB, Std Dev: 1.03 MB
   Avg Avg Cpu: 93.73 MB, Std Dev: 17.29 MB
 
-
-=== Global (Combined) Statistics Across All Repositories ===
-
   Remote: gitcryptremote (Total Runs: 30)
   Avg Execution Time: 0.78 sec, Std Dev: 0.11 sec
   Avg Peak Memory: 1636.03 MB, Std Dev: 0.25 MB
@@ -563,9 +524,6 @@ T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 4.65, p-v
   Avg Disk Read: 107.49 MB, Std Dev: 49.11 MB
   Avg Disk Write: 0.88 MB, Std Dev: 2.18 MB
   Avg Avg Cpu: 90.21 MB, Std Dev: 19.61 MB
-
-
-=== Global (Combined) Statistics Across All Repositories ===
 
   Remote: gcryptremote (Total Runs: 30)
   Avg Execution Time: 2.18 sec, Std Dev: 3.03 sec
@@ -576,9 +534,6 @@ T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 4.65, p-v
   Avg Disk Write: 196.27 MB, Std Dev: 619.96 MB
   Avg Avg Cpu: 99.10 MB, Std Dev: 3.75 MB
 
-
-=== Global (Combined) Statistics Across All Repositories ===
-
   Remote: zkgitremote (Total Runs: 30)
   Avg Execution Time: 0.91 sec, Std Dev: 0.06 sec
   Avg Peak Memory: 1863.14 MB, Std Dev: 22.63 MB
@@ -587,9 +542,6 @@ T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 4.65, p-v
   Avg Disk Read: 157.87 MB, Std Dev: 149.74 MB
   Avg Disk Write: 82.14 MB, Std Dev: 422.03 MB
   Avg Avg Cpu: 72.09 MB, Std Dev: 31.58 MB
-
-
-=== Global (Combined) Statistics Across All Repositories ===
 
 Statistics for Repository: glance
 
@@ -700,9 +652,6 @@ T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 4.70, p-v
   Avg Disk Write: 0.65 MB, Std Dev: 2.09 MB
   Avg Avg Cpu: 87.75 MB, Std Dev: 20.39 MB
 
-
-=== Global (Combined) Statistics Across All Repositories ===
-
   Remote: gitcryptremote (Total Runs: 30)
   Avg Execution Time: 0.87 sec, Std Dev: 0.01 sec
   Avg Peak Memory: 1637.59 MB, Std Dev: 0.35 MB
@@ -711,9 +660,6 @@ T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 4.70, p-v
   Avg Disk Read: 121.41 MB, Std Dev: 31.41 MB
   Avg Disk Write: 107.17 MB, Std Dev: 465.35 MB
   Avg Avg Cpu: 90.07 MB, Std Dev: 18.29 MB
-
-
-=== Global (Combined) Statistics Across All Repositories ===
 
   Remote: gcryptremote (Total Runs: 30)
   Avg Execution Time: 5.45 sec, Std Dev: 3.08 sec
@@ -724,9 +670,6 @@ T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 4.70, p-v
   Avg Disk Write: 739.75 MB, Std Dev: 1453.29 MB
   Avg Avg Cpu: 76.47 MB, Std Dev: 11.45 MB
 
-
-=== Global (Combined) Statistics Across All Repositories ===
-
   Remote: zkgitremote (Total Runs: 30)
   Avg Execution Time: 4.08 sec, Std Dev: 0.15 sec
   Avg Peak Memory: 1866.89 MB, Std Dev: 6.24 MB
@@ -735,9 +678,6 @@ T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 4.70, p-v
   Avg Disk Read: 606.81 MB, Std Dev: 351.01 MB
   Avg Disk Write: 368.27 MB, Std Dev: 1503.73 MB
   Avg Avg Cpu: 63.31 MB, Std Dev: 10.21 MB
-
-
-=== Global (Combined) Statistics Across All Repositories ===
 
 Statistics for Repository: llama-models
 
@@ -848,9 +788,6 @@ T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 5.92, p-v
   Avg Disk Write: 0.47 MB, Std Dev: 1.43 MB
   Avg Avg Cpu: 90.41 MB, Std Dev: 19.16 MB
 
-
-=== Global (Combined) Statistics Across All Repositories ===
-
   Remote: gitcryptremote (Total Runs: 30)
   Avg Execution Time: 0.85 sec, Std Dev: 0.06 sec
   Avg Peak Memory: 1638.61 MB, Std Dev: 0.36 MB
@@ -859,9 +796,6 @@ T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 5.92, p-v
   Avg Disk Read: 92.17 MB, Std Dev: 29.89 MB
   Avg Disk Write: 3.88 MB, Std Dev: 8.70 MB
   Avg Avg Cpu: 86.58 MB, Std Dev: 22.16 MB
-
-
-=== Global (Combined) Statistics Across All Repositories ===
 
   Remote: gcryptremote (Total Runs: 30)
   Avg Execution Time: 2.98 sec, Std Dev: 3.07 sec
@@ -872,9 +806,6 @@ T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 5.92, p-v
   Avg Disk Write: 370.49 MB, Std Dev: 1109.45 MB
   Avg Avg Cpu: 93.34 MB, Std Dev: 13.49 MB
 
-
-=== Global (Combined) Statistics Across All Repositories ===
-
   Remote: zkgitremote (Total Runs: 30)
   Avg Execution Time: 1.66 sec, Std Dev: 0.05 sec
   Avg Peak Memory: 1876.81 MB, Std Dev: 4.35 MB
@@ -883,9 +814,6 @@ T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 5.92, p-v
   Avg Disk Read: 195.43 MB, Std Dev: 62.86 MB
   Avg Disk Write: 208.41 MB, Std Dev: 788.68 MB
   Avg Avg Cpu: 70.29 MB, Std Dev: 16.52 MB
-
-
-=== Global (Combined) Statistics Across All Repositories ===
 
 Statistics for Repository: markitdown
 
@@ -996,9 +924,6 @@ T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 2.92, p-v
   Avg Disk Write: 12.46 MB, Std Dev: 65.67 MB
   Avg Avg Cpu: 84.75 MB, Std Dev: 20.34 MB
 
-
-=== Global (Combined) Statistics Across All Repositories ===
-
   Remote: gitcryptremote (Total Runs: 30)
   Avg Execution Time: 0.88 sec, Std Dev: 0.02 sec
   Avg Peak Memory: 1639.60 MB, Std Dev: 0.34 MB
@@ -1008,9 +933,6 @@ T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 2.92, p-v
   Avg Disk Write: 1.61 MB, Std Dev: 2.86 MB
   Avg Avg Cpu: 92.58 MB, Std Dev: 20.18 MB
 
-
-=== Global (Combined) Statistics Across All Repositories ===
-
   Remote: gcryptremote (Total Runs: 30)
   Avg Execution Time: 2.67 sec, Std Dev: 3.10 sec
   Avg Peak Memory: 1692.07 MB, Std Dev: 1.52 MB
@@ -1019,9 +941,6 @@ T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 2.92, p-v
   Avg Disk Read: 459.18 MB, Std Dev: 660.80 MB
   Avg Disk Write: 200.93 MB, Std Dev: 755.07 MB
   Avg Avg Cpu: 93.41 MB, Std Dev: 13.30 MB
-
-
-=== Global (Combined) Statistics Across All Repositories ===
 
   Remote: zkgitremote (Total Runs: 30)
   Avg Execution Time: 1.41 sec, Std Dev: 0.12 sec
@@ -1035,58 +954,89 @@ T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 2.92, p-v
 
 === Global (Combined) Statistics Across All Repositories ===
 
---- Global ANOVA Results ---
-ANOVA for execution_time: F = 79.47, p = 0.00000000
-ANOVA for peak_memory: F = 707.29, p = 0.00000000
-ANOVA for net_sent: F = 63.25, p = 0.00000000
-ANOVA for net_recv: F = 6.86, p = 0.00014462
-ANOVA for disk_read: F = 77.03, p = 0.00000000
-ANOVA for disk_write: F = 17.24, p = 0.00000000
-ANOVA for avg_cpu: F = 62.49, p = 0.00000000
+  Remote: gitcryptremote, Metric: Execution Time (Total Runs: 210)
+  Avg: 0.86 sec, Std Dev: 0.08 sec
 
---- Global Pairwise T-Tests ---
-execution_time: gitremote vs gitcryptremote: t = -33.48, p = 0.00000000
-execution_time: gitremote vs gcryptremote: t = -11.46, p = 0.00000000
-execution_time: gitremote vs zkgitremote: t = -10.26, p = 0.00000000
-execution_time: gitcryptremote vs gcryptremote: t = -10.96, p = 0.00000000
-execution_time: gitcryptremote vs zkgitremote: t = -9.61, p = 0.00000000
-execution_time: gcryptremote vs zkgitremote: t = 2.71, p = 0.00703721
-peak_memory: gitremote vs gitcryptremote: t = -0.04, p = 0.96902810
-peak_memory: gitremote vs gcryptremote: t = -13.67, p = 0.00000000
-peak_memory: gitremote vs zkgitremote: t = -69.68, p = 0.00000000
-peak_memory: gitcryptremote vs gcryptremote: t = -13.67, p = 0.00000000
-peak_memory: gitcryptremote vs zkgitremote: t = -70.23, p = 0.00000000
-peak_memory: gcryptremote vs zkgitremote: t = -17.44, p = 0.00000000
-net_sent: gitremote vs gitcryptremote: t = 2.22, p = 0.02704574
-net_sent: gitremote vs gcryptremote: t = -9.56, p = 0.00000000
-net_sent: gitremote vs zkgitremote: t = -9.95, p = 0.00000000
-net_sent: gitcryptremote vs gcryptremote: t = -9.56, p = 0.00000000
-net_sent: gitcryptremote vs zkgitremote: t = -9.95, p = 0.00000000
-net_sent: gcryptremote vs zkgitremote: t = 0.28, p = 0.78304522
-net_recv: gitremote vs gitcryptremote: t = 1.04, p = 0.30018118
-net_recv: gitremote vs gcryptremote: t = -9.74, p = 0.00000000
-net_recv: gitremote vs zkgitremote: t = -2.72, p = 0.00674728
-net_recv: gitcryptremote vs gcryptremote: t = -9.74, p = 0.00000000
-net_recv: gitcryptremote vs zkgitremote: t = -2.72, p = 0.00673301
-net_recv: gcryptremote vs zkgitremote: t = -1.13, p = 0.25800160
-disk_read: gitremote vs gitcryptremote: t = -2.88, p = 0.00420146
-disk_read: gitremote vs gcryptremote: t = -11.24, p = 0.00000000
-disk_read: gitremote vs zkgitremote: t = -9.63, p = 0.00000000
-disk_read: gitcryptremote vs gcryptremote: t = -10.91, p = 0.00000000
-disk_read: gitcryptremote vs zkgitremote: t = -9.20, p = 0.00000000
-disk_read: gcryptremote vs zkgitremote: t = 3.21, p = 0.00142764
-disk_write: gitremote vs gitcryptremote: t = -1.46, p = 0.14586221
-disk_write: gitremote vs gcryptremote: t = -5.98, p = 0.00000000
-disk_write: gitremote vs zkgitremote: t = -4.61, p = 0.00000538
-disk_write: gitcryptremote vs gcryptremote: t = -5.28, p = 0.00000021
-disk_write: gitcryptremote vs zkgitremote: t = -3.93, p = 0.00010014
-disk_write: gcryptremote vs zkgitremote: t = 1.14, p = 0.25581084
-avg_cpu: gitremote vs gitcryptremote: t = 0.21, p = 0.83116291
-avg_cpu: gitremote vs gcryptremote: t = 1.64, p = 0.10114982
-avg_cpu: gitremote vs zkgitremote: t = 10.96, p = 0.00000000
-avg_cpu: gitcryptremote vs gcryptremote: t = 1.38, p = 0.16689162
-avg_cpu: gitcryptremote vs zkgitremote: t = 10.65, p = 0.00000000
-avg_cpu: gcryptremote vs zkgitremote: t = 10.56, p = 0.00000000
+  Remote: gitcryptremote, Metric: Peak Memory (Total Runs: 210)
+  Avg: 1613.14 MB, Std Dev: 41.56 MB
+
+  Remote: gitcryptremote, Metric: Net Sent (Total Runs: 210)
+  Avg: 0.02 MB, Std Dev: 0.00 MB
+
+  Remote: gitcryptremote, Metric: Net Recv (Total Runs: 210)
+  Avg: 0.02 MB, Std Dev: 0.01 MB
+
+  Remote: gitcryptremote, Metric: Disk Read (Total Runs: 210)
+  Avg: 98.86 MB, Std Dev: 47.23 MB
+
+  Remote: gitcryptremote, Metric: Disk Write (Total Runs: 210)
+  Avg: 50.01 MB, Std Dev: 324.60 MB
+
+  Remote: gitcryptremote, Metric: Avg Cpu (Total Runs: 210)
+  Avg: 88.61 MB, Std Dev: 20.07 MB
+
+  Remote: gitremote, Metric: Execution Time (Total Runs: 210)
+  Avg: 0.63 sec, Std Dev: 0.06 sec
+
+  Remote: gitremote, Metric: Peak Memory (Total Runs: 210)
+  Avg: 1612.98 MB, Std Dev: 42.09 MB
+
+  Remote: gitremote, Metric: Net Sent (Total Runs: 210)
+  Avg: 0.03 MB, Std Dev: 0.02 MB
+
+  Remote: gitremote, Metric: Net Recv (Total Runs: 210)
+  Avg: 0.02 MB, Std Dev: 0.01 MB
+
+  Remote: gitremote, Metric: Disk Read (Total Runs: 210)
+  Avg: 78.69 MB, Std Dev: 89.91 MB
+
+  Remote: gitremote, Metric: Disk Write (Total Runs: 210)
+  Avg: 15.23 MB, Std Dev: 119.64 MB
+
+  Remote: gitremote, Metric: Avg Cpu (Total Runs: 210)
+  Avg: 89.02 MB, Std Dev: 19.66 MB
+
+  Remote: gcryptremote, Metric: Execution Time (Total Runs: 210)
+  Avg: 6.02 sec, Std Dev: 6.82 sec
+
+  Remote: gcryptremote, Metric: Peak Memory (Total Runs: 210)
+  Avg: 1723.92 MB, Std Dev: 109.81 MB
+
+  Remote: gcryptremote, Metric: Net Sent (Total Runs: 210)
+  Avg: 43.91 MB, Std Dev: 66.54 MB
+
+  Remote: gcryptremote, Metric: Net Recv (Total Runs: 210)
+  Avg: 1.60 MB, Std Dev: 2.35 MB
+
+  Remote: gcryptremote, Metric: Disk Read (Total Runs: 210)
+  Avg: 670.05 MB, Std Dev: 757.41 MB
+
+  Remote: gcryptremote, Metric: Disk Write (Total Runs: 210)
+  Avg: 444.97 MB, Std Dev: 1035.06 MB
+
+  Remote: gcryptremote, Metric: Avg Cpu (Total Runs: 210)
+  Avg: 86.20 MB, Std Dev: 15.32 MB
+
+  Remote: zkgitremote, Metric: Execution Time (Total Runs: 210)
+  Avg: 4.40 sec, Std Dev: 5.33 sec
+
+  Remote: zkgitremote, Metric: Peak Memory (Total Runs: 210)
+  Avg: 1860.86 MB, Std Dev: 29.77 MB
+
+  Remote: zkgitremote, Metric: Net Sent (Total Runs: 210)
+  Avg: 42.19 MB, Std Dev: 61.42 MB
+
+  Remote: zkgitremote, Metric: Net Recv (Total Runs: 210)
+  Avg: 2.75 MB, Std Dev: 14.51 MB
+
+  Remote: zkgitremote, Metric: Disk Read (Total Runs: 210)
+  Avg: 460.41 MB, Std Dev: 567.27 MB
+
+  Remote: zkgitremote, Metric: Disk Write (Total Runs: 210)
+  Avg: 332.49 MB, Std Dev: 990.26 MB
+
+  Remote: zkgitremote, Metric: Avg Cpu (Total Runs: 210)
+  Avg: 67.16 MB, Std Dev: 21.18 MB
 
 Raw Data:
 {

@@ -68,14 +68,25 @@ def load_existing_data():
         with open(path, config.FILE_READ, encoding=config.FILE_UTF8) as f:
             entry = json.load(f)
 
-        if isinstance(entry, dict) and all(isinstance(v, dict) for v in entry.values()):
-            for repo, remotes in entry.items():
-                for remote, entries in remotes.items():
-                    if repo not in performance_data:
-                        performance_data[repo] = {}
-                    if remote not in performance_data[repo]:
-                        performance_data[repo][remote] = []
-                    performance_data[repo][remote].extend(entries)
+        if isinstance(entry, dict):
+            print("Found Json")
+            for command, repos in entry.items():
+                if not isinstance(repos, dict):
+                    continue  # Skip malformed command blocks
+                for repo, remotes in repos.items():
+                    if not isinstance(remotes, dict):
+                        continue  # Skip malformed repo blocks
+                    for remote, entries in remotes.items():
+                        if not isinstance(entries, list):
+                            continue  # Skip if entries is not a list
+                        if command not in performance_data:
+                            performance_data[command] = {}
+                        if repo not in performance_data[command]:
+                            performance_data[command][repo] = {}
+                        if remote not in performance_data[command][repo]:
+                            performance_data[command][repo][remote] = []
+                        performance_data[command][repo][remote].extend(entries)
+
         else:
             match = re.match(r"(.+?)_(.+?)_(.+?)_round", filename)
             if match:
@@ -592,14 +603,6 @@ def calculate_statistics(data, command):
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
     with open(filename, config.FILE_WRITE, encoding=config.FILE_UTF8) as file:
 
-        global_remote_data = {metric: {} for metric in config.STATS}
-        for repo_dir, remotes in data.items():
-            for remote, entries in remotes.items():
-                for metric in config.STATS:
-                    values = [entry[metric] for entry in entries if metric in entry]
-                    if values:
-                        global_remote_data[metric].setdefault(remote, []).extend(values)
-
         for repo_dir, remotes in data.items():
             LOGGER.info(config.LOG_STATS_REPO, os.path.basename(repo_dir))
             file.write(f"\nStatistics for Repository: {os.path.basename(repo_dir)}\n")
@@ -686,32 +689,41 @@ def calculate_statistics(data, command):
                 LOGGER.info(output)
                 file.write(output)
 
-                file.write("\n\n=== Global (Combined) Statistics Across All Repositories ===\n")
+        file.write("\n\n=== Global (Combined) Statistics Across All Repositories ===\n")
+        global_remote_data = {remote: {metric: [] for metric in config.STATS} for remote in config.REMOTES}
 
-        # ANOVA across remotes globally
-        file.write("\n--- Global ANOVA Results ---\n")
-        for metric, remote_values in global_remote_data.items():
-            if len(remote_values) < 2:
-                file.write(f"{metric}: Not enough remotes for ANOVA.\n")
-                continue
-            anova_input = list(remote_values.values())
-            result = stats.f_oneway(*anova_input)
-            file.write(f"ANOVA for {metric}: F = {result.statistic:.2f}, p = {result.pvalue:.8f}\n")
-            LOGGER.info(f"ANOVA for {metric}: F = {result.statistic:.2f}, "
-                        + "p = {result.pvalue:.8f}\n")
+        # Collect all the data for each metric and remote across all repositories
+        for repo_dir, remotes in data.items():
+            for remote, entries in remotes.items():
+                for metric in config.STATS:
+                    # Collect values for the metric across all repositories and remotes
+                    values = [entry[metric] for entry in entries if metric in entry]
+                    if values:
+                        global_remote_data[remote][metric].extend(values)
 
-        file.write("\n--- Global Pairwise T-Tests ---\n")
-        for metric, remote_values in global_remote_data.items():
-            remotes = list(remote_values.keys())
-            for r1, r2 in itertools.combinations(remotes, 2):
-                values1 = remote_values[r1]
-                values2 = remote_values[r2]
-                if values1 and values2:
-                    t_stat, p_val = stats.ttest_ind(values1, values2)
-                    file.write(f"{metric}: {r1} vs {r2}: t = {t_stat:.2f}, p = {p_val:.8f}\n")
-                    LOGGER.info(config.LOG_TTEST_GLOBAL, metric, r1, r2, t_stat, p_val)
-                else:
-                    file.write(f"{metric}: {r1} vs {r2}: Skipped due to missing data.\n")
+        # Now calculate the mean and standard deviation for each remote and metric
+        for remote, metrics in global_remote_data.items():
+            for metric, values in metrics.items():
+                total_runs = len(values)
+
+                # Check if there are enough runs for statistics
+                if total_runs < 2:
+                    LOGGER.warning("\n  Remote: %s, Metric: %s (Total Runs: %d) - Not enough data for standard deviation",
+                                   remote, metric, total_runs)
+                    file.write(f"\n  Remote: {remote}, Metric: {metric} (Total Runs: {total_runs}) - "
+                               + "Not enough data for standard deviation\n")
+                    continue
+
+                # Calculate the average and standard deviation
+                avg = sum(values) / total_runs
+                stdev = statistics.stdev(values) if total_runs > 1 else 0.0
+
+                # Set the appropriate unit for execution time or other metrics
+                unit = "sec" if metric == config.STATS_EXECUTION_TIME else "MB"
+                file.write(
+                    f"\n  Remote: {remote}, Metric: {metric.replace('_', ' ').title()} (Total Runs: {total_runs})\n"
+                    f"  Avg: {avg:.2f} {unit}, Std Dev: {stdev:.2f} {unit}\n"
+                )
 
         file.write(config.LOG_RAWDATA)
         json.dump(data, file, indent=4)
@@ -762,7 +774,7 @@ def main():
                         .get(remote, [])
                     ]
                     if _ in existing_rounds:
-                        LOGGER.info(config.LOG_ROUND_SKIP, _, os.path.basename(repo_dir), remote)
+                        LOGGER.info(config.LOG_ROUND_SKIP, _, os.path.basename(repo_dir), remote, command)
                         current_round += 1
                         continue
 

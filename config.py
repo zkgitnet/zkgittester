@@ -41,6 +41,7 @@ GIT_CRYPT_REMOTE = "gitcryptremote"
 GIT_REMOTE = "gitremote"
 GIT_GCRYPT_REMOTE = "gcryptremote"
 GIT_ZKGIT_REMOTE = "zkgitremote"
+REMOTES = [GIT_CRYPT_REMOTE, GIT_REMOTE, GIT_GCRYPT_REMOTE, GIT_ZKGIT_REMOTE]
 DATETIME_FORMAT = "%Y-%m-%d_%H-%M-%S"
 
 # File Configuration
@@ -67,7 +68,7 @@ LOG_FILE_NOT_FOUND = "Filename %s does not match expected pattern, skipping"
 LOG_PROCESS_FOUND = "[%s] Relevant processes found: %s"
 LOG_STATS_WRITE = "\nStatistics written to: %s"
 LOG_ROUND_INFO = "Round %d of %d: %s at %s"
-LOG_ROUND_SKIP = "Skipping existing round %d for %s/%s"
+LOG_ROUND_SKIP = "Skipping existing round %d for %s/%s/%s"
 LOG_FILE_DELETE_FAIL = "Error deleting file %s: %s"
 LOG_DELETE_FAIL = "Delete failed: %s"
 LOG_ANOVA = "ANOVA result for %s: F-statistic = %.2f, p-value = %.8f"
