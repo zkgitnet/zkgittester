@@ -194,9 +194,9 @@ def generate_bar_plots(data, command):
         plt.tight_layout()
 
         timestamp = datetime.now().strftime(config.DATETIME_FORMAT)
-        filename = f"outputs/{timestamp}_{command}_{metric}_barplot.png"
-        plt.savefig(filename)
-        LOGGER.info(config.LOG_BOXPLOT, filename)
+        filename = f"outputs/{timestamp}_{command}_{metric}_barplot.svg"
+        plt.savefig(filename, format='svg')
+        LOGGER.info(config.LOG_BARPLOT, filename)
         if config.SHOW_PLOTS:
             plt.show()
 
@@ -232,30 +232,12 @@ def generate_box_plots(data, command):
         if metric_df.empty:
             continue
 
+        gray_palette = sns.color_palette("gray", n_colors=metric_df[config.STATS_REMOTE].nunique())[::-1]
+
         plt.figure(figsize=(6, 6))
         sns.boxplot(data=metric_df, x=config.STATS_REPODIR,
-                    y=config.STATS_VALUE, hue=config.STATS_REMOTE)
-
-        ax = plt.gca()
-        hatch_styles = ['///', '\\\\\\', 'xxx', '---']
-        unique_remotes = metric_df[config.STATS_REMOTE].unique()
-        hatch_map = {remote: hatch_styles[i % len(hatch_styles)] for i, remote in enumerate(unique_remotes)}
-
-        handles, labels = ax.get_legend_handles_labels()
-
-        color_to_remote = {
-            handle.get_facecolor(): label for handle, label in zip(handles, labels)
-        }
-
-        for patch in ax.patches:
-            facecolor = patch.get_facecolor()
-            remote_label = color_to_remote.get(facecolor)
-            if remote_label:
-                hatch = hatch_map.get(remote_label, '')
-                patch.set_facecolor('white')
-                patch.set_hatch(hatch)
-                patch.set_edgecolor('black')
-
+                    y=config.STATS_VALUE, hue=config.STATS_REMOTE,
+                    palette=gray_palette)
 
         handles, labels = plt.gca().get_legend_handles_labels()
 
@@ -281,8 +263,8 @@ def generate_box_plots(data, command):
         plt.tight_layout()
 
         timestamp = datetime.now().strftime(config.DATETIME_FORMAT)
-        filename = f"outputs/{timestamp}_{command}_{metric}_comparison.png"
-        plt.savefig(filename)
+        filename = f"outputs/{timestamp}_{command}_{metric}_boxplot.svg"
+        plt.savefig(filename, format='svg')
         LOGGER.info(config.LOG_BOXPLOT, filename)
         if config.SHOW_PLOTS:
             plt.show()
@@ -599,6 +581,7 @@ def calculate_statistics(data, command):
     data = data.get(command, {})
     timestamp = datetime.now().strftime(config.DATETIME_FORMAT)
     filename = f"outputs/{timestamp}_{command}_stats.txt"
+    filename_rawdata = f"outputs/{timestamp}_{command}_rawdata.txt"
 
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
     with open(filename, config.FILE_WRITE, encoding=config.FILE_UTF8) as file:
@@ -725,6 +708,8 @@ def calculate_statistics(data, command):
                     f"  Avg: {avg:.2f} {unit}, Std Dev: {stdev:.2f} {unit}\n"
                 )
 
+    with open(filename_rawdata, config.FILE_WRITE, encoding=config.FILE_UTF8) as file:
+
         file.write(config.LOG_RAWDATA)
         json.dump(data, file, indent=4)
 
@@ -794,7 +779,7 @@ def main():
 
         calculate_statistics(performance_data, command)
         generate_bar_plots(performance_data, command)
-        #generate_box_plots(performance_data, command)
+        generate_box_plots(performance_data, command)
 
     delete_tmp_directory_contents()
 

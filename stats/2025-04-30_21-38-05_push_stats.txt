@@ -1,0 +1,1039 @@
+
+Statistics for Repository: anime
+
+ANOVA Result for execution_time: F-statistic = 1009.25, p-value = 0.00000000
+
+ANOVA Result for peak_memory: F-statistic = 4.18, p-value = 0.00756881
+
+ANOVA Result for net_sent: F-statistic = 1271.88, p-value = 0.00000000
+
+ANOVA Result for net_recv: F-statistic = 4.01, p-value = 0.00928168
+
+ANOVA Result for disk_read: F-statistic = 25.41, p-value = 0.00000000
+
+ANOVA Result for disk_write: F-statistic = 3.39, p-value = 0.02052136
+
+ANOVA Result for avg_cpu: F-statistic = 16.66, p-value = 0.00000000
+
+T-test Result for gitremote vs gitcryptremote (execution_time): t-statistic = -5.08, p-value = 0.00000415
+
+T-test Result for gitremote vs gitcryptremote (peak_memory): t-statistic = 0.64, p-value = 0.52214733
+
+T-test Result for gitremote vs gitcryptremote (net_sent): t-statistic = 0.32, p-value = 0.75294594
+
+T-test Result for gitremote vs gitcryptremote (net_recv): t-statistic = -1.02, p-value = 0.31075831
+
+T-test Result for gitremote vs gitcryptremote (disk_read): t-statistic = -2.61, p-value = 0.01149692
+
+T-test Result for gitremote vs gitcryptremote (disk_write): t-statistic = -0.59, p-value = 0.55421808
+
+T-test Result for gitremote vs gitcryptremote (avg_cpu): t-statistic = 2.21, p-value = 0.03103585
+
+T-test Result for gitremote vs gcryptremote (execution_time): t-statistic = -126.45, p-value = 0.00000000
+
+T-test Result for gitremote vs gcryptremote (peak_memory): t-statistic = 0.62, p-value = 0.53964900
+
+T-test Result for gitremote vs gcryptremote (net_sent): t-statistic = -1834.92, p-value = 0.00000000
+
+T-test Result for gitremote vs gcryptremote (net_recv): t-statistic = -260.73, p-value = 0.00000000
+
+T-test Result for gitremote vs gcryptremote (disk_read): t-statistic = -5.99, p-value = 0.00000014
+
+T-test Result for gitremote vs gcryptremote (disk_write): t-statistic = -2.79, p-value = 0.00721604
+
+T-test Result for gitremote vs gcryptremote (avg_cpu): t-statistic = 5.31, p-value = 0.00000178
+
+T-test Result for gitremote vs zkgitremote (execution_time): t-statistic = -29.54, p-value = 0.00000000
+
+T-test Result for gitremote vs zkgitremote (peak_memory): t-statistic = -2.84, p-value = 0.00612877
+
+T-test Result for gitremote vs zkgitremote (net_sent): t-statistic = -31.46, p-value = 0.00000000
+
+T-test Result for gitremote vs zkgitremote (net_recv): t-statistic = -2.09, p-value = 0.04104739
+
+T-test Result for gitremote vs zkgitremote (disk_read): t-statistic = -6.17, p-value = 0.00000007
+
+T-test Result for gitremote vs zkgitremote (disk_write): t-statistic = -1.83, p-value = 0.07267273
+
+T-test Result for gitremote vs zkgitremote (avg_cpu): t-statistic = 7.49, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs gcryptremote (execution_time): t-statistic = -59.95, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs gcryptremote (peak_memory): t-statistic = 0.25, p-value = 0.80584395
+
+T-test Result for gitcryptremote vs gcryptremote (net_sent): t-statistic = -1835.12, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs gcryptremote (net_recv): t-statistic = -255.35, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs gcryptremote (disk_read): t-statistic = -5.72, p-value = 0.00000039
+
+T-test Result for gitcryptremote vs gcryptremote (disk_write): t-statistic = -2.63, p-value = 0.01081532
+
+T-test Result for gitcryptremote vs gcryptremote (avg_cpu): t-statistic = 1.86, p-value = 0.06780825
+
+T-test Result for gitcryptremote vs zkgitremote (execution_time): t-statistic = -24.58, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs zkgitremote (peak_memory): t-statistic = -2.83, p-value = 0.00630026
+
+T-test Result for gitcryptremote vs zkgitremote (net_sent): t-statistic = -31.46, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs zkgitremote (net_recv): t-statistic = -2.09, p-value = 0.04115856
+
+T-test Result for gitcryptremote vs zkgitremote (disk_read): t-statistic = -5.58, p-value = 0.00000067
+
+T-test Result for gitcryptremote vs zkgitremote (disk_write): t-statistic = -1.63, p-value = 0.10800399
+
+T-test Result for gitcryptremote vs zkgitremote (avg_cpu): t-statistic = 3.63, p-value = 0.00060985
+
+T-test Result for gcryptremote vs zkgitremote (execution_time): t-statistic = 5.19, p-value = 0.00000277
+
+T-test Result for gcryptremote vs zkgitremote (peak_memory): t-statistic = -2.39, p-value = 0.02005130
+
+T-test Result for gcryptremote vs zkgitremote (net_sent): t-statistic = -1.16, p-value = 0.24901892
+
+T-test Result for gcryptremote vs zkgitremote (net_recv): t-statistic = -1.03, p-value = 0.30948603
+
+T-test Result for gcryptremote vs zkgitremote (disk_read): t-statistic = 2.74, p-value = 0.00807724
+
+T-test Result for gcryptremote vs zkgitremote (disk_write): t-statistic = 0.53, p-value = 0.59506398
+
+T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 3.11, p-value = 0.00292335
+
+  Remote: gitremote (Total Runs: 30)
+  Avg Execution Time: 0.64 sec, Std Dev: 0.05 sec
+  Avg Peak Memory: 1510.62 MB, Std Dev: 51.18 MB
+  Avg Net Sent: 0.02 MB, Std Dev: 0.00 MB
+  Avg Net Recv: 0.02 MB, Std Dev: 0.00 MB
+  Avg Disk Read: 79.53 MB, Std Dev: 30.77 MB
+  Avg Disk Write: 2.58 MB, Std Dev: 10.18 MB
+  Avg Avg Cpu: 92.23 MB, Std Dev: 18.07 MB
+
+  Remote: gitcryptremote (Total Runs: 30)
+  Avg Execution Time: 0.98 sec, Std Dev: 0.36 sec
+  Avg Peak Memory: 1489.04 MB, Std Dev: 176.26 MB
+  Avg Net Sent: 0.02 MB, Std Dev: 0.00 MB
+  Avg Net Recv: 0.02 MB, Std Dev: 0.01 MB
+  Avg Disk Read: 106.01 MB, Std Dev: 46.28 MB
+  Avg Disk Write: 3.89 MB, Std Dev: 6.42 MB
+  Avg Avg Cpu: 80.57 MB, Std Dev: 22.55 MB
+
+  Remote: gcryptremote (Total Runs: 30)
+  Avg Execution Time: 5.53 sec, Std Dev: 0.21 sec
+  Avg Peak Memory: 1471.71 MB, Std Dev: 341.56 MB
+  Avg Net Sent: 43.69 MB, Std Dev: 0.13 MB
+  Avg Net Recv: 1.55 MB, Std Dev: 0.03 MB
+  Avg Disk Read: 688.15 MB, Std Dev: 555.41 MB
+  Avg Disk Write: 14.63 MB, Std Dev: 21.39 MB
+  Avg Avg Cpu: 72.19 MB, Std Dev: 10.02 MB
+
+  Remote: zkgitremote (Total Runs: 30)
+  Avg Execution Time: 4.78 sec, Std Dev: 0.77 sec
+  Avg Peak Memory: 1672.15 MB, Std Dev: 306.75 MB
+  Avg Net Sent: 45.37 MB, Std Dev: 7.89 MB
+  Avg Net Recv: 3.03 MB, Std Dev: 7.90 MB
+  Avg Disk Read: 379.91 MB, Std Dev: 265.02 MB
+  Avg Disk Write: 11.45 MB, Std Dev: 24.55 MB
+  Avg Avg Cpu: 64.42 MB, Std Dev: 9.32 MB
+
+Statistics for Repository: awesome-llm-apps
+
+ANOVA Result for execution_time: F-statistic = 1262.24, p-value = 0.00000000
+
+ANOVA Result for peak_memory: F-statistic = 0.16, p-value = 0.92544414
+
+ANOVA Result for net_sent: F-statistic = 29021894.43, p-value = 0.00000000
+
+ANOVA Result for net_recv: F-statistic = 19031.71, p-value = 0.00000000
+
+ANOVA Result for disk_read: F-statistic = 3.75, p-value = 0.01297236
+
+ANOVA Result for disk_write: F-statistic = 42.24, p-value = 0.00000000
+
+ANOVA Result for avg_cpu: F-statistic = 29.15, p-value = 0.00000000
+
+T-test Result for gitremote vs gitcryptremote (execution_time): t-statistic = -8.62, p-value = 0.00000000
+
+T-test Result for gitremote vs gitcryptremote (peak_memory): t-statistic = -0.61, p-value = 0.54597341
+
+T-test Result for gitremote vs gitcryptremote (net_sent): t-statistic = 1.21, p-value = 0.23208533
+
+T-test Result for gitremote vs gitcryptremote (net_recv): t-statistic = 0.71, p-value = 0.47970049
+
+T-test Result for gitremote vs gitcryptremote (disk_read): t-statistic = -4.63, p-value = 0.00002101
+
+T-test Result for gitremote vs gitcryptremote (disk_write): t-statistic = -2.38, p-value = 0.02086912
+
+T-test Result for gitremote vs gitcryptremote (avg_cpu): t-statistic = -0.54, p-value = 0.59467844
+
+T-test Result for gitremote vs gcryptremote (execution_time): t-statistic = -34.17, p-value = 0.00000000
+
+T-test Result for gitremote vs gcryptremote (peak_memory): t-statistic = -0.61, p-value = 0.54469072
+
+T-test Result for gitremote vs gcryptremote (net_sent): t-statistic = -7408.27, p-value = 0.00000000
+
+T-test Result for gitremote vs gcryptremote (net_recv): t-statistic = -190.62, p-value = 0.00000000
+
+T-test Result for gitremote vs gcryptremote (disk_read): t-statistic = -2.51, p-value = 0.01486586
+
+T-test Result for gitremote vs gcryptremote (disk_write): t-statistic = -8.93, p-value = 0.00000000
+
+T-test Result for gitremote vs gcryptremote (avg_cpu): t-statistic = 5.34, p-value = 0.00000161
+
+T-test Result for gitremote vs zkgitremote (execution_time): t-statistic = -192.08, p-value = 0.00000000
+
+T-test Result for gitremote vs zkgitremote (peak_memory): t-statistic = -0.41, p-value = 0.68030287
+
+T-test Result for gitremote vs zkgitremote (net_sent): t-statistic = -5826.40, p-value = 0.00000000
+
+T-test Result for gitremote vs zkgitremote (net_recv): t-statistic = -149.47, p-value = 0.00000000
+
+T-test Result for gitremote vs zkgitremote (disk_read): t-statistic = -2.44, p-value = 0.01769076
+
+T-test Result for gitremote vs zkgitremote (disk_write): t-statistic = -7.21, p-value = 0.00000000
+
+T-test Result for gitremote vs zkgitremote (avg_cpu): t-statistic = 6.29, p-value = 0.00000004
+
+T-test Result for gitcryptremote vs gcryptremote (execution_time): t-statistic = -33.79, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs gcryptremote (peak_memory): t-statistic = -0.26, p-value = 0.79728773
+
+T-test Result for gitcryptremote vs gcryptremote (net_sent): t-statistic = -7553.45, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs gcryptremote (net_recv): t-statistic = -190.71, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs gcryptremote (disk_read): t-statistic = -2.29, p-value = 0.02596346
+
+T-test Result for gitcryptremote vs gcryptremote (disk_write): t-statistic = -8.26, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs gcryptremote (avg_cpu): t-statistic = 6.89, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs zkgitremote (execution_time): t-statistic = -192.71, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs zkgitremote (peak_memory): t-statistic = 0.02, p-value = 0.98558005
+
+T-test Result for gitcryptremote vs zkgitremote (net_sent): t-statistic = -5908.89, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs zkgitremote (net_recv): t-statistic = -149.53, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs zkgitremote (disk_read): t-statistic = -2.20, p-value = 0.03190137
+
+T-test Result for gitcryptremote vs zkgitremote (disk_write): t-statistic = -6.49, p-value = 0.00000002
+
+T-test Result for gitcryptremote vs zkgitremote (avg_cpu): t-statistic = 8.14, p-value = 0.00000000
+
+T-test Result for gcryptremote vs zkgitremote (execution_time): t-statistic = 6.43, p-value = 0.00000003
+
+T-test Result for gcryptremote vs zkgitremote (peak_memory): t-statistic = 0.23, p-value = 0.81859563
+
+T-test Result for gcryptremote vs zkgitremote (net_sent): t-statistic = 381.10, p-value = 0.00000000
+
+T-test Result for gcryptremote vs zkgitremote (net_recv): t-statistic = 13.61, p-value = 0.00000000
+
+T-test Result for gcryptremote vs zkgitremote (disk_read): t-statistic = 0.18, p-value = 0.85660619
+
+T-test Result for gcryptremote vs zkgitremote (disk_write): t-statistic = 1.79, p-value = 0.07922333
+
+T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 1.75, p-value = 0.08556040
+
+  Remote: gitremote (Total Runs: 30)
+  Avg Execution Time: 0.66 sec, Std Dev: 0.12 sec
+  Avg Peak Memory: 1527.94 MB, Std Dev: 219.86 MB
+  Avg Net Sent: 0.03 MB, Std Dev: 0.03 MB
+  Avg Net Recv: 0.02 MB, Std Dev: 0.01 MB
+  Avg Disk Read: 60.29 MB, Std Dev: 19.73 MB
+  Avg Disk Write: 0.59 MB, Std Dev: 1.52 MB
+  Avg Avg Cpu: 89.90 MB, Std Dev: 20.57 MB
+
+  Remote: gitcryptremote (Total Runs: 30)
+  Avg Execution Time: 0.90 sec, Std Dev: 0.09 sec
+  Avg Peak Memory: 1558.05 MB, Std Dev: 159.43 MB
+  Avg Net Sent: 0.02 MB, Std Dev: 0.00 MB
+  Avg Net Recv: 0.02 MB, Std Dev: 0.00 MB
+  Avg Disk Read: 97.66 MB, Std Dev: 39.55 MB
+  Avg Disk Write: 1.98 MB, Std Dev: 2.82 MB
+  Avg Avg Cpu: 92.54 MB, Std Dev: 17.53 MB
+
+  Remote: gcryptremote (Total Runs: 30)
+  Avg Execution Time: 20.87 sec, Std Dev: 3.24 sec
+  Avg Peak Memory: 1578.03 MB, Std Dev: 392.99 MB
+  Avg Net Sent: 202.15 MB, Std Dev: 0.15 MB
+  Avg Net Recv: 7.10 MB, Std Dev: 0.20 MB
+  Avg Disk Read: 479.96 MB, Std Dev: 915.38 MB
+  Avg Disk Write: 23.13 MB, Std Dev: 13.74 MB
+  Avg Avg Cpu: 68.54 MB, Std Dev: 7.52 MB
+
+  Remote: zkgitremote (Total Runs: 30)
+  Avg Execution Time: 17.04 sec, Std Dev: 0.45 sec
+  Avg Peak Memory: 1556.89 MB, Std Dev: 313.47 MB
+  Avg Net Sent: 186.39 MB, Std Dev: 0.17 MB
+  Avg Net Recv: 6.34 MB, Std Dev: 0.23 MB
+  Avg Disk Read: 438.60 MB, Std Dev: 848.41 MB
+  Avg Disk Write: 17.09 MB, Std Dev: 12.45 MB
+  Avg Avg Cpu: 65.83 MB, Std Dev: 3.94 MB
+
+Statistics for Repository: build-your-own-x
+
+ANOVA Result for execution_time: F-statistic = 6.97, p-value = 0.00023568
+
+ANOVA Result for peak_memory: F-statistic = 23.15, p-value = 0.00000000
+
+ANOVA Result for net_sent: F-statistic = 1044.49, p-value = 0.00000000
+
+ANOVA Result for net_recv: F-statistic = 4.49, p-value = 0.00509388
+
+ANOVA Result for disk_read: F-statistic = 6.33, p-value = 0.00051697
+
+ANOVA Result for disk_write: F-statistic = 3.01, p-value = 0.03323123
+
+ANOVA Result for avg_cpu: F-statistic = 12.56, p-value = 0.00000036
+
+T-test Result for gitremote vs gitcryptremote (execution_time): t-statistic = -16.27, p-value = 0.00000000
+
+T-test Result for gitremote vs gitcryptremote (peak_memory): t-statistic = 1.00, p-value = 0.32061693
+
+T-test Result for gitremote vs gitcryptremote (net_sent): t-statistic = -0.24, p-value = 0.81081893
+
+T-test Result for gitremote vs gitcryptremote (net_recv): t-statistic = -0.69, p-value = 0.49494267
+
+T-test Result for gitremote vs gitcryptremote (disk_read): t-statistic = -0.94, p-value = 0.35007640
+
+T-test Result for gitremote vs gitcryptremote (disk_write): t-statistic = -2.88, p-value = 0.00551103
+
+T-test Result for gitremote vs gitcryptremote (avg_cpu): t-statistic = -0.28, p-value = 0.77711953
+
+T-test Result for gitremote vs gcryptremote (execution_time): t-statistic = -2.96, p-value = 0.00447647
+
+T-test Result for gitremote vs gcryptremote (peak_memory): t-statistic = -0.94, p-value = 0.35147497
+
+T-test Result for gitremote vs gcryptremote (net_sent): t-statistic = -164.16, p-value = 0.00000000
+
+T-test Result for gitremote vs gcryptremote (net_recv): t-statistic = -8.59, p-value = 0.00000000
+
+T-test Result for gitremote vs gcryptremote (disk_read): t-statistic = -2.84, p-value = 0.00617386
+
+T-test Result for gitremote vs gcryptremote (disk_write): t-statistic = -2.53, p-value = 0.01411228
+
+T-test Result for gitremote vs gcryptremote (avg_cpu): t-statistic = -3.41, p-value = 0.00120608
+
+T-test Result for gitremote vs zkgitremote (execution_time): t-statistic = -11.90, p-value = 0.00000000
+
+T-test Result for gitremote vs zkgitremote (peak_memory): t-statistic = -6.79, p-value = 0.00000001
+
+T-test Result for gitremote vs zkgitremote (net_sent): t-statistic = -28.32, p-value = 0.00000000
+
+T-test Result for gitremote vs zkgitremote (net_recv): t-statistic = -2.11, p-value = 0.03885755
+
+T-test Result for gitremote vs zkgitremote (disk_read): t-statistic = -2.16, p-value = 0.03471384
+
+T-test Result for gitremote vs zkgitremote (disk_write): t-statistic = -4.04, p-value = 0.00015989
+
+T-test Result for gitremote vs zkgitremote (avg_cpu): t-statistic = 2.81, p-value = 0.00672464
+
+T-test Result for gitcryptremote vs gcryptremote (execution_time): t-statistic = -2.53, p-value = 0.01417798
+
+T-test Result for gitcryptremote vs gcryptremote (peak_memory): t-statistic = -1.37, p-value = 0.17542134
+
+T-test Result for gitcryptremote vs gcryptremote (net_sent): t-statistic = -164.13, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs gcryptremote (net_recv): t-statistic = -8.54, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs gcryptremote (disk_read): t-statistic = -2.65, p-value = 0.01033310
+
+T-test Result for gitcryptremote vs gcryptremote (disk_write): t-statistic = -0.69, p-value = 0.49277143
+
+T-test Result for gitcryptremote vs gcryptremote (avg_cpu): t-statistic = -3.38, p-value = 0.00131479
+
+T-test Result for gitcryptremote vs zkgitremote (execution_time): t-statistic = -4.75, p-value = 0.00001376
+
+T-test Result for gitcryptremote vs zkgitremote (peak_memory): t-statistic = -5.95, p-value = 0.00000017
+
+T-test Result for gitcryptremote vs zkgitremote (net_sent): t-statistic = -28.32, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs zkgitremote (net_recv): t-statistic = -2.11, p-value = 0.03950520
+
+T-test Result for gitcryptremote vs zkgitremote (disk_read): t-statistic = -3.05, p-value = 0.00342461
+
+T-test Result for gitcryptremote vs zkgitremote (disk_write): t-statistic = -0.32, p-value = 0.75011467
+
+T-test Result for gitcryptremote vs zkgitremote (avg_cpu): t-statistic = 3.16, p-value = 0.00251984
+
+T-test Result for gcryptremote vs zkgitremote (execution_time): t-statistic = 2.25, p-value = 0.02804209
+
+T-test Result for gcryptremote vs zkgitremote (peak_memory): t-statistic = -5.10, p-value = 0.00000388
+
+T-test Result for gcryptremote vs zkgitremote (net_sent): t-statistic = 0.18, p-value = 0.85970963
+
+T-test Result for gcryptremote vs zkgitremote (net_recv): t-statistic = -0.58, p-value = 0.56672507
+
+T-test Result for gcryptremote vs zkgitremote (disk_read): t-statistic = 2.17, p-value = 0.03443204
+
+T-test Result for gcryptremote vs zkgitremote (disk_write): t-statistic = 0.50, p-value = 0.61744841
+
+T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 6.05, p-value = 0.00000011
+
+  Remote: gitremote (Total Runs: 30)
+  Avg Execution Time: 0.62 sec, Std Dev: 0.06 sec
+  Avg Peak Memory: 1631.93 MB, Std Dev: 0.31 MB
+  Avg Net Sent: 0.02 MB, Std Dev: 0.00 MB
+  Avg Net Recv: 0.02 MB, Std Dev: 0.00 MB
+  Avg Disk Read: 75.38 MB, Std Dev: 135.81 MB
+  Avg Disk Write: 0.34 MB, Std Dev: 0.60 MB
+  Avg Avg Cpu: 86.25 MB, Std Dev: 21.27 MB
+
+  Remote: gitcryptremote (Total Runs: 30)
+  Avg Execution Time: 0.86 sec, Std Dev: 0.05 sec
+  Avg Peak Memory: 1609.65 MB, Std Dev: 121.83 MB
+  Avg Net Sent: 0.02 MB, Std Dev: 0.00 MB
+  Avg Net Recv: 0.02 MB, Std Dev: 0.00 MB
+  Avg Disk Read: 99.72 MB, Std Dev: 39.86 MB
+  Avg Disk Write: 2.75 MB, Std Dev: 4.53 MB
+  Avg Avg Cpu: 87.72 MB, Std Dev: 18.98 MB
+
+  Remote: gcryptremote (Total Runs: 30)
+  Avg Execution Time: 2.26 sec, Std Dev: 3.03 sec
+  Avg Peak Memory: 1649.76 MB, Std Dev: 103.99 MB
+  Avg Net Sent: 3.08 MB, Std Dev: 0.10 MB
+  Avg Net Recv: 0.17 MB, Std Dev: 0.10 MB
+  Avg Disk Read: 272.55 MB, Std Dev: 354.86 MB
+  Avg Disk Write: 3.86 MB, Std Dev: 7.59 MB
+  Avg Avg Cpu: 99.83 MB, Std Dev: 5.04 MB
+
+  Remote: zkgitremote (Total Runs: 30)
+  Avg Execution Time: 1.01 sec, Std Dev: 0.17 sec
+  Avg Peak Memory: 1822.81 MB, Std Dev: 153.95 MB
+  Avg Net Sent: 3.06 MB, Std Dev: 0.59 MB
+  Avg Net Recv: 0.23 MB, Std Dev: 0.54 MB
+  Avg Disk Read: 131.31 MB, Std Dev: 40.31 MB
+  Avg Disk Write: 3.09 MB, Std Dev: 3.68 MB
+  Avg Avg Cpu: 68.08 MB, Std Dev: 28.29 MB
+
+Statistics for Repository: gitdiagram
+
+ANOVA Result for execution_time: F-statistic = 6.48, p-value = 0.00042841
+
+ANOVA Result for peak_memory: F-statistic = 35.85, p-value = 0.00000000
+
+ANOVA Result for net_sent: F-statistic = 1077.63, p-value = 0.00000000
+
+ANOVA Result for net_recv: F-statistic = 4.68, p-value = 0.00402786
+
+ANOVA Result for disk_read: F-statistic = 3.11, p-value = 0.02918751
+
+ANOVA Result for disk_write: F-statistic = 6.46, p-value = 0.00044303
+
+ANOVA Result for avg_cpu: F-statistic = 6.33, p-value = 0.00051405
+
+T-test Result for gitremote vs gitcryptremote (execution_time): t-statistic = -6.44, p-value = 0.00000003
+
+T-test Result for gitremote vs gitcryptremote (peak_memory): t-statistic = 1.05, p-value = 0.29954782
+
+T-test Result for gitremote vs gitcryptremote (net_sent): t-statistic = 1.01, p-value = 0.31767988
+
+T-test Result for gitremote vs gitcryptremote (net_recv): t-statistic = 0.29, p-value = 0.77569322
+
+T-test Result for gitremote vs gitcryptremote (disk_read): t-statistic = -3.02, p-value = 0.00377582
+
+T-test Result for gitremote vs gitcryptremote (disk_write): t-statistic = -0.79, p-value = 0.43397746
+
+T-test Result for gitremote vs gitcryptremote (avg_cpu): t-statistic = 0.74, p-value = 0.46354513
+
+T-test Result for gitremote vs gcryptremote (execution_time): t-statistic = -2.77, p-value = 0.00744175
+
+T-test Result for gitremote vs gcryptremote (peak_memory): t-statistic = 0.69, p-value = 0.49069832
+
+T-test Result for gitremote vs gcryptremote (net_sent): t-statistic = -90.46, p-value = 0.00000000
+
+T-test Result for gitremote vs gcryptremote (net_recv): t-statistic = -7.54, p-value = 0.00000000
+
+T-test Result for gitremote vs gcryptremote (disk_read): t-statistic = -2.19, p-value = 0.03232086
+
+T-test Result for gitremote vs gcryptremote (disk_write): t-statistic = -3.03, p-value = 0.00365134
+
+T-test Result for gitremote vs gcryptremote (avg_cpu): t-statistic = -1.70, p-value = 0.09361542
+
+T-test Result for gitremote vs zkgitremote (execution_time): t-statistic = -15.05, p-value = 0.00000000
+
+T-test Result for gitremote vs zkgitremote (peak_memory): t-statistic = -11.75, p-value = 0.00000000
+
+T-test Result for gitremote vs zkgitremote (net_sent): t-statistic = -29.47, p-value = 0.00000000
+
+T-test Result for gitremote vs zkgitremote (net_recv): t-statistic = -2.14, p-value = 0.03677615
+
+T-test Result for gitremote vs zkgitremote (disk_read): t-statistic = -2.76, p-value = 0.00766214
+
+T-test Result for gitremote vs zkgitremote (disk_write): t-statistic = -3.56, p-value = 0.00075599
+
+T-test Result for gitremote vs zkgitremote (avg_cpu): t-statistic = 2.53, p-value = 0.01399329
+
+T-test Result for gitcryptremote vs gcryptremote (execution_time): t-statistic = -2.51, p-value = 0.01495046
+
+T-test Result for gitcryptremote vs gcryptremote (peak_memory): t-statistic = 0.68, p-value = 0.49843217
+
+T-test Result for gitcryptremote vs gcryptremote (net_sent): t-statistic = -93.29, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs gcryptremote (net_recv): t-statistic = -7.56, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs gcryptremote (disk_read): t-statistic = -1.74, p-value = 0.08789444
+
+T-test Result for gitcryptremote vs gcryptremote (disk_write): t-statistic = -2.71, p-value = 0.00885266
+
+T-test Result for gitcryptremote vs gcryptremote (avg_cpu): t-statistic = -2.47, p-value = 0.01630668
+
+T-test Result for gitcryptremote vs zkgitremote (execution_time): t-statistic = -5.49, p-value = 0.00000094
+
+T-test Result for gitcryptremote vs zkgitremote (peak_memory): t-statistic = -11.77, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs zkgitremote (net_sent): t-statistic = -29.64, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs zkgitremote (net_recv): t-statistic = -2.14, p-value = 0.03644971
+
+T-test Result for gitcryptremote vs zkgitremote (disk_read): t-statistic = -1.58, p-value = 0.11885796
+
+T-test Result for gitcryptremote vs zkgitremote (disk_write): t-statistic = -3.18, p-value = 0.00235239
+
+T-test Result for gitcryptremote vs zkgitremote (avg_cpu): t-statistic = 1.99, p-value = 0.05157195
+
+T-test Result for gcryptremote vs zkgitremote (execution_time): t-statistic = 2.26, p-value = 0.02776291
+
+T-test Result for gcryptremote vs zkgitremote (peak_memory): t-statistic = -6.36, p-value = 0.00000003
+
+T-test Result for gcryptremote vs zkgitremote (net_sent): t-statistic = 0.71, p-value = 0.48080223
+
+T-test Result for gcryptremote vs zkgitremote (net_recv): t-statistic = -0.51, p-value = 0.61383973
+
+T-test Result for gcryptremote vs zkgitremote (disk_read): t-statistic = 1.03, p-value = 0.30849852
+
+T-test Result for gcryptremote vs zkgitremote (disk_write): t-statistic = -0.17, p-value = 0.86838919
+
+T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 3.66, p-value = 0.00054933
+
+  Remote: gitremote (Total Runs: 30)
+  Avg Execution Time: 0.64 sec, Std Dev: 0.06 sec
+  Avg Peak Memory: 1636.42 MB, Std Dev: 2.05 MB
+  Avg Net Sent: 0.03 MB, Std Dev: 0.03 MB
+  Avg Net Recv: 0.02 MB, Std Dev: 0.00 MB
+  Avg Disk Read: 75.29 MB, Std Dev: 31.68 MB
+  Avg Disk Write: 0.54 MB, Std Dev: 1.03 MB
+  Avg Avg Cpu: 93.73 MB, Std Dev: 17.29 MB
+
+  Remote: gitcryptremote (Total Runs: 30)
+  Avg Execution Time: 0.78 sec, Std Dev: 0.11 sec
+  Avg Peak Memory: 1636.03 MB, Std Dev: 0.25 MB
+  Avg Net Sent: 0.02 MB, Std Dev: 0.00 MB
+  Avg Net Recv: 0.02 MB, Std Dev: 0.00 MB
+  Avg Disk Read: 107.49 MB, Std Dev: 49.11 MB
+  Avg Disk Write: 0.88 MB, Std Dev: 2.18 MB
+  Avg Avg Cpu: 90.21 MB, Std Dev: 19.61 MB
+
+  Remote: gcryptremote (Total Runs: 30)
+  Avg Execution Time: 2.17 sec, Std Dev: 3.03 sec
+  Avg Peak Memory: 1614.42 MB, Std Dev: 173.71 MB
+  Avg Net Sent: 2.20 MB, Std Dev: 0.13 MB
+  Avg Net Recv: 0.13 MB, Std Dev: 0.08 MB
+  Avg Disk Read: 232.46 MB, Std Dev: 391.24 MB
+  Avg Disk Write: 4.90 MB, Std Dev: 7.82 MB
+  Avg Avg Cpu: 99.26 MB, Std Dev: 4.12 MB
+
+  Remote: zkgitremote (Total Runs: 30)
+  Avg Execution Time: 0.92 sec, Std Dev: 0.09 sec
+  Avg Peak Memory: 1845.81 MB, Std Dev: 97.59 MB
+  Avg Net Sent: 2.14 MB, Std Dev: 0.39 MB
+  Avg Net Recv: 0.17 MB, Std Dev: 0.39 MB
+  Avg Disk Read: 153.72 MB, Std Dev: 152.20 MB
+  Avg Disk Write: 5.22 MB, Std Dev: 7.14 MB
+  Avg Avg Cpu: 75.58 MB, Std Dev: 35.22 MB
+
+Statistics for Repository: glance
+
+ANOVA Result for execution_time: F-statistic = 5004.05, p-value = 0.00000000
+
+ANOVA Result for peak_memory: F-statistic = 15.99, p-value = 0.00000001
+
+ANOVA Result for net_sent: F-statistic = 1233.31, p-value = 0.00000000
+
+ANOVA Result for net_recv: F-statistic = 3.96, p-value = 0.00996590
+
+ANOVA Result for disk_read: F-statistic = 27.91, p-value = 0.00000000
+
+ANOVA Result for disk_write: F-statistic = 2.81, p-value = 0.04277118
+
+ANOVA Result for avg_cpu: F-statistic = 8.56, p-value = 0.00003508
+
+T-test Result for gitremote vs gitcryptremote (execution_time): t-statistic = -17.17, p-value = 0.00000000
+
+T-test Result for gitremote vs gitcryptremote (peak_memory): t-statistic = 1.44, p-value = 0.15421408
+
+T-test Result for gitremote vs gitcryptremote (net_sent): t-statistic = 1.07, p-value = 0.28813984
+
+T-test Result for gitremote vs gitcryptremote (net_recv): t-statistic = 0.68, p-value = 0.50134993
+
+T-test Result for gitremote vs gitcryptremote (disk_read): t-statistic = 0.71, p-value = 0.48245146
+
+T-test Result for gitremote vs gitcryptremote (disk_write): t-statistic = -2.59, p-value = 0.01223986
+
+T-test Result for gitremote vs gitcryptremote (avg_cpu): t-statistic = -0.47, p-value = 0.64351170
+
+T-test Result for gitremote vs gcryptremote (execution_time): t-statistic = -127.77, p-value = 0.00000000
+
+T-test Result for gitremote vs gcryptremote (peak_memory): t-statistic = 0.78, p-value = 0.44037455
+
+T-test Result for gitremote vs gcryptremote (net_sent): t-statistic = -1512.78, p-value = 0.00000000
+
+T-test Result for gitremote vs gcryptremote (net_recv): t-statistic = -221.87, p-value = 0.00000000
+
+T-test Result for gitremote vs gcryptremote (disk_read): t-statistic = -6.34, p-value = 0.00000004
+
+T-test Result for gitremote vs gcryptremote (disk_write): t-statistic = -3.87, p-value = 0.00028093
+
+T-test Result for gitremote vs gcryptremote (avg_cpu): t-statistic = 2.82, p-value = 0.00647946
+
+T-test Result for gitremote vs zkgitremote (execution_time): t-statistic = -66.25, p-value = 0.00000000
+
+T-test Result for gitremote vs zkgitremote (peak_memory): t-statistic = -9.55, p-value = 0.00000000
+
+T-test Result for gitremote vs zkgitremote (net_sent): t-statistic = -29.95, p-value = 0.00000000
+
+T-test Result for gitremote vs zkgitremote (net_recv): t-statistic = -2.06, p-value = 0.04367025
+
+T-test Result for gitremote vs zkgitremote (disk_read): t-statistic = -5.68, p-value = 0.00000046
+
+T-test Result for gitremote vs zkgitremote (disk_write): t-statistic = -1.95, p-value = 0.05569216
+
+T-test Result for gitremote vs zkgitremote (avg_cpu): t-statistic = 3.34, p-value = 0.00144906
+
+T-test Result for gitcryptremote vs gcryptremote (execution_time): t-statistic = -120.21, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs gcryptremote (peak_memory): t-statistic = -0.14, p-value = 0.89188799
+
+T-test Result for gitcryptremote vs gcryptremote (net_sent): t-statistic = -1550.00, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs gcryptremote (net_recv): t-statistic = -221.83, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs gcryptremote (disk_read): t-statistic = -7.72, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs gcryptremote (disk_write): t-statistic = -0.96, p-value = 0.33925751
+
+T-test Result for gitcryptremote vs gcryptremote (avg_cpu): t-statistic = 3.64, p-value = 0.00059064
+
+T-test Result for gitcryptremote vs zkgitremote (execution_time): t-statistic = -61.14, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs zkgitremote (peak_memory): t-statistic = -6.76, p-value = 0.00000001
+
+T-test Result for gitcryptremote vs zkgitremote (net_sent): t-statistic = -29.95, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs zkgitremote (net_recv): t-statistic = -2.06, p-value = 0.04358192
+
+T-test Result for gitcryptremote vs zkgitremote (disk_read): t-statistic = -6.58, p-value = 0.00000001
+
+T-test Result for gitcryptremote vs zkgitremote (disk_write): t-statistic = -0.07, p-value = 0.94224413
+
+T-test Result for gitcryptremote vs zkgitremote (avg_cpu): t-statistic = 3.87, p-value = 0.00028066
+
+T-test Result for gcryptremote vs zkgitremote (execution_time): t-statistic = 14.28, p-value = 0.00000000
+
+T-test Result for gcryptremote vs zkgitremote (peak_memory): t-statistic = -4.77, p-value = 0.00001296
+
+T-test Result for gcryptremote vs zkgitremote (net_sent): t-statistic = 0.93, p-value = 0.35662955
+
+T-test Result for gcryptremote vs zkgitremote (net_recv): t-statistic = -0.96, p-value = 0.34308924
+
+T-test Result for gcryptremote vs zkgitremote (disk_read): t-statistic = -0.30, p-value = 0.76253724
+
+T-test Result for gcryptremote vs zkgitremote (disk_write): t-statistic = 0.72, p-value = 0.47187725
+
+T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 1.54, p-value = 0.12791763
+
+  Remote: gitremote (Total Runs: 30)
+  Avg Execution Time: 0.62 sec, Std Dev: 0.06 sec
+  Avg Peak Memory: 1637.88 MB, Std Dev: 1.02 MB
+  Avg Net Sent: 0.03 MB, Std Dev: 0.03 MB
+  Avg Net Recv: 0.02 MB, Std Dev: 0.01 MB
+  Avg Disk Read: 137.83 MB, Std Dev: 179.89 MB
+  Avg Disk Write: 0.65 MB, Std Dev: 2.09 MB
+  Avg Avg Cpu: 87.75 MB, Std Dev: 20.39 MB
+
+  Remote: gitcryptremote (Total Runs: 30)
+  Avg Execution Time: 0.89 sec, Std Dev: 0.06 sec
+  Avg Peak Memory: 1596.08 MB, Std Dev: 158.58 MB
+  Avg Net Sent: 0.02 MB, Std Dev: 0.00 MB
+  Avg Net Recv: 0.02 MB, Std Dev: 0.01 MB
+  Avg Disk Read: 114.03 MB, Std Dev: 40.45 MB
+  Avg Disk Write: 7.10 MB, Std Dev: 13.50 MB
+  Avg Avg Cpu: 90.07 MB, Std Dev: 18.29 MB
+
+  Remote: gcryptremote (Total Runs: 30)
+  Avg Execution Time: 4.90 sec, Std Dev: 0.17 sec
+  Avg Peak Memory: 1603.32 MB, Std Dev: 243.61 MB
+  Avg Net Sent: 37.56 MB, Std Dev: 0.13 MB
+  Avg Net Recv: 1.34 MB, Std Dev: 0.03 MB
+  Avg Disk Read: 546.90 MB, Std Dev: 304.45 MB
+  Avg Disk Write: 10.50 MB, Std Dev: 13.78 MB
+  Avg Avg Cpu: 75.52 MB, Std Dev: 12.09 MB
+
+  Remote: zkgitremote (Total Runs: 30)
+  Avg Execution Time: 4.05 sec, Std Dev: 0.28 sec
+  Avg Peak Memory: 1837.61 MB, Std Dev: 114.49 MB
+  Avg Net Sent: 36.43 MB, Std Dev: 6.66 MB
+  Avg Net Recv: 2.49 MB, Std Dev: 6.56 MB
+  Avg Disk Read: 573.90 MB, Std Dev: 380.44 MB
+  Avg Disk Write: 7.41 MB, Std Dev: 18.83 MB
+  Avg Avg Cpu: 67.29 MB, Std Dev: 26.59 MB
+
+Statistics for Repository: llama-models
+
+ANOVA Result for execution_time: F-statistic = 3366.18, p-value = 0.00000000
+
+ANOVA Result for peak_memory: F-statistic = 23.77, p-value = 0.00000000
+
+ANOVA Result for net_sent: F-statistic = 1213.75, p-value = 0.00000000
+
+ANOVA Result for net_recv: F-statistic = 4.01, p-value = 0.00937109
+
+ANOVA Result for disk_read: F-statistic = 53.67, p-value = 0.00000000
+
+ANOVA Result for disk_write: F-statistic = 2.05, p-value = 0.11035958
+
+ANOVA Result for avg_cpu: F-statistic = 8.06, p-value = 0.00006372
+
+T-test Result for gitremote vs gitcryptremote (execution_time): t-statistic = -14.66, p-value = 0.00000000
+
+T-test Result for gitremote vs gitcryptremote (peak_memory): t-statistic = 1.35, p-value = 0.18070782
+
+T-test Result for gitremote vs gitcryptremote (net_sent): t-statistic = 1.05, p-value = 0.29914278
+
+T-test Result for gitremote vs gitcryptremote (net_recv): t-statistic = 0.98, p-value = 0.32879396
+
+T-test Result for gitremote vs gitcryptremote (disk_read): t-statistic = -6.18, p-value = 0.00000007
+
+T-test Result for gitremote vs gitcryptremote (disk_write): t-statistic = -2.11, p-value = 0.03879609
+
+T-test Result for gitremote vs gitcryptremote (avg_cpu): t-statistic = 0.72, p-value = 0.47637782
+
+T-test Result for gitremote vs gcryptremote (execution_time): t-statistic = -77.22, p-value = 0.00000000
+
+T-test Result for gitremote vs gcryptremote (peak_memory): t-statistic = 0.72, p-value = 0.47485140
+
+T-test Result for gitremote vs gcryptremote (net_sent): t-statistic = -906.33, p-value = 0.00000000
+
+T-test Result for gitremote vs gcryptremote (net_recv): t-statistic = -135.31, p-value = 0.00000000
+
+T-test Result for gitremote vs gcryptremote (disk_read): t-statistic = -10.21, p-value = 0.00000000
+
+T-test Result for gitremote vs gcryptremote (disk_write): t-statistic = -3.11, p-value = 0.00290350
+
+T-test Result for gitremote vs gcryptremote (avg_cpu): t-statistic = -0.24, p-value = 0.80755207
+
+T-test Result for gitremote vs zkgitremote (execution_time): t-statistic = -66.23, p-value = 0.00000000
+
+T-test Result for gitremote vs zkgitremote (peak_memory): t-statistic = -8.25, p-value = 0.00000000
+
+T-test Result for gitremote vs zkgitremote (net_sent): t-statistic = -29.85, p-value = 0.00000000
+
+T-test Result for gitremote vs zkgitremote (net_recv): t-statistic = -2.06, p-value = 0.04398507
+
+T-test Result for gitremote vs zkgitremote (disk_read): t-statistic = -9.02, p-value = 0.00000000
+
+T-test Result for gitremote vs zkgitremote (disk_write): t-statistic = -2.49, p-value = 0.01567215
+
+T-test Result for gitremote vs zkgitremote (avg_cpu): t-statistic = 4.12, p-value = 0.00012307
+
+T-test Result for gitcryptremote vs gcryptremote (execution_time): t-statistic = -66.81, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs gcryptremote (peak_memory): t-statistic = 0.71, p-value = 0.48328448
+
+T-test Result for gitcryptremote vs gcryptremote (net_sent): t-statistic = -1013.16, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs gcryptremote (net_recv): t-statistic = -145.66, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs gcryptremote (disk_read): t-statistic = -8.04, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs gcryptremote (disk_write): t-statistic = 0.33, p-value = 0.74305837
+
+T-test Result for gitcryptremote vs gcryptremote (avg_cpu): t-statistic = -1.01, p-value = 0.31579604
+
+T-test Result for gitcryptremote vs zkgitremote (execution_time): t-statistic = -50.76, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs zkgitremote (peak_memory): t-statistic = -8.28, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs zkgitremote (net_sent): t-statistic = -29.87, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs zkgitremote (net_recv): t-statistic = -2.06, p-value = 0.04361886
+
+T-test Result for gitcryptremote vs zkgitremote (disk_read): t-statistic = -6.03, p-value = 0.00000012
+
+T-test Result for gitcryptremote vs zkgitremote (disk_write): t-statistic = 0.26, p-value = 0.79839480
+
+T-test Result for gitcryptremote vs zkgitremote (avg_cpu): t-statistic = 3.06, p-value = 0.00330651
+
+T-test Result for gcryptremote vs zkgitremote (execution_time): t-statistic = 32.23, p-value = 0.00000000
+
+T-test Result for gcryptremote vs zkgitremote (peak_memory): t-statistic = -5.24, p-value = 0.00000237
+
+T-test Result for gcryptremote vs zkgitremote (net_sent): t-statistic = 0.64, p-value = 0.52196357
+
+T-test Result for gcryptremote vs zkgitremote (net_recv): t-statistic = -0.89, p-value = 0.37548294
+
+T-test Result for gcryptremote vs zkgitremote (disk_read): t-statistic = 3.01, p-value = 0.00390437
+
+T-test Result for gcryptremote vs zkgitremote (disk_write): t-statistic = -0.07, p-value = 0.94743766
+
+T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 4.90, p-value = 0.00000806
+
+  Remote: gitremote (Total Runs: 30)
+  Avg Execution Time: 0.61 sec, Std Dev: 0.06 sec
+  Avg Peak Memory: 1639.10 MB, Std Dev: 1.98 MB
+  Avg Net Sent: 0.03 MB, Std Dev: 0.03 MB
+  Avg Net Recv: 0.02 MB, Std Dev: 0.01 MB
+  Avg Disk Read: 50.82 MB, Std Dev: 21.18 MB
+  Avg Disk Write: 0.47 MB, Std Dev: 1.43 MB
+  Avg Avg Cpu: 90.41 MB, Std Dev: 19.16 MB
+
+  Remote: gitcryptremote (Total Runs: 30)
+  Avg Execution Time: 0.85 sec, Std Dev: 0.06 sec
+  Avg Peak Memory: 1638.61 MB, Std Dev: 0.36 MB
+  Avg Net Sent: 0.02 MB, Std Dev: 0.00 MB
+  Avg Net Recv: 0.02 MB, Std Dev: 0.00 MB
+  Avg Disk Read: 92.17 MB, Std Dev: 29.89 MB
+  Avg Disk Write: 3.88 MB, Std Dev: 8.70 MB
+  Avg Avg Cpu: 86.58 MB, Std Dev: 22.16 MB
+
+  Remote: gcryptremote (Total Runs: 30)
+  Avg Execution Time: 2.43 sec, Std Dev: 0.11 sec
+  Avg Peak Memory: 1613.13 MB, Std Dev: 197.77 MB
+  Avg Net Sent: 11.08 MB, Std Dev: 0.06 MB
+  Avg Net Recv: 0.43 MB, Std Dev: 0.02 MB
+  Avg Disk Read: 258.49 MB, Std Dev: 109.34 MB
+  Avg Disk Write: 3.28 MB, Std Dev: 4.74 MB
+  Avg Avg Cpu: 91.49 MB, Std Dev: 14.70 MB
+
+  Remote: zkgitremote (Total Runs: 30)
+  Avg Execution Time: 1.67 sec, Std Dev: 0.06 sec
+  Avg Peak Memory: 1841.81 MB, Std Dev: 134.49 MB
+  Avg Net Sent: 10.84 MB, Std Dev: 1.98 MB
+  Avg Net Recv: 0.75 MB, Std Dev: 1.94 MB
+  Avg Disk Read: 184.63 MB, Std Dev: 78.45 MB
+  Avg Disk Write: 3.38 MB, Std Dev: 6.22 MB
+  Avg Avg Cpu: 70.51 MB, Std Dev: 18.27 MB
+
+Statistics for Repository: markitdown
+
+ANOVA Result for execution_time: F-statistic = 2061.16, p-value = 0.00000000
+
+ANOVA Result for peak_memory: F-statistic = 49.18, p-value = 0.00000000
+
+ANOVA Result for net_sent: F-statistic = 26588.19, p-value = 0.00000000
+
+ANOVA Result for net_recv: F-statistic = 3171.35, p-value = 0.00000000
+
+ANOVA Result for disk_read: F-statistic = 51.80, p-value = 0.00000000
+
+ANOVA Result for disk_write: F-statistic = 4.16, p-value = 0.00770147
+
+ANOVA Result for avg_cpu: F-statistic = 4.75, p-value = 0.00367140
+
+T-test Result for gitremote vs gitcryptremote (execution_time): t-statistic = -21.29, p-value = 0.00000000
+
+T-test Result for gitremote vs gitcryptremote (peak_memory): t-statistic = -0.98, p-value = 0.32904183
+
+T-test Result for gitremote vs gitcryptremote (net_sent): t-statistic = 1.44, p-value = 0.15390860
+
+T-test Result for gitremote vs gitcryptremote (net_recv): t-statistic = 0.87, p-value = 0.38957143
+
+T-test Result for gitremote vs gitcryptremote (disk_read): t-statistic = 0.47, p-value = 0.63739646
+
+T-test Result for gitremote vs gitcryptremote (disk_write): t-statistic = -1.84, p-value = 0.07051852
+
+T-test Result for gitremote vs gitcryptremote (avg_cpu): t-statistic = -1.50, p-value = 0.13998175
+
+T-test Result for gitremote vs gcryptremote (execution_time): t-statistic = -78.44, p-value = 0.00000000
+
+T-test Result for gitremote vs gcryptremote (peak_memory): t-statistic = -0.87, p-value = 0.38865083
+
+T-test Result for gitremote vs gcryptremote (net_sent): t-statistic = -172.23, p-value = 0.00000000
+
+T-test Result for gitremote vs gcryptremote (net_recv): t-statistic = -69.96, p-value = 0.00000000
+
+T-test Result for gitremote vs gcryptremote (disk_read): t-statistic = -10.18, p-value = 0.00000000
+
+T-test Result for gitremote vs gcryptremote (disk_write): t-statistic = -3.23, p-value = 0.00202922
+
+T-test Result for gitremote vs gcryptremote (avg_cpu): t-statistic = -2.05, p-value = 0.04446247
+
+T-test Result for gitremote vs zkgitremote (execution_time): t-statistic = -32.46, p-value = 0.00000000
+
+T-test Result for gitremote vs zkgitremote (peak_memory): t-statistic = -14.05, p-value = 0.00000000
+
+T-test Result for gitremote vs zkgitremote (net_sent): t-statistic = -239.17, p-value = 0.00000000
+
+T-test Result for gitremote vs zkgitremote (net_recv): t-statistic = -52.73, p-value = 0.00000000
+
+T-test Result for gitremote vs zkgitremote (disk_read): t-statistic = -7.41, p-value = 0.00000000
+
+T-test Result for gitremote vs zkgitremote (disk_write): t-statistic = -3.10, p-value = 0.00300553
+
+T-test Result for gitremote vs zkgitremote (avg_cpu): t-statistic = 1.53, p-value = 0.13151811
+
+T-test Result for gitcryptremote vs gcryptremote (execution_time): t-statistic = -78.93, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs gcryptremote (peak_memory): t-statistic = -0.41, p-value = 0.68304271
+
+T-test Result for gitcryptremote vs gcryptremote (net_sent): t-statistic = -175.02, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs gcryptremote (net_recv): t-statistic = -106.49, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs gcryptremote (disk_read): t-statistic = -9.41, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs gcryptremote (disk_write): t-statistic = -1.60, p-value = 0.11420285
+
+T-test Result for gitcryptremote vs gcryptremote (avg_cpu): t-statistic = -0.30, p-value = 0.76546917
+
+T-test Result for gitcryptremote vs zkgitremote (execution_time): t-statistic = -24.29, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs zkgitremote (peak_memory): t-statistic = -192.07, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs zkgitremote (net_sent): t-statistic = -246.46, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs zkgitremote (net_recv): t-statistic = -67.70, p-value = 0.00000000
+
+T-test Result for gitcryptremote vs zkgitremote (disk_read): t-statistic = -6.79, p-value = 0.00000001
+
+T-test Result for gitcryptremote vs zkgitremote (disk_write): t-statistic = -1.08, p-value = 0.28249061
+
+T-test Result for gitcryptremote vs zkgitremote (avg_cpu): t-statistic = 2.59, p-value = 0.01206410
+
+T-test Result for gcryptremote vs zkgitremote (execution_time): t-statistic = 26.53, p-value = 0.00000000
+
+T-test Result for gcryptremote vs zkgitremote (peak_memory): t-statistic = -7.74, p-value = 0.00000000
+
+T-test Result for gcryptremote vs zkgitremote (net_sent): t-statistic = -0.04, p-value = 0.97117014
+
+T-test Result for gcryptremote vs zkgitremote (net_recv): t-statistic = 5.49, p-value = 0.00000091
+
+T-test Result for gcryptremote vs zkgitremote (disk_read): t-statistic = 2.63, p-value = 0.01086875
+
+T-test Result for gcryptremote vs zkgitremote (disk_write): t-statistic = 0.69, p-value = 0.49261255
+
+T-test Result for gcryptremote vs zkgitremote (avg_cpu): t-statistic = 2.98, p-value = 0.00416170
+
+  Remote: gitremote (Total Runs: 30)
+  Avg Execution Time: 0.62 sec, Std Dev: 0.06 sec
+  Avg Peak Memory: 1622.10 MB, Std Dev: 97.36 MB
+  Avg Net Sent: 0.03 MB, Std Dev: 0.04 MB
+  Avg Net Recv: 0.02 MB, Std Dev: 0.02 MB
+  Avg Disk Read: 63.73 MB, Std Dev: 20.48 MB
+  Avg Disk Write: 0.46 MB, Std Dev: 1.87 MB
+  Avg Avg Cpu: 84.75 MB, Std Dev: 20.34 MB
+
+  Remote: gitcryptremote (Total Runs: 30)
+  Avg Execution Time: 0.88 sec, Std Dev: 0.02 sec
+  Avg Peak Memory: 1639.60 MB, Std Dev: 0.34 MB
+  Avg Net Sent: 0.02 MB, Std Dev: 0.00 MB
+  Avg Net Recv: 0.02 MB, Std Dev: 0.01 MB
+  Avg Disk Read: 57.46 MB, Std Dev: 69.53 MB
+  Avg Disk Write: 1.61 MB, Std Dev: 2.86 MB
+  Avg Avg Cpu: 92.58 MB, Std Dev: 20.18 MB
+
+  Remote: gcryptremote (Total Runs: 30)
+  Avg Execution Time: 2.10 sec, Std Dev: 0.08 sec
+  Avg Peak Memory: 1651.31 MB, Std Dev: 156.39 MB
+  Avg Net Sent: 7.68 MB, Std Dev: 0.24 MB
+  Avg Net Recv: 0.31 MB, Std Dev: 0.01 MB
+  Avg Disk Read: 322.58 MB, Std Dev: 137.79 MB
+  Avg Disk Write: 3.03 MB, Std Dev: 3.94 MB
+  Avg Avg Cpu: 93.91 MB, Std Dev: 13.51 MB
+
+  Remote: zkgitremote (Total Runs: 30)
+  Avg Execution Time: 1.41 sec, Std Dev: 0.12 sec
+  Avg Peak Memory: 1872.46 MB, Std Dev: 6.63 MB
+  Avg Net Sent: 7.68 MB, Std Dev: 0.17 MB
+  Avg Net Recv: 0.29 MB, Std Dev: 0.02 MB
+  Avg Disk Read: 233.54 MB, Std Dev: 123.91 MB
+  Avg Disk Write: 2.42 MB, Std Dev: 2.91 MB
+  Avg Avg Cpu: 73.42 MB, Std Dev: 35.10 MB
+
+
+=== Global (Combined) Statistics Across All Repositories ===
+
+  Remote: gitcryptremote, Metric: Execution Time (Total Runs: 210)
+  Avg: 0.88 sec, Std Dev: 0.16 sec
+
+  Remote: gitcryptremote, Metric: Peak Memory (Total Runs: 210)
+  Avg: 1595.29 MB, Std Dev: 126.59 MB
+
+  Remote: gitcryptremote, Metric: Net Sent (Total Runs: 210)
+  Avg: 0.02 MB, Std Dev: 0.00 MB
+
+  Remote: gitcryptremote, Metric: Net Recv (Total Runs: 210)
+  Avg: 0.02 MB, Std Dev: 0.01 MB
+
+  Remote: gitcryptremote, Metric: Disk Read (Total Runs: 210)
+  Avg: 96.36 MB, Std Dev: 48.87 MB
+
+  Remote: gitcryptremote, Metric: Disk Write (Total Runs: 210)
+  Avg: 3.15 MB, Std Dev: 7.14 MB
+
+  Remote: gitcryptremote, Metric: Avg Cpu (Total Runs: 210)
+  Avg: 88.61 MB, Std Dev: 20.07 MB
+
+  Remote: gitremote, Metric: Execution Time (Total Runs: 210)
+  Avg: 0.63 sec, Std Dev: 0.07 sec
+
+  Remote: gitremote, Metric: Peak Memory (Total Runs: 210)
+  Avg: 1600.86 MB, Std Dev: 105.41 MB
+
+  Remote: gitremote, Metric: Net Sent (Total Runs: 210)
+  Avg: 0.03 MB, Std Dev: 0.03 MB
+
+  Remote: gitremote, Metric: Net Recv (Total Runs: 210)
+  Avg: 0.02 MB, Std Dev: 0.01 MB
+
+  Remote: gitremote, Metric: Disk Read (Total Runs: 210)
+  Avg: 77.55 MB, Std Dev: 90.50 MB
+
+  Remote: gitremote, Metric: Disk Write (Total Runs: 210)
+  Avg: 0.80 MB, Std Dev: 4.10 MB
+
+  Remote: gitremote, Metric: Avg Cpu (Total Runs: 210)
+  Avg: 89.29 MB, Std Dev: 19.58 MB
+
+  Remote: gcryptremote, Metric: Execution Time (Total Runs: 210)
+  Avg: 5.75 sec, Std Dev: 6.64 sec
+
+  Remote: gcryptremote, Metric: Peak Memory (Total Runs: 210)
+  Avg: 1597.39 MB, Std Dev: 252.14 MB
+
+  Remote: gcryptremote, Metric: Net Sent (Total Runs: 210)
+  Avg: 43.92 MB, Std Dev: 66.57 MB
+
+  Remote: gcryptremote, Metric: Net Recv (Total Runs: 210)
+  Avg: 1.58 MB, Std Dev: 2.32 MB
+
+  Remote: gcryptremote, Metric: Disk Read (Total Runs: 210)
+  Avg: 400.16 MB, Std Dev: 490.88 MB
+
+  Remote: gcryptremote, Metric: Disk Write (Total Runs: 210)
+  Avg: 9.05 MB, Std Dev: 13.69 MB
+
+  Remote: gcryptremote, Metric: Avg Cpu (Total Runs: 210)
+  Avg: 85.82 MB, Std Dev: 16.00 MB
+
+  Remote: zkgitremote, Metric: Execution Time (Total Runs: 210)
+  Avg: 4.41 sec, Std Dev: 5.37 sec
+
+  Remote: zkgitremote, Metric: Peak Memory (Total Runs: 210)
+  Avg: 1778.50 MB, Std Dev: 218.14 MB
+
+  Remote: zkgitremote, Metric: Net Sent (Total Runs: 210)
+  Avg: 41.70 MB, Std Dev: 61.38 MB
+
+  Remote: zkgitremote, Metric: Net Recv (Total Runs: 210)
+  Avg: 1.90 MB, Std Dev: 4.44 MB
+
+  Remote: zkgitremote, Metric: Disk Read (Total Runs: 210)
+  Avg: 299.37 MB, Std Dev: 400.34 MB
+
+  Remote: zkgitremote, Metric: Disk Write (Total Runs: 210)
+  Avg: 7.15 MB, Std Dev: 13.96 MB
+
+  Remote: zkgitremote, Metric: Avg Cpu (Total Runs: 210)
+  Avg: 69.30 MB, Std Dev: 25.04 MB

@@ -33,7 +33,8 @@ OS_RF = "-rf"
 # Test Configuration
 TEST_NUM_ROUNDS = 30
 SHOW_PLOTS = False
-TEST_COMMANDS = ["clone", "push", "pull"]
+#TEST_COMMANDS = ["clone", "push", "pull"]
+TEST_COMMANDS = ["push"]
 PID_TERMS = ["git", "gcrypt"]
 PID = "pid"
 CMDLINE = "cmdline"
@@ -61,6 +62,7 @@ LABEL_PROCESS = "Process"
 
 
 LOG_BOXPLOT = "Boxplot saved as %s"
+LOG_BARPLOT = "Barplot saved as %s"
 LOG_DIRECTORY = "Error: Directory '%s' does not exist"
 LOG_RESET_REPO = "Resetting remote repo. PID: %d"
 LOG_RUN_COMMAND = "Running command: %s (PID: %d)"
