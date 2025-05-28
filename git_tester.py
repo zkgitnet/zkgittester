@@ -185,6 +185,8 @@ def generate_bar_plots(data, command):
         plt.ylabel(metric.replace('_', ' ').title())
         if metric == config.STATS_AVG_CPU:
             plt.ylim(bottom=0, top=200)
+        elif metric == config.STATS_DISK_WRITE:
+            plt.ylim(bottom=0, top=60)
         else:
             y_max = metric_df[config.STATS_VALUE].max()
             plt.ylim(bottom=0, top=y_max * 1.1)
